@@ -145,28 +145,36 @@
     cardsEl.innerHTML = "";
     for (const s of list) {
       const node = template.content.cloneNode(true);
+
+      const stagebarEl = node.querySelector(".card-stagebar");
+      stagebarEl.textContent = s.llmops_stages.length
+        ? `Stage: ${s.llmops_stages.join(", ")}`
+        : "";
+
       node.querySelector(".card-title").textContent = s.title;
       node.querySelector(".card-company").textContent = s.company;
       node.querySelector(".card-description").textContent = s.description;
 
       const typesEl = node.querySelector(".card-tags-types");
       s.solution_types.forEach((t) => {
-        const tag = document.createElement("span");
-        tag.className = "tag";
-        tag.textContent = t;
-        typesEl.appendChild(tag);
+        const badge = document.createElement("span");
+        badge.className = "badge-type";
+        badge.textContent = t;
+        typesEl.appendChild(badge);
       });
+
+      const llmopsEl = node.querySelector(".card-tags-llmops");
       s.llmops_stages.forEach((t) => {
         const tag = document.createElement("span");
         tag.className = "tag";
         tag.textContent = t;
-        typesEl.appendChild(tag);
+        llmopsEl.appendChild(tag);
       });
 
       const risksEl = node.querySelector(".card-tags-risks");
       s.top10_2026.forEach((t) => {
         const tag = document.createElement("span");
-        tag.className = "tag tag-risk";
+        tag.className = "tag";
         tag.textContent = t;
         risksEl.appendChild(tag);
       });

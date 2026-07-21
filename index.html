@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Agentic Security Solutions</title>
 <meta name="description" content="A searchable database of agentic AI security solutions.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Inter:wght@600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -62,19 +65,29 @@
 
 <template id="card-template">
   <article class="card">
-    <div class="card-head">
-      <h2 class="card-title"></h2>
-      <span class="card-company"></span>
+    <div class="card-stagebar"></div>
+    <div class="card-body">
+      <div class="card-meta-row">
+        <div class="card-meta-text">
+          <span class="meta-label">Company / Project:</span>
+          <span class="card-company"></span>
+        </div>
+        <div class="card-tags-types"></div>
+      </div>
+      <div class="card-solution-row">
+        <span class="meta-label">Solution:</span>
+        <h2 class="card-title"></h2>
+      </div>
+      <p class="card-description"></p>
+      <div class="card-tags card-tags-llmops"></div>
+      <details class="card-details">
+        <summary>Secops Coverage</summary>
+        <div class="card-sldc"></div>
+      </details>
+      <div class="card-tags card-tags-risks"></div>
     </div>
-    <p class="card-description"></p>
-    <div class="card-tags card-tags-types"></div>
-    <details class="card-details">
-      <summary>Secops Coverage</summary>
-      <div class="card-sldc"></div>
-    </details>
-    <div class="card-tags card-tags-risks"></div>
     <div class="card-footer">
-      <a class="card-link" target="_blank" rel="noopener noreferrer">Visit site ↗</a>
+      <a class="card-link" target="_blank" rel="noopener noreferrer">Visit site <span aria-hidden="true">↗</span></a>
     </div>
   </article>
 </template>
