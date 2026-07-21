@@ -63,7 +63,7 @@
       `**Agentic SDLC Phase(s):** ${data.sldc_stages.join(", ") || "—"}`,
       `**Agentic Top 10 (2026):** ${data.top10_2026.join(", ") || "—"}`,
       "",
-      `**Characteristics / Capabilities:**`,
+      `**Secops Coverage:**`,
       data.characteristics || "—",
       "",
       `---`,
