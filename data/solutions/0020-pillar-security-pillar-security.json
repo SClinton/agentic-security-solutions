@@ -1,0 +1,46 @@
+{
+  "id": 20,
+  "slug": "pillar-security-pillar-security",
+  "title": "Pillar Security",
+  "company": "Pillar Security",
+  "description": "Pillar provides holistic AI security platform through discovery and mapping of models, prompts, tools, agents, datasets, MCP servers, and third-party components, enabling effective and customized AI-SPM, Red Teaming, and Runtime Protection for agentic systems,",
+  "link": "https://www.pillar.security/",
+  "solution_types": [
+    "Proprietary"
+  ],
+  "llmops_stages": [
+    "Scoping/Planning",
+    "Test & Evaluation"
+  ],
+  "agentic_sldc": [
+    {
+      "stage": "Scoping/Planning",
+      "items": [
+        "Conducting Agentic Threat Modeling, Support for Gen AI Security Project - Agentic Security Threat Modeling Approach"
+      ]
+    },
+    {
+      "stage": "Test & Evaluation",
+      "items": [
+        "Available Agent Scanning, Agent Penetration Testing, Adversarial red-teaming: goal drift, prompt injection, hallucination chaining, & over-permissioned tool usage.",
+        "Multi-agent scenario simulations for collusion, misalignment, or deception detection.",
+        "Validate agent decisions against expected goal plans.",
+        "Sandboxed testing of all tool calls, code execution, cloud API triggers"
+      ]
+    }
+  ],
+  "top10_2026": [
+    "ASI01:26",
+    "ASI02:26",
+    "ASI03:26",
+    "ASI05:26",
+    "ASI06:26",
+    "ASI07:26",
+    "ASI08:26",
+    "ASI09:26",
+    "ASI10:26"
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "Company Representative"
+}

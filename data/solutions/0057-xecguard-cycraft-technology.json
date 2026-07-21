@@ -1,0 +1,59 @@
+{
+  "id": 57,
+  "slug": "xecguard-cycraft-technology",
+  "title": "XecGuard",
+  "company": "CyCraft Technology",
+  "description": "XecGuard, the next-generation AI Guardrail safety module, instantly equips existing AI applications with robust malicious context defense. By blocking threats such as Prompt Injection, Prompt Extraction and Jailbreak attacks, XecGuard precisely enhances instruction adherence and provides active defense for enterprise AI.",
+  "link": "https://www.cycraft.com/en/xecguard",
+  "solution_types": [
+    "Proprietary"
+  ],
+  "llmops_stages": [
+    "Operate",
+    "Operate",
+    "Operate",
+    "Monitor"
+  ],
+  "agentic_sldc": [
+    {
+      "stage": "Operate",
+      "items": [
+        "Runtime guardrails & moderation; anomalous tool use"
+      ]
+    },
+    {
+      "stage": "Operate",
+      "items": [
+        "Runtime guardrails & moderation; anomalous tool use"
+      ]
+    },
+    {
+      "stage": "Operate",
+      "items": [
+        "Runtime guardrails & moderation; anomalous tool use"
+      ]
+    },
+    {
+      "stage": "Monitor",
+      "items": [
+        "Correlate telemetry from agent step tracing, tool execution, & message logs.",
+        "Alert on anomalies;  e.g., goal reversal, unexpected plan depth, adversarial-input, excessive tool usage, or rapid inter-agent chatter.",
+        "Audit reflection accuracy by comparing stated & observed planning outcomes."
+      ]
+    }
+  ],
+  "top10_2026": [
+    "ASI01:26",
+    "ASI02:26",
+    "ASI03:26",
+    "ASI05:26",
+    "ASI06:26",
+    "ASI07:26",
+    "ASI08:26",
+    "ASI09:26",
+    "ASI10:26"
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "Company Representative"
+}

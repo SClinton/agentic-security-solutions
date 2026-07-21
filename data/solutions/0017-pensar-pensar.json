@@ -1,0 +1,36 @@
+{
+  "id": 17,
+  "slug": "pensar-pensar",
+  "title": "Pensar",
+  "company": "Pensar",
+  "description": "Pensar uses context-based code analysis to find and remediate Agentic AI security risks in AI agent applications - protecting against issues such as unverified tool use, memory mismanagement, or unintended agentic behaviors during development.",
+  "link": "https://www.pensarai.com/ai-agents",
+  "solution_types": [
+    "Proprietary"
+  ],
+  "llmops_stages": [
+    "Development & Experimentation"
+  ],
+  "agentic_sldc": [
+    {
+      "stage": "Development & Experimentation",
+      "items": [
+        "Perform SAST/DAST on agent planning code, tool wrappers, & plugin interfaces.",
+        "Harden agent loop logic against infinite loops, unsafe function routing, & unauthorized self-modification."
+      ]
+    }
+  ],
+  "top10_2026": [
+    "ASI01:26",
+    "ASI02:26",
+    "ASI03:26",
+    "ASI05:26",
+    "ASI06:26",
+    "ASI07:26",
+    "ASI09:26",
+    "ASI10:26"
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "Company Representative"
+}

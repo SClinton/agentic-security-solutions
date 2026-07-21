@@ -1,0 +1,40 @@
+{
+  "id": 40,
+  "slug": "argus-repello-ai",
+  "title": "ARGUS",
+  "company": "Repello AI",
+  "description": "ARGUS — Real-time runtime security that blocks malicious prompts, jailbreaks, and harmful outputs under 200 ms across text, image, and voice; provides multimodal filtering (100+ languages), adaptive guardrails, audit logging, and policy enforcement.",
+  "link": "https://repello.ai/argus",
+  "solution_types": [
+    "Proprietary"
+  ],
+  "llmops_stages": [
+    "Monitor"
+  ],
+  "agentic_sldc": [
+    {
+      "stage": "Monitor",
+      "items": [
+        "Correlate telemetry from agent step tracing, tool execution, & message logs.",
+        "Alert on anomalies;  e.g., goal reversal, unexpected plan depth, adversarial-input, excessive tool usage, or rapid inter-agent chatter.",
+        "Audit reflection accuracy by comparing stated & observed planning outcomes.",
+        "Use immutable logs (e.g.",
+        "Sigstore, Immudb) for forensic readiness."
+      ]
+    }
+  ],
+  "top10_2026": [
+    "ASI01:26",
+    "ASI02:26",
+    "ASI03:26",
+    "ASI05:26",
+    "ASI06:26",
+    "ASI07:26",
+    "ASI08:26",
+    "ASI09:26",
+    "ASI10:26"
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "Company Representative"
+}

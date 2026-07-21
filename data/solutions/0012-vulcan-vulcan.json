@@ -1,0 +1,36 @@
+{
+  "id": 12,
+  "slug": "vulcan-vulcan",
+  "title": "Vulcan",
+  "company": "Vulcan",
+  "description": "Vulcan is a GenAI security solution that tests large language models for vulnerabilities such as data leakage, harmful or biased content, and selected agentic AI behaviors, focused on prompt-based, single-session evaluation.",
+  "link": "https://vulcanlab.ai",
+  "solution_types": [
+    "Proprietary"
+  ],
+  "llmops_stages": [
+    "Test & Evaluation"
+  ],
+  "agentic_sldc": [
+    {
+      "stage": "Test & Evaluation",
+      "items": [
+        "Agent Penetration Testing, Adversarial red-teaming: goal drift, prompt injection, hallucination chaining, & over-permissioned tool usage."
+      ]
+    }
+  ],
+  "top10_2026": [
+    "ASI01:26",
+    "ASI02:26",
+    "ASI03:26",
+    "ASI05:26",
+    "ASI06:26",
+    "ASI07:26",
+    "ASI08:26",
+    "ASI09:26",
+    "ASI10:26"
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "Company Representative"
+}

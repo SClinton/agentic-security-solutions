@@ -1,0 +1,37 @@
+{
+  "id": 72,
+  "slug": "neuraltrust-mcp-scanner-neuraltrust",
+  "title": "NeuralTrust MCP Scanner",
+  "company": "NeuralTrust",
+  "description": "NeuralTrust MCP Scanner verifies MCP connectors and servers by scanning code, manifests, dependencies, and access configurations to detect vulnerabilities, poisoned tools, insecure defaults, and overly broad permissions before deployment.",
+  "link": "https://neuraltrust.ai/mcp-scanner",
+  "solution_types": [
+    "Proprietary"
+  ],
+  "llmops_stages": [
+    "Development & Experimentation"
+  ],
+  "agentic_sldc": [
+    {
+      "stage": "Development & Experimentation",
+      "items": [
+        "Validate connector (e.g.",
+        "MCP)  contracts (input/output schemas & permissions)."
+      ]
+    }
+  ],
+  "top10_2026": [
+    "ASI01:26",
+    "ASI02:26",
+    "ASI03:26",
+    "ASI05:26",
+    "ASI06:26",
+    "ASI07:26",
+    "ASI08:26",
+    "ASI09:26",
+    "ASI10:26"
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "Company Representative"
+}

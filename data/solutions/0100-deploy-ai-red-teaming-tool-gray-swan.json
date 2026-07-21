@@ -1,0 +1,36 @@
+{
+  "id": 100,
+  "slug": "deploy-ai-red-teaming-tool-gray-swan",
+  "title": "Deploy - AI Red Teaming Tool",
+  "company": "Gray Swan",
+  "description": "Gray Swan provides AI security solutions that assess, test, and protect large language model deployments through adversarial red teaming, runtime threat detection, policy enforcement, and continuous vulnerability monitoring for enterprise AI applications and agents.",
+  "link": "www.grayswan.ai",
+  "solution_types": [
+    "Proprietary"
+  ],
+  "llmops_stages": [
+    "Deploy"
+  ],
+  "agentic_sldc": [
+    {
+      "stage": "Deploy",
+      "items": [
+        "Enforce zero-trust policies between agents, tools, & external APIs, Apply & manage runtime Guardrails, Configure Inter-agent authorization policies, capabilities, & roles"
+      ]
+    }
+  ],
+  "top10_2026": [
+    "ASI01:26",
+    "ASI02:26",
+    "ASI03:26",
+    "ASI05:26",
+    "ASI06:26",
+    "ASI07:26",
+    "ASI08:26",
+    "ASI09:26",
+    "ASI10:26"
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "End User"
+}

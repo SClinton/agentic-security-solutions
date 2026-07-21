@@ -1,0 +1,34 @@
+{
+  "id": 60,
+  "slug": "protecto-cbac-protecto",
+  "title": "Protecto CBAC",
+  "company": "Protecto",
+  "description": "Provides context-aware access control for agentic AI systems by analyzing user roles, prompts, and data context, applying policy-driven tokenization, and enforcing fine-grained permissions to prevent unauthorized disclosure during multi-agent and MCP workflows.",
+  "link": "https://www.protecto.ai/context-based-access-control-for-ai/",
+  "solution_types": [
+    "Proprietary"
+  ],
+  "llmops_stages": [
+    "Govern"
+  ],
+  "agentic_sldc": [
+    {
+      "stage": "Govern",
+      "items": [
+        "Enforce role- & task-based access policies across agent populations & their tool access."
+      ]
+    }
+  ],
+  "top10_2026": [
+    "ASI01:26",
+    "ASI02:26",
+    "ASI03:26",
+    "ASI05:26",
+    "ASI06:26",
+    "ASI07:26",
+    "ASI08:26"
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "Company Representative"
+}

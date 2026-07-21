@@ -1,0 +1,61 @@
+{
+  "id": 95,
+  "slug": "silverfort-ai-agent-security-silverfort",
+  "title": "Silverfort AI Agent Security",
+  "company": "Silverfort",
+  "description": "Silverfort discovers all AI agents and associated non-human identities (NHIs) — service accounts, API keys, and MCP connections — to produce an accurate pre-deployment inventory. It identifies over-privileged accounts, orphaned credentials, and agents lacking authentication policies before any workload is authorized to operate.",
+  "link": "https://www.silverfort.com/platform/ai-agent-security/",
+  "solution_types": [
+    "Proprietary"
+  ],
+  "llmops_stages": [
+    "Scoping/Planning",
+    "Deploy",
+    "Operate",
+    "Monitor",
+    "Govern"
+  ],
+  "agentic_sldc": [
+    {
+      "stage": "Scoping/Planning",
+      "items": [
+        "Identify system-wide non-human Identities & Auth Protocols, Draft policy for Agent privilege boundaries, Draft policy Agent for tool scopes"
+      ]
+    },
+    {
+      "stage": "Deploy",
+      "items": [
+        "Enforce zero-trust policies between agents, tools, & external APIs, Configure Inter-agent authorization policies, capabilities, & roles"
+      ]
+    },
+    {
+      "stage": "Operate",
+      "items": [
+        "Runtime guardrails & moderation; anomalous tool use"
+      ]
+    },
+    {
+      "stage": "Monitor",
+      "items": [
+        "Correlate telemetry from agent step tracing, tool execution, & message logs."
+      ]
+    },
+    {
+      "stage": "Govern",
+      "items": [
+        "Enforce role- & task-based access policies across agent populations & their tool access."
+      ]
+    }
+  ],
+  "top10_2026": [
+    "ASI01:26",
+    "ASI02:26",
+    "ASI03:26",
+    "ASI05:26",
+    "ASI07:26",
+    "ASI10:26"
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "Company Representative"
+}

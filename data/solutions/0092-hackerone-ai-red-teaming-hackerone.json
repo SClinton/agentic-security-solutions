@@ -1,0 +1,38 @@
+{
+  "id": 92,
+  "slug": "hackerone-ai-red-teaming-hackerone",
+  "title": "HackerOne AI Red Teaming",
+  "company": "HackerOne",
+  "description": "Adversarial testing of agentic AI systems using human researchers and autonomous AI agents to identify prompt injection,  tool misuse, privilege escalation, and goal manipulation across agent workflows and retrieval pipelines.",
+  "link": "https://docs.hackerone.com/en/articles/14089281-hackerone-ai-red-teaming-airt",
+  "solution_types": [
+    "Proprietary"
+  ],
+  "llmops_stages": [
+    "Test & Evaluation"
+  ],
+  "agentic_sldc": [
+    {
+      "stage": "Test & Evaluation",
+      "items": [
+        "Available Agent Scanning, Adversarial red-teaming: goal drift, prompt injection, hallucination chaining, & over-permissioned tool usage.",
+        "Multi-agent scenario simulations for collusion, misalignment, or deception detection.",
+        "Validate agent decisions against expected goal plans."
+      ]
+    }
+  ],
+  "top10_2026": [
+    "ASI01:26",
+    "ASI02:26",
+    "ASI03:26",
+    "ASI05:26",
+    "ASI06:26",
+    "ASI07:26",
+    "ASI08:26",
+    "ASI09:26",
+    "ASI10:26"
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "Company Representative"
+}

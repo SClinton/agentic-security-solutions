@@ -1,0 +1,38 @@
+{
+  "id": 15,
+  "slug": "prompt-security-prompt-for-agentic-ai-prompt-security",
+  "title": "Prompt Security (Prompt for Agentic AI)",
+  "company": "Prompt Security",
+  "description": "Comprehensive solution for Agentic AI Security and Governance. Endpoint-level enforcement thanks to our lightweight agent or reverse proxy for your homegrown applications. MCP risk scoring, dynamically assessing over 13,000 MCP servers on GitHub, and deep inspection of interactions between users and MCP servers.",
+  "link": "https://www.prompt.security/solutions/agentic-ai-security-and-governance",
+  "solution_types": [
+    "Proprietary"
+  ],
+  "llmops_stages": [
+    "Govern"
+  ],
+  "agentic_sldc": [
+    {
+      "stage": "Govern",
+      "items": [
+        "Enforce role- & task-based access policies across agent populations & their tool access.",
+        "Align control evidence with frameworks like EU AI Act, NIST AI RMF, & ISO/IEC 42001.",
+        "Automate goal alignment audits, including adversarial review of long-term agent memory."
+      ]
+    }
+  ],
+  "top10_2026": [
+    "ASI01:26",
+    "ASI02:26",
+    "ASI03:26",
+    "ASI05:26",
+    "ASI06:26",
+    "ASI07:26",
+    "ASI08:26",
+    "ASI09:26",
+    "ASI10:26"
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "Company Representative"
+}

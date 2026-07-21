@@ -1,0 +1,29 @@
+{
+  "id": 7,
+  "slug": "inspectrag-eunomatix",
+  "title": "InspectRAG",
+  "company": "Eunomatix",
+  "description": "InspectRAG is an enterprise-level RAG(Inspect Retrieval-Augmented Generation) with a secure document access and retrieval system that integrates OpenID for authentication, Active Directory (AD) for role management, and multiple organizatonal platforms such as sharepoint , jira , confluence etc for storing and managing documents.\n\nIt ensures that only authorized users can query and access files based on real-time permission matching. Whether deployed on-premise or in the cloud, InspectRAG offers seamless integration with your organization—s existing infrastructure to enhance security, compliance, and collaboration.",
+  "link": "https://eunomatix.com/site/web/products-inspectrag.html",
+  "solution_types": [
+    "Proprietary"
+  ],
+  "llmops_stages": [
+    "Test & Evaluation"
+  ],
+  "agentic_sldc": [
+    {
+      "stage": "Test & Evaluation",
+      "items": [
+        "Adversarial red-teaming: goal drift, prompt injection, hallucination chaining, & over-permissioned tool usage."
+      ]
+    }
+  ],
+  "top10_2026": [
+    "ASI02:26",
+    "ASI03:26"
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "Company Representative"
+}

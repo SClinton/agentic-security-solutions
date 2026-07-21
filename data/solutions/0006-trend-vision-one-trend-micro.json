@@ -1,0 +1,43 @@
+{
+  "id": 6,
+  "slug": "trend-vision-one-trend-micro",
+  "title": "Trend Vision One—",
+  "company": "Trend Micro",
+  "description": "Trend Vision One— is an AI-powered cybersecurity platform that centralizes risk management, security operations, and protection layers across your entire digital estate, helping predict and prevent threats while eliminating blind spots.",
+  "link": "https://documents.trendmicro.com/images/uploads/owasp%2010%20llm%20and%20vision%20one.pdf",
+  "solution_types": [
+    "Proprietary"
+  ],
+  "llmops_stages": [
+    "Deploy",
+    "Test & Evaluation"
+  ],
+  "agentic_sldc": [
+    {
+      "stage": "Deploy",
+      "items": [
+        "Apply & manage runtime Guardrails"
+      ]
+    },
+    {
+      "stage": "Test & Evaluation",
+      "items": [
+        "Adversarial red-teaming: goal drift, prompt injection, hallucination chaining, & over-permissioned tool usage."
+      ]
+    }
+  ],
+  "top10_2026": [
+    "ASI01:26",
+    "ASI02:26",
+    "ASI03:26",
+    "ASI05:26",
+    "ASI06:26",
+    "ASI07:26",
+    "ASI08:26",
+    "ASI09:26",
+    "ASI10:26"
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "Company Representative"
+}

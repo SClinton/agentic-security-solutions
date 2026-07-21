@@ -1,0 +1,33 @@
+{
+  "id": 99,
+  "slug": "barndoor-ai-barndoor-ai",
+  "title": "Barndoor AI",
+  "company": "Barndoor AI",
+  "description": "A centralized control plane that governs enterprise AI interactions through existing policies and identity rules. It provides end-to-end visibility, compliance auditing, and secure data access for LLMs, agents, and tools.",
+  "link": "https://barndoor.ai",
+  "solution_types": [
+    "Proprietary"
+  ],
+  "llmops_stages": [
+    "Govern"
+  ],
+  "agentic_sldc": [
+    {
+      "stage": "Govern",
+      "items": [
+        "Enforce role- & task-based access policies across agent populations & their tool access."
+      ]
+    }
+  ],
+  "top10_2026": [
+    "ASI01:26",
+    "ASI02:26",
+    "ASI03:26",
+    "ASI05:26",
+    "ASI07:26",
+    "ASI10:26"
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "Company Representative"
+}

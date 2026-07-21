@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agentic Security Solutions</title>
+<meta name="description" content="A searchable database of agentic AI security solutions.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="concept-banner">
+  ⚠️ Design concept only — this is a prototype, not an active or production application. Data may be incomplete or out of date.
+</div>
+
+<header class="site-header">
+  <div class="wrap header-row">
+    <h1>Agentic Security Solutions</h1>
+    <nav>
+      <a class="btn btn-primary" href="add.html">+ Submit a Solution</a>
+    </nav>
+  </div>
+  <p class="subtitle">A searchable database of tools and platforms for securing agentic AI systems.</p>
+</header>
+
+<main class="wrap">
+  <section class="controls">
+    <input id="search" type="search" placeholder="Search by name, company, or description…" aria-label="Search solutions">
+
+    <div class="facets">
+      <div class="facet" data-facet="solution_types">
+        <h3>Solution Type</h3>
+        <div class="facet-options" id="facet-solution_types"></div>
+      </div>
+      <div class="facet" data-facet="llmops_stages">
+        <h3>LLMOps Stage</h3>
+        <div class="facet-options" id="facet-llmops_stages"></div>
+      </div>
+      <div class="facet" data-facet="sldc_stages">
+        <h3>Agentic SDLC Phase</h3>
+        <div class="facet-options" id="facet-sldc_stages"></div>
+      </div>
+      <div class="facet" data-facet="top10_2026">
+        <h3>Agentic Top 10 (2026)</h3>
+        <div class="facet-options" id="facet-top10_2026"></div>
+      </div>
+    </div>
+
+    <div class="active-filters" id="active-filters"></div>
+  </section>
+
+  <p class="result-count" id="result-count"></p>
+
+  <section id="cards" class="cards" aria-live="polite"></section>
+  <p id="empty-state" class="empty-state" hidden>No solutions match your filters.</p>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>Data sourced from the OWASP Agentic Security Initiative landscape. <a href="add.html">Suggest a solution to add.</a></p>
+  </div>
+</footer>
+
+<template id="card-template">
+  <article class="card">
+    <div class="card-head">
+      <h2 class="card-title"></h2>
+      <span class="card-company"></span>
+    </div>
+    <p class="card-description"></p>
+    <div class="card-tags card-tags-types"></div>
+    <details class="card-details">
+      <summary>Characteristics</summary>
+      <div class="card-sldc"></div>
+    </details>
+    <div class="card-tags card-tags-risks"></div>
+    <div class="card-footer">
+      <a class="card-link" target="_blank" rel="noopener noreferrer">Visit site ↗</a>
+    </div>
+  </article>
+</template>
+
+<script src="app.js"></script>
+</body>
+</html>

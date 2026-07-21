@@ -1,0 +1,34 @@
+{
+  "id": 33,
+  "slug": "agentictrust-by-human-security-human-security",
+  "title": "AgenticTrust by HUMAN Security",
+  "company": "HUMAN Security",
+  "description": "AgenticTrust provides real-time detection, trust, and control of AI agents on your website and platform, enabling visibility into agent behavior, verification status, and enforcement of granular action-level policies for any third-party AI agent.",
+  "link": "https://www.humansecurity.com/learn/blog/agentictrust-govern-ai-agents/",
+  "solution_types": [
+    "Proprietary"
+  ],
+  "llmops_stages": [
+    "Govern"
+  ],
+  "agentic_sldc": [
+    {
+      "stage": "Govern",
+      "items": [
+        "Enforce role- & task-based access policies across agent populations & their tool access."
+      ]
+    }
+  ],
+  "top10_2026": [
+    "ASI01:26",
+    "ASI02:26",
+    "ASI03:26",
+    "ASI07:26",
+    "ASI08:26",
+    "ASI09:26",
+    "ASI10:26"
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "Company Representative"
+}

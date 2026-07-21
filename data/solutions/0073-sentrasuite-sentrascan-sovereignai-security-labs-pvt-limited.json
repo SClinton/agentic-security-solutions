@@ -1,0 +1,36 @@
+{
+  "id": 73,
+  "slug": "sentrasuite-sentrascan-sovereignai-security-labs-pvt-limited",
+  "title": "SentraSuite - SentraScan",
+  "company": "SovereignAI Security Labs Pvt. Limited",
+  "description": "SentraScan statically assesses MCP, model, and RAG surfaces for tool poisoning, unsafe permissions, command-injection patterns, deserialization risks, and configuration drift, then enforces policy gates and evidence capture before agentic systems move toward production.",
+  "link": "https://www.sovereignaisecurity.com/products/sentrascan",
+  "solution_types": [
+    "Proprietary"
+  ],
+  "llmops_stages": [
+    "Development & Experimentation"
+  ],
+  "agentic_sldc": [
+    {
+      "stage": "Development & Experimentation",
+      "items": [
+        "Perform SAST/DAST on agent planning code, tool wrappers, & plugin interfaces.",
+        "Validate connector (e.g.",
+        "MCP)  contracts (input/output schemas & permissions)."
+      ]
+    }
+  ],
+  "top10_2026": [
+    "ASI01:26",
+    "ASI02:26",
+    "ASI03:26",
+    "ASI05:26",
+    "ASI06:26",
+    "ASI07:26",
+    "ASI08:26"
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "Company Representative"
+}

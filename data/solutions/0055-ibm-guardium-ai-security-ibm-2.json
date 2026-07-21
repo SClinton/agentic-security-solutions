@@ -1,0 +1,64 @@
+{
+  "id": 55,
+  "slug": "ibm-guardium-ai-security-ibm-2",
+  "title": "IBM Guardium AI Security",
+  "company": "IBM",
+  "description": "IBM Guardium AI Security allows you to discover shadow AI, secure all AI models and use cases, get real-time protection from malicious prompts, and align teams on common set of metrics—for secure and trustworthy AI.",
+  "link": "https://www.ibm.com/products/guardium-ai-security",
+  "solution_types": [
+    "Proprietary"
+  ],
+  "llmops_stages": [
+    "Deploy",
+    "Govern",
+    "Release",
+    "Test & Evaluation",
+    "Monitor"
+  ],
+  "agentic_sldc": [
+    {
+      "stage": "Deploy",
+      "items": [
+        "Enforce zero-trust policies between agents, tools, & external APIs, Apply & manage runtime Guardrails"
+      ]
+    },
+    {
+      "stage": "Govern",
+      "items": [
+        "Align control evidence with frameworks like EU AI Act, NIST AI RMF, & ISO/IEC 42001."
+      ]
+    },
+    {
+      "stage": "Release",
+      "items": [
+        "Generate & verify model + agent + tool SBOMs - shared responsibility, Register all agents in an internal trust registry"
+      ]
+    },
+    {
+      "stage": "Test & Evaluation",
+      "items": [
+        "Agent Penetration Testing, Adversarial red-teaming: goal drift, prompt injection, hallucination chaining, & over-permissioned tool usage."
+      ]
+    },
+    {
+      "stage": "Monitor",
+      "items": [
+        "Alert on anomalies;  e.g., goal reversal, unexpected plan depth, adversarial-input, excessive tool usage, or rapid inter-agent chatter."
+      ]
+    }
+  ],
+  "top10_2026": [
+    "ASI01:26",
+    "ASI02:26",
+    "ASI03:26",
+    "ASI05:26",
+    "ASI06:26",
+    "ASI07:26",
+    "ASI08:26",
+    "ASI09:26",
+    "ASI10:26"
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "Company Representative"
+}

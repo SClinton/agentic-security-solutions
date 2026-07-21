@@ -1,0 +1,34 @@
+{
+  "id": 16,
+  "slug": "microsoft-defender-for-cloud-microsoft",
+  "title": "Microsoft Defender for Cloud",
+  "company": "Microsoft",
+  "description": "Microsoft Defender for Cloud is a comprehensive cloud-native application protection platform (CNAPP) that helps organizations strengthen their security posture across multicloud and hybrid environments. It provides continuous assessment, threat protection, and security recommendations for resources in Azure, AWS, and Google Cloud.\n\n\n\n\n\n\nAsk ChatGPT",
+  "link": "https://www.microsoft.com/en-us/security/business/solutions/security-for-ai#tabs-pill-bar-oc498f_tab2",
+  "solution_types": [
+    "Proprietary"
+  ],
+  "llmops_stages": [
+    "Operate"
+  ],
+  "agentic_sldc": [
+    {
+      "stage": "Operate",
+      "items": [
+        "LLM Incident Detection & Response, Runtime guardrails & moderation; anomalous tool use"
+      ]
+    }
+  ],
+  "top10_2026": [
+    "ASI01:26",
+    "ASI02:26",
+    "ASI05:26",
+    "ASI07:26",
+    "ASI08:26",
+    "ASI09:26",
+    "ASI10:26"
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "Company Representative"
+}

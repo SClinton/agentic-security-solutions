@@ -1,0 +1,58 @@
+{
+  "id": 3,
+  "slug": "citadel-lens-citadel-ai",
+  "title": "Citadel Lens",
+  "company": "Citadel AI",
+  "description": "Evaluation, monitoring, and guardrails for your AI agents, generative AI, and predictive AI systems. Iteratively design highly domain-specific metrics that combine human expertise and LLM judges.",
+  "link": "https://citadel-ai.com/products/lens/",
+  "solution_types": [
+    "Proprietary"
+  ],
+  "llmops_stages": [
+    "Test & Evaluation",
+    "Deploy",
+    "Operate",
+    "Monitor"
+  ],
+  "agentic_sldc": [
+    {
+      "stage": "Test & Evaluation",
+      "items": [
+        "Adversarial red-teaming: goal drift, prompt injection, hallucination chaining, & over-permissioned tool usage.",
+        "Validate agent decisions against expected goal plans."
+      ]
+    },
+    {
+      "stage": "Deploy",
+      "items": [
+        "Apply & manage runtime Guardrails"
+      ]
+    },
+    {
+      "stage": "Operate",
+      "items": [
+        "Monitor agent memory mutation patterns for drift, LLM Incident Detection & Response, Runtime guardrails & moderation; anomalous tool use"
+      ]
+    },
+    {
+      "stage": "Monitor",
+      "items": [
+        "Correlate telemetry from agent step tracing, tool execution, & message logs."
+      ]
+    }
+  ],
+  "top10_2026": [
+    "ASI01:26",
+    "ASI02:26",
+    "ASI03:26",
+    "ASI05:26",
+    "ASI06:26",
+    "ASI07:26",
+    "ASI08:26",
+    "ASI09:26",
+    "ASI10:26"
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "Company Representative"
+}

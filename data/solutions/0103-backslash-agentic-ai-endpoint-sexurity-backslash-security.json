@@ -1,0 +1,37 @@
+{
+  "id": 103,
+  "slug": "backslash-agentic-ai-endpoint-sexurity-backslash-security",
+  "title": "Backslash Agentic AI Endpoint Sexurity",
+  "company": "Backslash Security",
+  "description": "Backslash provides discovery, governance and real-time protection for the agentia AI fabric on endpoints, including agents, skills, MCPs, plugins, and hooks. We enable security teams to place guardrails for safe AI usage and prevent threats including prompt injections, drift and privilege escalations, the use of unapproved components, and data and credential theft.",
+  "link": "https://backslash.security",
+  "solution_types": [
+    "Proprietary"
+  ],
+  "llmops_stages": [
+    "Monitor"
+  ],
+  "agentic_sldc": [
+    {
+      "stage": "Monitor",
+      "items": [
+        "Correlate telemetry from agent step tracing, tool execution, & message logs.",
+        "Alert on anomalies;  e.g., goal reversal, unexpected plan depth, adversarial-input, excessive tool usage, or rapid inter-agent chatter.",
+        "Use immutable logs (e.g.",
+        "Sigstore, Immudb) for forensic readiness."
+      ]
+    }
+  ],
+  "top10_2026": [
+    "ASI01:26",
+    "ASI02:26",
+    "ASI03:26",
+    "ASI05:26",
+    "ASI07:26",
+    "ASI09:26",
+    "ASI10:26"
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "Company Representative"
+}

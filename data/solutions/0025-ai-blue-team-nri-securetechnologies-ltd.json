@@ -1,0 +1,44 @@
+{
+  "id": 25,
+  "slug": "ai-blue-team-nri-securetechnologies-ltd",
+  "title": "AI Blue Team",
+  "company": "NRI SecureTechnologies, Ltd.",
+  "description": "AI Blue Team Service provides continuous security monitoring for AI systems. It detects AI-specific threats like prompt injection and sensitive information disclosure, offering real-time alerts and customized protection based on evolving threat intelligence.",
+  "link": "https://www.nri-secure.com/security-solutions/ai-blue-team-service",
+  "solution_types": [
+    "Proprietary"
+  ],
+  "llmops_stages": [
+    "Operate",
+    "Monitor"
+  ],
+  "agentic_sldc": [
+    {
+      "stage": "Operate",
+      "items": [
+        "Detect task replay, infinite delegation, or hallucination loops.",
+        "LLM Incident Detection & Response, Runtime guardrails & moderation; anomalous tool use"
+      ]
+    },
+    {
+      "stage": "Monitor",
+      "items": [
+        "Alert on anomalies;  e.g., goal reversal, unexpected plan depth, adversarial-input, excessive tool usage, or rapid inter-agent chatter."
+      ]
+    }
+  ],
+  "top10_2026": [
+    "ASI01:26",
+    "ASI02:26",
+    "ASI03:26",
+    "ASI05:26",
+    "ASI06:26",
+    "ASI07:26",
+    "ASI08:26",
+    "ASI09:26",
+    "ASI10:26"
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "Company Representative"
+}

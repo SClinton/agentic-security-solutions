@@ -1,0 +1,43 @@
+{
+  "id": 69,
+  "slug": "neuraltrust-agent-posture-neuraltrust",
+  "title": "NeuralTrust Agent Posture",
+  "company": "NeuralTrust",
+  "description": "NeuralTrust Agent Posture registers agents in a centralized trust registry with defined capabilities, creating a unified inventory across platforms to assess risk, monitor behavior, and enforce consistent security controls.",
+  "link": "https://neuraltrust.ai/agent-monitoring",
+  "solution_types": [
+    "Proprietary"
+  ],
+  "llmops_stages": [
+    "Release",
+    "Scoping/Planning"
+  ],
+  "agentic_sldc": [
+    {
+      "stage": "Release",
+      "items": [
+        "Register all agents in an internal trust registry"
+      ]
+    },
+    {
+      "stage": "Scoping/Planning",
+      "items": [
+        "Support for Gen AI Security Project - Agentic Security Threat Modeling Approach, Identify system-wide non-human Identities & Auth Protocols, Draft policy for Agent privilege boundaries, Draft policy Agent for tool scopes"
+      ]
+    }
+  ],
+  "top10_2026": [
+    "ASI01:26",
+    "ASI02:26",
+    "ASI03:26",
+    "ASI05:26",
+    "ASI06:26",
+    "ASI07:26",
+    "ASI08:26",
+    "ASI09:26",
+    "ASI10:26"
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "Company Representative"
+}

@@ -1,0 +1,37 @@
+{
+  "id": 89,
+  "slug": "spellguard-ai-spellguard-ai",
+  "title": "Spellguard.ai",
+  "company": "Spellguard.ai",
+  "description": "Spellguard is a security platform for AI agents that routes all messages and tool calls through a Trusted Execution Environment for real-time policy enforcement, encrypted messaging, and tamper-proof audit logging.",
+  "link": "Spellguard.ai",
+  "solution_types": [
+    "Proprietary"
+  ],
+  "llmops_stages": [
+    "Operate"
+  ],
+  "agentic_sldc": [
+    {
+      "stage": "Operate",
+      "items": [
+        "Detect task replay, infinite delegation, or hallucination loops.",
+        "LLM Incident Detection & Response, Runtime guardrails & moderation; anomalous tool use"
+      ]
+    }
+  ],
+  "top10_2026": [
+    "ASI01:26",
+    "ASI02:26",
+    "ASI03:26",
+    "ASI05:26",
+    "ASI06:26",
+    "ASI07:26",
+    "ASI08:26",
+    "ASI09:26",
+    "ASI10:26"
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "Company Representative"
+}

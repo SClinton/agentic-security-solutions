@@ -1,0 +1,36 @@
+{
+  "id": 54,
+  "slug": "ibm-guardium-ai-security-ibm",
+  "title": "IBM Guardium AI Security",
+  "company": "IBM",
+  "description": "IBM Guardium AI Security allows organizations to discover shadow AI, secure all AI models and use cases, get real-time protection from malicious prompts, and align teams on common set of metrics—for secure and trustworthy AI.",
+  "link": "https://www.ibm.com/products/guardium-ai-security",
+  "solution_types": [
+    "Proprietary"
+  ],
+  "llmops_stages": [
+    "Operate"
+  ],
+  "agentic_sldc": [
+    {
+      "stage": "Operate",
+      "items": [
+        "Enable human-in-the-loop (HITL) override thresholds on high-risk or ambiguous actions, Continuously scan loaded plugins for CVEs & privilege escalation vectors.",
+        "LLM Incident Detection & Response, Runtime guardrails & moderation; anomalous tool use"
+      ]
+    }
+  ],
+  "top10_2026": [
+    "ASI01:26",
+    "ASI02:26",
+    "ASI03:26",
+    "ASI05:26",
+    "ASI06:26",
+    "ASI07:26",
+    "ASI08:26",
+    "ASI09:26"
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "Company Representative"
+}

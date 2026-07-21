@@ -1,0 +1,37 @@
+{
+  "id": 14,
+  "slug": "adversa-ai-red-teaming-platform-adversa-ai",
+  "title": "Adversa AI Red Teaming platform",
+  "company": "Adversa AI",
+  "description": "Adversa AI—s Red Teaming platform automates security testing across classic, generative, and Agentic AI, uncovering adversarial examples, jailbreaks, prompt injections, MCP flaws, and agent_specific vulnerabilities in memory, tools, and inter_agent communication for comprehensive, robust protection.",
+  "link": "https://adversa.ai/ai-red-teaming-llm/",
+  "solution_types": [
+    "Proprietary"
+  ],
+  "llmops_stages": [
+    "Test & Evaluation"
+  ],
+  "agentic_sldc": [
+    {
+      "stage": "Test & Evaluation",
+      "items": [
+        "Available Agent Scanning, Agent Penetration Testing, Adversarial red-teaming: goal drift, prompt injection, hallucination chaining, & over-permissioned tool usage.",
+        "Validate agent decisions against expected goal plans."
+      ]
+    }
+  ],
+  "top10_2026": [
+    "ASI01:26",
+    "ASI02:26",
+    "ASI03:26",
+    "ASI05:26",
+    "ASI06:26",
+    "ASI07:26",
+    "ASI08:26",
+    "ASI09:26",
+    "ASI10:26"
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "Company Representative"
+}

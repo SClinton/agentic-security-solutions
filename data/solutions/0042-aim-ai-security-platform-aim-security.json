@@ -1,0 +1,38 @@
+{
+  "id": 42,
+  "slug": "aim-ai-security-platform-aim-security",
+  "title": "Aim AI Security Platform",
+  "company": "Aim Security",
+  "description": "The Aim module for AI agent security provide agent observability and monitoring (shadow AI agent discovery, agent run audits with a a reasoning and decision tree log etc), Agent-SPM (ex: protection against supply chain attacks targeting agent AI models) as well as Agent runtime protection (ex: block unauthorized actions via integrated agent tools).",
+  "link": "https://www.aim.security/solutions/aim-ai-agents",
+  "solution_types": [
+    "Proprietary"
+  ],
+  "llmops_stages": [
+    "Operate"
+  ],
+  "agentic_sldc": [
+    {
+      "stage": "Operate",
+      "items": [
+        "Monitor agent memory mutation patterns for drift, Detect task replay, infinite delegation, or hallucination loops.",
+        "Enable human-in-the-loop (HITL) override thresholds on high-risk or ambiguous actions, Continuously scan loaded plugins for CVEs & privilege escalation vectors.",
+        "LLM Incident Detection & Response, Runtime guardrails & moderation; anomalous tool use"
+      ]
+    }
+  ],
+  "top10_2026": [
+    "ASI01:26",
+    "ASI02:26",
+    "ASI03:26",
+    "ASI05:26",
+    "ASI06:26",
+    "ASI07:26",
+    "ASI08:26",
+    "ASI09:26",
+    "ASI10:26"
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "Company Representative"
+}

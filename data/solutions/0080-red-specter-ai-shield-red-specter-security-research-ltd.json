@@ -1,0 +1,38 @@
+{
+  "id": 80,
+  "slug": "red-specter-ai-shield-red-specter-security-research-ltd",
+  "title": "Red Specter AI Shield",
+  "company": "Red Specter Security Research Ltd",
+  "description": "Runtime security platform for LLMs and AI agents. 103 modules covering prompt injection, jailbreak detection, output sanitisation, memory forensics, and kill_switch. Ed25519_signed audit trail.",
+  "link": "https://red-specter.co.uk/",
+  "solution_types": [
+    "Proprietary"
+  ],
+  "llmops_stages": [
+    "Operate"
+  ],
+  "agentic_sldc": [
+    {
+      "stage": "Operate",
+      "items": [
+        "Monitor agent memory mutation patterns for drift, Detect task replay, infinite delegation, or hallucination loops.",
+        "Enable human-in-the-loop (HITL) override thresholds on high-risk or ambiguous actions, Continuously scan loaded plugins for CVEs & privilege escalation vectors.",
+        "LLM Incident Detection & Response, Runtime guardrails & moderation; anomalous tool use"
+      ]
+    }
+  ],
+  "top10_2026": [
+    "ASI01:26",
+    "ASI02:26",
+    "ASI03:26",
+    "ASI05:26",
+    "ASI06:26",
+    "ASI07:26",
+    "ASI08:26",
+    "ASI09:26",
+    "ASI10:26"
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "Company Representative"
+}

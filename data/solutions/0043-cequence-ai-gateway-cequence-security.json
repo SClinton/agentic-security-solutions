@@ -1,0 +1,67 @@
+{
+  "id": 43,
+  "slug": "cequence-ai-gateway-cequence-security",
+  "title": "Cequence AI Gateway",
+  "company": "Cequence Security",
+  "description": "The Cequence AI Gateway unlocks the promise of agentic AI productivity by easily and safely connecting agents to enterprise and SaaS applications.",
+  "link": "https://www.cequence.ai/products/ai-gateway/",
+  "solution_types": [
+    "Proprietary"
+  ],
+  "llmops_stages": [
+    "Deploy",
+    "Operate",
+    "Monitor",
+    "Deploy",
+    "Govern"
+  ],
+  "agentic_sldc": [
+    {
+      "stage": "Deploy",
+      "items": [
+        "Enforce zero-trust policies between agents, tools, & external APIs, Apply & manage runtime Guardrails"
+      ]
+    },
+    {
+      "stage": "Operate",
+      "items": [
+        "Enable human-in-the-loop (HITL) override thresholds on high-risk or ambiguous actions, Runtime guardrails & moderation; anomalous tool use"
+      ]
+    },
+    {
+      "stage": "Monitor",
+      "items": [
+        "Correlate telemetry from agent step tracing, tool execution, & message logs.",
+        "Alert on anomalies;  e.g., goal reversal, unexpected plan depth, adversarial-input, excessive tool usage, or rapid inter-agent chatter.",
+        "Use immutable logs (e.g.",
+        "Sigstore, Immudb) for forensic readiness."
+      ]
+    },
+    {
+      "stage": "Deploy",
+      "items": [
+        "Enforce zero-trust policies between agents, tools, & external APIs, Apply & manage runtime Guardrails"
+      ]
+    },
+    {
+      "stage": "Govern",
+      "items": [
+        "Enforce role- & task-based access policies across agent populations & their tool access."
+      ]
+    }
+  ],
+  "top10_2026": [
+    "ASI01:26",
+    "ASI02:26",
+    "ASI03:26",
+    "ASI05:26",
+    "ASI06:26",
+    "ASI07:26",
+    "ASI08:26",
+    "ASI09:26",
+    "ASI10:26"
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "Company Representative"
+}
