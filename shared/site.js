@@ -8,6 +8,7 @@
     all: [],
     filters: {},
     query: "",
+    sortOrder: "asc",
   };
   cfg.facets.forEach((f) => (state.filters[f.key] = new Set()));
 
@@ -18,6 +19,7 @@
   const emptyEl = document.getElementById("empty-state");
   const countEl = document.getElementById("result-count");
   const searchEl = document.getElementById("search");
+  const sortEl = document.getElementById("sort-select");
   const activeFiltersEl = document.getElementById("active-filters");
   const template = document.getElementById("card-template");
 
@@ -291,8 +293,13 @@
     }
   }
 
+  function sortByTitle(list) {
+    const dir = state.sortOrder === "desc" ? -1 : 1;
+    return list.slice().sort((a, b) => dir * a.title.localeCompare(b.title, undefined, { sensitivity: "base" }));
+  }
+
   function render() {
-    const filtered = state.all.filter((s) => matchesFilters(s) && matchesQuery(s));
+    const filtered = sortByTitle(state.all.filter((s) => matchesFilters(s) && matchesQuery(s)));
     renderCards(filtered);
     countEl.textContent = `${filtered.length} solution${filtered.length === 1 ? "" : "s"}`;
     emptyEl.hidden = filtered.length !== 0;
@@ -304,6 +311,13 @@
     state.query = e.target.value.trim().toLowerCase();
     render();
   });
+
+  if (sortEl) {
+    sortEl.addEventListener("change", (e) => {
+      state.sortOrder = e.target.value;
+      render();
+    });
+  }
 
   loadData()
     .then(() => {

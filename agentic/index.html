@@ -44,6 +44,16 @@
     <div class="content">
       <p class="result-count" id="result-count"></p>
 
+      <div class="sort-bar">
+        <label class="sort-control">
+          Sort:
+          <select id="sort-select" aria-label="Sort solutions by name">
+            <option value="asc">Name (A–Z)</option>
+            <option value="desc">Name (Z–A)</option>
+          </select>
+        </label>
+      </div>
+
       <section id="cards" class="cards" aria-live="polite"></section>
       <p id="empty-state" class="empty-state" hidden>No solutions match your filters.</p>
     </div>

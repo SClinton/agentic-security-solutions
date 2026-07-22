@@ -470,7 +470,30 @@ html.embedded .site-header {
 .result-count {
   color: var(--text-muted);
   font-size: 0.88rem;
+  margin: 0 0 10px;
+}
+
+.sort-bar {
   margin: 0 0 16px;
+}
+
+.sort-control {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.sort-control select {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  padding: 5px 10px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text);
 }
 
 .cards {
