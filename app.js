@@ -5,8 +5,7 @@
     all: [],
     filters: {
       solution_types: new Set(),
-      llmops_stages: new Set(),
-      sldc_stages: new Set(),
+      stage: new Set(),
       top10_2026: new Set(),
     },
     query: "",
@@ -14,8 +13,7 @@
 
   const FACET_LABELS = {
     solution_types: "Solution Type",
-    llmops_stages: "LLMOps Stage",
-    sldc_stages: "Agentic SDLC Phase",
+    stage: "Stage",
     top10_2026: "Top 10 Risk",
   };
 
@@ -32,23 +30,22 @@
     const solutions = await Promise.all(
       files.map((f) => fetch(`data/${f}`).then((r) => r.json()))
     );
-    state.all = solutions.map((s) => ({
-      ...s,
-      sldc_stages: (s.agentic_sldc || []).map((st) => st.stage),
-    }));
+    state.all = solutions.map((s) => {
+      const sldc_stages = (s.agentic_sldc || []).map((st) => st.stage);
+      const stage = Array.from(new Set([...(s.llmops_stages || []), ...sldc_stages]));
+      return { ...s, sldc_stages, stage };
+    });
   }
 
   function buildFacets() {
     const values = {
       solution_types: new Set(),
-      llmops_stages: new Set(),
-      sldc_stages: new Set(),
+      stage: new Set(),
       top10_2026: new Set(),
     };
     for (const s of state.all) {
       s.solution_types.forEach((v) => values.solution_types.add(v));
-      s.llmops_stages.forEach((v) => values.llmops_stages.add(v));
-      s.sldc_stages.forEach((v) => values.sldc_stages.add(v));
+      s.stage.forEach((v) => values.stage.add(v));
       s.top10_2026.forEach((v) => values.top10_2026.add(v));
     }
     for (const facet of Object.keys(values)) {
@@ -56,16 +53,67 @@
       container.innerHTML = "";
       const sorted = Array.from(values[facet]).sort();
       for (const val of sorted) {
-        const chip = document.createElement("button");
-        chip.type = "button";
-        chip.className = "facet-chip";
-        chip.textContent = val;
-        chip.dataset.facet = facet;
-        chip.dataset.value = val;
-        chip.addEventListener("click", () => toggleFilter(facet, val));
-        container.appendChild(chip);
+        const label = document.createElement("label");
+        label.className = "facet-check";
+        const input = document.createElement("input");
+        input.type = "checkbox";
+        input.dataset.facet = facet;
+        input.dataset.value = val;
+        input.addEventListener("change", () => toggleFilter(facet, val));
+        label.appendChild(input);
+        label.appendChild(document.createTextNode(val));
+        container.appendChild(label);
       }
     }
+  }
+
+  function setupDropdowns() {
+    const dropdowns = Array.from(document.querySelectorAll(".facet-dropdown"));
+    function closeAll(except) {
+      dropdowns.forEach((d) => {
+        if (d === except) return;
+        d.classList.remove("open");
+        d.querySelector(".facet-toggle").setAttribute("aria-expanded", "false");
+      });
+    }
+    dropdowns.forEach((dropdown) => {
+      const toggle = dropdown.querySelector(".facet-toggle");
+      toggle.addEventListener("click", (e) => {
+        e.stopPropagation();
+        const isOpen = dropdown.classList.contains("open");
+        closeAll(dropdown);
+        dropdown.classList.toggle("open", !isOpen);
+        toggle.setAttribute("aria-expanded", String(!isOpen));
+      });
+    });
+    document.addEventListener("click", (e) => {
+      if (!e.target.closest(".facet-dropdown")) closeAll(null);
+    });
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeAll(null);
+    });
+  }
+
+  function updateFacetToggleLabels() {
+    document.querySelectorAll(".facet-dropdown").forEach((dropdown) => {
+      const facet = dropdown.dataset.facet;
+      const count = state.filters[facet].size;
+      const chevron = dropdown.querySelector(".facet-toggle-chevron");
+      let countEl = dropdown.querySelector(".facet-toggle-count");
+      if (count > 0 && !countEl) {
+        countEl = document.createElement("span");
+        countEl.className = "facet-toggle-count";
+        dropdown.querySelector(".facet-toggle").insertBefore(countEl, chevron);
+      }
+      if (countEl) {
+        if (count > 0) {
+          countEl.textContent = String(count);
+          countEl.hidden = false;
+        } else {
+          countEl.remove();
+        }
+      }
+    });
   }
 
   function toggleFilter(facet, value) {
@@ -134,11 +182,12 @@
     }
   }
 
-  function syncChipStates() {
-    document.querySelectorAll(".facet-chip").forEach((chip) => {
-      const { facet, value } = chip.dataset;
-      chip.classList.toggle("active", state.filters[facet].has(value));
+  function syncFacetInputs() {
+    document.querySelectorAll(".facet-panel input[type=checkbox]").forEach((input) => {
+      const { facet, value } = input.dataset;
+      input.checked = state.filters[facet].has(value);
     });
+    updateFacetToggleLabels();
   }
 
   function renderCards(list) {
@@ -146,27 +195,22 @@
     for (const s of list) {
       const node = template.content.cloneNode(true);
 
-      const stagebarEl = node.querySelector(".card-stagebar");
-      stagebarEl.textContent = s.llmops_stages.length
-        ? `Stage: ${s.llmops_stages.join(", ")}`
-        : "";
-
       node.querySelector(".card-title").textContent = s.title;
       node.querySelector(".card-company").textContent = s.company;
       node.querySelector(".card-description").textContent = s.description;
 
       const typesEl = node.querySelector(".card-tags-types");
       s.solution_types.forEach((t) => {
-        const badge = document.createElement("span");
-        badge.className = "badge-type";
-        badge.textContent = t;
-        typesEl.appendChild(badge);
+        const tag = document.createElement("span");
+        tag.className = "tag tag-type";
+        tag.textContent = t;
+        typesEl.appendChild(tag);
       });
 
       const llmopsEl = node.querySelector(".card-tags-llmops");
       s.llmops_stages.forEach((t) => {
         const tag = document.createElement("span");
-        tag.className = "tag";
+        tag.className = "tag tag-llmops";
         tag.textContent = t;
         llmopsEl.appendChild(tag);
       });
@@ -174,7 +218,7 @@
       const risksEl = node.querySelector(".card-tags-risks");
       s.top10_2026.forEach((t) => {
         const tag = document.createElement("span");
-        tag.className = "tag";
+        tag.className = "tag tag-risk";
         tag.textContent = t;
         risksEl.appendChild(tag);
       });
@@ -219,7 +263,7 @@
     countEl.textContent = `${filtered.length} solution${filtered.length === 1 ? "" : "s"}`;
     emptyEl.hidden = filtered.length !== 0;
     renderActiveFilterChips();
-    syncChipStates();
+    syncFacetInputs();
   }
 
   searchEl.addEventListener("input", (e) => {
@@ -230,6 +274,7 @@
   loadData()
     .then(() => {
       buildFacets();
+      setupDropdowns();
       render();
     })
     .catch((err) => {
