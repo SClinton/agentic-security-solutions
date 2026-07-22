@@ -67,6 +67,168 @@
     );
   }
 
+  // --- Taxonomy checklist (optional, config-driven) -------------------------
+
+  let taxonomyData = null;
+
+  async function loadTaxonomy() {
+    if (!cfg.taxonomy) return null;
+    if (taxonomyData) return taxonomyData;
+    taxonomyData = await fetch(cfg.taxonomy.path).then((r) => r.json());
+    return taxonomyData;
+  }
+
+  function isCapabilityChecked(existingCoverage, team, stage, name) {
+    if (!existingCoverage) return false;
+    const target = name.toLowerCase();
+
+    // Exact team+stage+name match (data already produced by this checklist).
+    const structuredMatch = existingCoverage.some((group) => {
+      const teamMatches = group.team ? group.team === team : true;
+      const stageMatches = group.group === stage;
+      if (!teamMatches || !stageMatches) return false;
+      return (group.items || []).some((item) => item.trim().toLowerCase() === target);
+    });
+    if (structuredMatch) return true;
+
+    // Fallback for legacy entries predating this taxonomy, whose coverage
+    // items aren't grouped by team/stage: match the name anywhere.
+    return existingCoverage.some((group) =>
+      !group.team && (group.items || []).some((item) => item.trim().toLowerCase() === target)
+    );
+  }
+
+  function renderTaxonomyChecklist(taxonomy, existingCoverage) {
+    if (!cfg.taxonomy) return;
+    const container = document.getElementById(cfg.taxonomy.containerId);
+    if (!container) return;
+    container.innerHTML = "";
+
+    Object.keys(taxonomy).forEach((team) => {
+      const teamFieldset = document.createElement("fieldset");
+      teamFieldset.className = "taxonomy-team";
+      const legend = document.createElement("legend");
+      legend.textContent = team;
+      teamFieldset.appendChild(legend);
+
+      Object.keys(taxonomy[team]).forEach((stage) => {
+        const stageBlock = document.createElement("div");
+        stageBlock.className = "taxonomy-stage";
+        const h4 = document.createElement("h4");
+        h4.textContent = stage;
+        stageBlock.appendChild(h4);
+
+        const grid = document.createElement("div");
+        grid.className = "checkbox-grid";
+        taxonomy[team][stage].forEach((cap) => {
+          const label = document.createElement("label");
+          label.className = "checkbox-chip";
+          label.title = cap.description || "";
+          const input = document.createElement("input");
+          input.type = "checkbox";
+          input.name = "taxonomy";
+          input.dataset.team = team;
+          input.dataset.stage = stage;
+          input.value = cap.name;
+          if (isCapabilityChecked(existingCoverage, team, stage, cap.name)) input.checked = true;
+          label.appendChild(input);
+          label.appendChild(document.createTextNode(cap.name));
+          grid.appendChild(label);
+        });
+        stageBlock.appendChild(grid);
+        teamFieldset.appendChild(stageBlock);
+      });
+
+      container.appendChild(teamFieldset);
+    });
+  }
+
+  function collectTaxonomySelections() {
+    const groups = new Map();
+    document.querySelectorAll('input[name="taxonomy"]:checked').forEach((input) => {
+      const key = `${input.dataset.team}::${input.dataset.stage}`;
+      if (!groups.has(key)) {
+        groups.set(key, { team: input.dataset.team, group: input.dataset.stage, items: [] });
+      }
+      groups.get(key).items.push(input.value);
+    });
+    return Array.from(groups.values());
+  }
+
+  // --- Logo upload (rename-on-download helper; no backend to receive it) ----
+
+  function slugify(text) {
+    return (
+      (text || "")
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/^-+|-+$/g, "") || "solution"
+    );
+  }
+
+  function initLogoUpload() {
+    const fileInput = document.getElementById("logo_file");
+    const companyInput = document.getElementById("company");
+    const preview = document.getElementById("logo-preview");
+    const hint = document.getElementById("logo-hint");
+    if (!fileInput || !companyInput || !preview || !hint) return;
+
+    function targetFilename() {
+      const file = fileInput.files[0];
+      if (!file) return null;
+      const ext = (file.name.split(".").pop() || "png").toLowerCase();
+      return `${slugify(companyInput.value)}.${ext}`;
+    }
+
+    function refresh() {
+      const file = fileInput.files[0];
+      if (!file) {
+        preview.hidden = true;
+        preview.innerHTML = "";
+        hint.textContent =
+          "PNG, SVG, JPEG, or WebP. Since this goes through a GitHub Issue, you'll attach the " +
+          "image to the issue yourself after it opens (drag & drop into the comment box).";
+        return;
+      }
+      const filename = targetFilename();
+      const url = URL.createObjectURL(file);
+      preview.hidden = false;
+      preview.innerHTML = "";
+      const img = document.createElement("img");
+      img.src = url;
+      img.alt = "Logo preview";
+      preview.appendChild(img);
+      const dl = document.createElement("a");
+      dl.href = url;
+      dl.download = filename;
+      dl.className = "btn logo-download-btn";
+      dl.textContent = `Download as ${filename}`;
+      preview.appendChild(dl);
+      hint.textContent =
+        `If approved, this will be saved as ${cfg.dbKey}/logos/${filename}. Download it renamed ` +
+        `above, then drag that file into the GitHub Issue after it opens.`;
+    }
+
+    fileInput.addEventListener("change", refresh);
+    companyInput.addEventListener("input", () => {
+      if (fileInput.files[0]) refresh();
+    });
+    refresh();
+  }
+
+  function logoIssueLines() {
+    const fileInput = document.getElementById("logo_file");
+    const companyInput = document.getElementById("company");
+    if (!fileInput || !fileInput.files[0]) return [];
+    const file = fileInput.files[0];
+    const ext = (file.name.split(".").pop() || "png").toLowerCase();
+    const filename = `${slugify(companyInput.value)}.${ext}`;
+    return [
+      "",
+      `**Company Logo:** attached below — if approved, save as \`${cfg.dbKey}/logos/${filename}\`.`,
+    ];
+  }
+
   function buildIssueBody(data, target) {
     const lines = [];
     if (mode === "edit") {
@@ -88,7 +250,22 @@
     cfg.formFacets.forEach((f) => {
       lines.push(`**${f.label}:** ${(data[f.key] || []).join(", ") || "—"}`);
     });
-    lines.push("", `**${cfg.coverageLabel}:**`, data.characteristics || "—");
+
+    if (cfg.taxonomy) {
+      lines.push("", `**${cfg.coverageLabel}:**`);
+      if (data.coverage.length) {
+        data.coverage.forEach((group) => {
+          lines.push(`- ${group.team} — ${group.group}: ${group.items.join(", ")}`);
+        });
+      } else {
+        lines.push("—");
+      }
+    } else {
+      lines.push("", `**${cfg.coverageLabel}:**`, data.characteristics || "—");
+    }
+
+    lines.push(...logoIssueLines());
+
     if (mode === "edit") {
       lines.push("", `**Reason for this change:**`, data.edit_reason || "—");
     }
@@ -116,11 +293,16 @@
       company: document.getElementById("company").value.trim(),
       description: document.getElementById("description").value.trim(),
       link: document.getElementById("link").value.trim(),
-      characteristics: document.getElementById("characteristics").value.trim(),
       submitter_name: document.getElementById("submitter_name").value.trim(),
       submitter_affiliation: document.getElementById("submitter_affiliation").value.trim(),
       submitter_email: document.getElementById("submitter_email").value.trim(),
     };
+    if (cfg.taxonomy) {
+      data.coverage = collectTaxonomySelections();
+    } else {
+      const charsEl = document.getElementById("characteristics");
+      data.characteristics = charsEl ? charsEl.value.trim() : "";
+    }
     cfg.formFacets.forEach((f) => {
       data[f.key] = getChecked(f.key);
     });
@@ -160,9 +342,11 @@
   async function initAdd() {
     const form = document.getElementById("submit-form");
     const note = document.getElementById("form-note");
+    initLogoUpload();
     try {
       const entries = await loadAllCurrentSolutions();
       renderFacetCheckboxes(buildFacetValueSets(entries), null);
+      if (cfg.taxonomy) renderTaxonomyChecklist(await loadTaxonomy(), null);
     } catch (err) {
       console.error("Failed to load facet values", err);
     }
@@ -201,9 +385,6 @@
     }
 
     const s = target.current;
-    const characteristics = (s.coverage || [])
-      .map((g) => `${g.group}: ${g.items.join(" ")}`)
-      .join("\n");
 
     editingNote.hidden = false;
     editingNote.textContent = `Editing "${s.title}" — currently version ${target.meta.current_version} of ${target.meta.versions.length}.`;
@@ -212,9 +393,18 @@
     document.getElementById("company").value = s.company || "";
     document.getElementById("description").value = s.description || "";
     document.getElementById("link").value = s.link || "";
-    document.getElementById("characteristics").value = characteristics;
+
+    if (cfg.taxonomy) {
+      renderTaxonomyChecklist(await loadTaxonomy(), s.coverage || []);
+    } else {
+      const charsEl = document.getElementById("characteristics");
+      if (charsEl) {
+        charsEl.value = (s.coverage || []).map((g) => `${g.group}: ${g.items.join(" ")}`).join("\n");
+      }
+    }
 
     renderFacetCheckboxes(buildFacetValueSets(entries), s);
+    initLogoUpload();
 
     form.hidden = false;
 

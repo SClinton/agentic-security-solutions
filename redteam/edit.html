@@ -50,6 +50,13 @@
     </div>
 
     <div class="field">
+      <label for="logo_file">Company Logo (optional)</label>
+      <input type="file" id="logo_file" accept="image/png,image/svg+xml,image/jpeg,image/webp">
+      <div id="logo-preview" class="logo-preview" hidden></div>
+      <span class="hint" id="logo-hint"></span>
+    </div>
+
+    <div class="field">
       <label for="description">Description <span aria-hidden="true">*</span></label>
       <textarea id="description" name="description" required></textarea>
     </div>
@@ -77,10 +84,10 @@
     </div>
 
     <div class="field">
-      <label for="characteristics">Red Team Coverage</label>
-      <textarea id="characteristics" name="characteristics"
-        placeholder="Describe specific capabilities, e.g. &quot;Threat-model design aids, LLM attack-surface mapping.&quot;"></textarea>
-      <span class="hint">Freeform — reference the team/stage above where relevant.</span>
+      <label>Red Team Coverage</label>
+      <span class="hint">Check every capability this solution supports, per the OWASP GenAI
+        Security Project's Red Teaming Solutions Taxonomy.</span>
+      <div id="taxonomy-checklist" class="taxonomy-checklist"></div>
     </div>
 
     <div class="field">

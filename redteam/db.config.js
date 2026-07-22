@@ -31,6 +31,14 @@ window.DB_CONFIG = {
     { key: "risk_maps", label: "Risk Maps Supported" },
   ],
 
+  // Authoritative capability checklist (replaces the freeform coverage
+  // textarea): fetched, grouped by Team > Stage, rendered as checkboxes.
+  // Selections become the entry's "coverage" field.
+  taxonomy: {
+    path: "taxonomy/rt_taxonomy.json",
+    containerId: "taxonomy-checklist",
+  },
+
   issueLabelNew: "redteam-new-submission",
   issueLabelEdit: "redteam-edit-suggestion",
 };

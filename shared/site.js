@@ -267,7 +267,7 @@
           const div = document.createElement("div");
           div.className = "sldc-stage";
           const h4 = document.createElement("h4");
-          h4.textContent = group.group;
+          h4.textContent = group.team ? `${group.team} — ${group.group}` : group.group;
           div.appendChild(h4);
           const ul = document.createElement("ul");
           group.items.forEach((item) => {

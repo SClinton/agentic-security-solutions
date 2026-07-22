@@ -18,7 +18,13 @@ securing generative and agentic AI systems, published via GitHub Pages.
   database's `index.html`) to hide its own title/breadcrumb/banner when shown inside the
   umbrella page's iframe.
 - `shared/form.js` — the add/edit form engine (checkbox groups, pre-fill on edit, GitHub Issue
-  body). Also driven by `db.config.js`.
+  body). Also driven by `db.config.js`. If a database's config sets `taxonomy: {path,
+  containerId}`, the freeform coverage textarea is replaced with a checklist built from that
+  taxonomy JSON (grouped Team > Stage > capability); selections become the entry's `coverage`
+  field. Every form also offers an optional logo upload: it's renamed client-side to
+  `<company-slug>.<ext>` (a "Download renamed file" button) for the submitter to drag into the
+  GitHub Issue, since a URL-triggered issue can't carry a file attachment automatically - the
+  maintainer saves it to `<db>/logos/` on acceptance.
 - `shared/build_common.py` — shared Python helpers for turning a landscape CSV into versioned
   per-solution JSON.
 - `apply_edit.py` — maintainer tool (works across all databases) to accept an edit suggestion as
@@ -47,7 +53,10 @@ Each database is a self-contained folder:
 
 Currently:
 - **`agentic/`** — Agentic Security Solutions, sourced from `agentic/upload/AgenticSolutions.csv`.
-- **`redteam/`** — Red Team Solutions, sourced from `redteam/upload/RedTeamSolutions.csv`.
+- **`redteam/`** — Red Team Solutions, sourced from `redteam/upload/RedTeamSolutions.csv`. Its
+  `taxonomy/rt_taxonomy.md` is the authoritative capability taxonomy (Red/Blue/Purple/Shared ×
+  lifecycle stage); `taxonomy/build_taxonomy.py` regenerates `rt_taxonomy.json` from it whenever
+  the markdown changes, which drives the "Red Team Coverage" checklist on `add.html`/`edit.html`.
 
 ### Adding a new database
 

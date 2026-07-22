@@ -749,6 +749,12 @@ html.embedded .site-header {
   margin-top: 4px;
 }
 
+.field input[type="file"] {
+  display: block;
+  font-size: 0.88rem;
+  color: var(--text);
+}
+
 .field input[type="text"],
 .field input[type="email"],
 .field input[type="url"],
@@ -794,6 +800,71 @@ html.embedded .site-header {
 
 .checkbox-chip input {
   accent-color: var(--accent-teal);
+}
+
+.taxonomy-checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.taxonomy-team {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin: 0;
+}
+
+.taxonomy-team legend {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 0 6px;
+  color: var(--text-strong);
+}
+
+.taxonomy-stage {
+  margin-top: 12px;
+}
+
+.taxonomy-stage:first-of-type {
+  margin-top: 4px;
+}
+
+.taxonomy-stage h4 {
+  margin: 0 0 6px;
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--text-muted);
+}
+
+.logo-preview {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.logo-preview img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg-card);
+  padding: 4px;
+}
+
+.logo-download-btn {
+  background: var(--accent-teal);
+  border-color: var(--accent-teal);
+  color: var(--accent-teal-contrast);
+  padding: 7px 14px;
+  font-size: 0.82rem;
 }
 
 .form-actions {

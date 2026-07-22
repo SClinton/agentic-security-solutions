@@ -1,0 +1,410 @@
+{
+  "Red": {
+    "Scope / Plan": [
+      {
+        "name": "Threat-model design aids",
+        "description": "Structured tools that guide practitioners in identifying AI-specific threat actors, misuse scenarios, attack paths, and failure modes across models, agents, data pipelines, and integrations."
+      },
+      {
+        "name": "LLM / agent attack-surface mapping",
+        "description": "Capabilities that enumerate and visualize exposed prompts, tools, APIs, memory stores, plugins, and decision boundaries where adversarial interaction or exploitation may occur."
+      }
+    ],
+    "Data Augmentation & Fine-Tuning": [
+      {
+        "name": "Data-poison fuzzing",
+        "description": "Techniques that intentionally inject malformed, adversarial, or misleading training data to evaluate model sensitivity, robustness, and susceptibility to poisoning attacks."
+      },
+      {
+        "name": "Synthetic insert generation",
+        "description": "Generation of artificial malicious, biased, or edge-case data designed to stress test training and fine-tuning pipelines without using real-world sensitive data."
+      },
+      {
+        "name": "Malicious model artifacts",
+        "description": "Simulated tampered or compromised model files, weights, or metadata used to assess detection, validation, and integrity controls within AI supply chains."
+      }
+    ],
+    "Development & Experimentation": [
+      {
+        "name": "Model vulnerability scanning",
+        "description": "Automated testing of models for known and emerging weaknesses such as prompt injection, jailbreaks, bias amplification, unsafe completions, and unintended capability exposure."
+      },
+      {
+        "name": "Agent-logic corruption testing",
+        "description": "Evaluation of agent workflows under adversarial manipulation of reasoning chains, memory, tool outputs, or control logic to uncover unsafe autonomous behaviors."
+      }
+    ],
+    "Test & Evaluation": [
+      {
+        "name": "Automated adversarial suites",
+        "description": "Repeatable collections of adversarial test cases that exercise models and agents across common and novel attack patterns to establish baseline and comparative risk metrics."
+      },
+      {
+        "name": "Prompt-chaining attacks",
+        "description": "Testing techniques that exploit multi-step prompt dependencies to induce policy bypass, goal hijacking, or unintended behaviors not visible in single-prompt tests."
+      },
+      {
+        "name": "Multi-turn attacks",
+        "description": "Adversarial testing across extended interactions to identify emergent failures that arise only through sustained dialogue or state accumulation."
+      },
+      {
+        "name": "Protocol attacks (A2A, MCP)",
+        "description": "Simulation of malicious use or spoofing of agent-to-agent and model communication protocols to test trust boundaries and authentication mechanisms."
+      },
+      {
+        "name": "RAG-poison scenario runners",
+        "description": "Execution of adversarial scenarios targeting retrieval-augmented generation pipelines by manipulating indexed data or retrieval logic to influence outputs."
+      }
+    ],
+    "Release": [
+      {
+        "name": "Supply-chain attack simulation",
+        "description": "Adversarial testing of model, data, and dependency delivery processes to assess exposure to compromised components, unauthorized changes, or provenance failures."
+      }
+    ],
+    "Deploy": [
+      {
+        "name": "Tool-chain / plug-in misuse simulation",
+        "description": "Testing of deployed tools and plugins to identify abuse paths where integrations enable privilege escalation, data exfiltration, or unintended side effects."
+      },
+      {
+        "name": "Agent privilege-escalation emulation",
+        "description": "Simulation of scenarios in which agents attempt to exceed intended authority, access restricted tools, or bypass control boundaries in deployed environments."
+      },
+      {
+        "name": "Cross-tenant data exposure testing",
+        "description": "Validation that deployed AI systems enforce tenant isolation and prevent unintended data leakage across users or organizational boundaries."
+      }
+    ],
+    "Operate": [
+      {
+        "name": "Autonomous red bots",
+        "description": "Self-directed adversarial agents that continuously probe deployed AI systems for weaknesses without requiring manual test execution."
+      },
+      {
+        "name": "Continuous prompt fuzzing",
+        "description": "Ongoing generation and mutation of prompts to discover new attack patterns and emergent failure modes in production or production-like systems."
+      },
+      {
+        "name": "Memory poisoning",
+        "description": "Testing of agent memory stores and long-term state mechanisms to evaluate susceptibility to persistent manipulation or corruption."
+      }
+    ],
+    "Monitor": [
+      {
+        "name": "Synthetic user & rogue-agent generation",
+        "description": "Creation of simulated malicious users or compromised agents to test detection and monitoring capabilities under realistic operating conditions."
+      }
+    ],
+    "Govern": [
+      {
+        "name": "Audit-grade attack-path replay",
+        "description": "Capabilities to reproduce adversarial tests and attacks with full context and evidence to support audits, compliance reviews, and post-incident analysis."
+      }
+    ]
+  },
+  "Blue": {
+    "Scope / Plan": [
+      {
+        "name": "AI asset inventory",
+        "description": "Centralized and continuously updated catalog of AI models, agents, datasets, tools, plugins, and environments used to establish ownership and accountability."
+      },
+      {
+        "name": "AI posture dashboards (AI-SPM / AI-TRiSM)",
+        "description": "Dashboards that aggregate AI risk indicators, control coverage, and compliance signals to provide situational awareness across the AI estate."
+      },
+      {
+        "name": "Risk-scoring boards",
+        "description": "Mechanisms that quantify AI risks based on likelihood, impact, and control effectiveness to support prioritization and decision-making."
+      }
+    ],
+    "Data Augmentation & Fine-Tuning": [
+      {
+        "name": "Data lineage & provenance tracking",
+        "description": "Capabilities that trace the origin, transformation, and usage of training and fine-tuning data to support integrity, compliance, and incident response."
+      },
+      {
+        "name": "DLP scanning",
+        "description": "Detection of sensitive, personal, or regulated information within AI datasets to reduce privacy and regulatory risk."
+      },
+      {
+        "name": "Bias–toxicity co-auditing",
+        "description": "Joint assessment of fairness, bias, and harmful content characteristics in datasets and model outputs to prevent systemic harm."
+      }
+    ],
+    "Development & Experimentation": [
+      {
+        "name": "SAST / DAST / IAST scanning",
+        "description": "Application of traditional application security testing methods to AI-related code, services, and infrastructure components."
+      },
+      {
+        "name": "LLM plugin, tool, and infrastructure scanning",
+        "description": "Evaluation of third-party and internal AI integrations for vulnerabilities, misconfigurations, and unsafe behaviors."
+      }
+    ],
+    "Test & Evaluation": [
+      {
+        "name": "Guardrail conformance testing",
+        "description": "Validation that deployed guardrails consistently enforce content, safety, and behavioral policies under expected and adversarial conditions."
+      },
+      {
+        "name": "Policy testing & validation",
+        "description": "Systematic evaluation of policy definitions to ensure they are complete, correctly implemented, and aligned with organizational intent."
+      }
+    ],
+    "Release": [
+      {
+        "name": "Secure CI/CD gates",
+        "description": "Automated enforcement points that prevent AI artifacts from being released unless defined security and risk criteria are satisfied."
+      },
+      {
+        "name": "Signing & provenance validation",
+        "description": "Verification that released models, code, and data artifacts originate from trusted sources and have not been altered."
+      }
+    ],
+    "Deploy": [
+      {
+        "name": "LLM / agent firewall",
+        "description": "Runtime enforcement layer that filters inputs, outputs, and tool usage based on defined policies and risk thresholds."
+      },
+      {
+        "name": "Policy management",
+        "description": "Centralized systems for defining, versioning, and deploying AI security and safety policies across environments."
+      }
+    ],
+    "Operate": [
+      {
+        "name": "Runtime AI-SPM / AI-WAF",
+        "description": "Continuous monitoring and protection capabilities that detect and mitigate attacks against AI systems during operation."
+      },
+      {
+        "name": "Anomaly & drift detection",
+        "description": "Detection of deviations in model behavior, agent actions, or data distributions that may indicate failure or attack."
+      },
+      {
+        "name": "Trust-boundary alerting",
+        "description": "Alerting mechanisms that identify violations of defined trust boundaries between agents, systems, users, and data."
+      }
+    ],
+    "Monitor": [
+      {
+        "name": "Posture & metric collection",
+        "description": "Aggregation of operational, security, and risk metrics from deployed AI systems to support analysis and reporting."
+      },
+      {
+        "name": "UEBA for AI and agent signals",
+        "description": "Behavior-based analytics applied to AI and agent activity to detect abnormal or malicious patterns."
+      }
+    ],
+    "Govern": [
+      {
+        "name": "Policy & compliance orchestration (AI-TRiSM)",
+        "description": "Capabilities that align AI operations with regulatory, legal, and internal governance requirements across the lifecycle."
+      },
+      {
+        "name": "Executive reporting",
+        "description": "High-level summaries of AI risk posture, trends, and residual risk designed for leadership and board audiences."
+      }
+    ]
+  },
+  "Purple": {
+    "Scope / Plan": [
+      {
+        "name": "Import red scenarios",
+        "description": "Ingestion of adversarial test cases and threat scenarios to enable coordinated defensive validation."
+      },
+      {
+        "name": "Map red scenarios to blue controls",
+        "description": "Traceability between attacks and defensive measures to identify gaps and measure coverage."
+      }
+    ],
+    "Data Augmentation & Fine-Tuning": [
+      {
+        "name": "Replay red mutations through blue filters",
+        "description": "Re-execution of known adversarial data patterns to confirm that defensive controls remain effective over time."
+      },
+      {
+        "name": "Corpus diffing",
+        "description": "Comparison of dataset versions to identify changes that may introduce new risks or regressions."
+      }
+    ],
+    "Development & Experimentation": [
+      {
+        "name": "Interactive sandbox",
+        "description": "Shared environment where red and blue teams collaboratively test attacks and defenses without production risk."
+      },
+      {
+        "name": "Defender signal analysis",
+        "description": "Analysis of detection outputs generated during adversarial testing to assess signal quality and coverage."
+      },
+      {
+        "name": "Reasoning-trace capture",
+        "description": "Collection of model or agent reasoning steps to support joint investigation and remediation."
+      },
+      {
+        "name": "Auto-ticketing for failed tests",
+        "description": "Automatic creation of remediation work items when adversarial tests reveal control failures."
+      }
+    ],
+    "Test & Evaluation": [
+      {
+        "name": "One-click purple runs",
+        "description": "Unified execution of adversarial tests with integrated defensive measurement and reporting."
+      },
+      {
+        "name": "Metrics exporting (blue KPIs)",
+        "description": "Export of defensive metrics aligned to adversarial outcomes for continuous improvement."
+      },
+      {
+        "name": "Success-threshold analysis",
+        "description": "Definition and evaluation of acceptable performance and risk thresholds."
+      },
+      {
+        "name": "Hallucination vs misalignment labeling",
+        "description": "Classification of failures to distinguish factual errors from policy or alignment violations."
+      },
+      {
+        "name": "Continuous Integration hooks",
+        "description": "Integration of purple testing into continuous integration workflows."
+      }
+    ],
+    "Release": [
+      {
+        "name": "Purple pipeline analysis",
+        "description": "End-to-end assessment of release pipelines to identify residual risks across red and blue perspectives."
+      },
+      {
+        "name": "Release-risk dashboards",
+        "description": "Visualization of aggregated risks and mitigations at release time."
+      },
+      {
+        "name": "Rollback script generation",
+        "description": "Automated preparation of rollback procedures to reduce blast radius of failed releases."
+      }
+    ],
+    "Deploy": [
+      {
+        "name": "Live traffic chaos simulation",
+        "description": "Controlled disruption of live or mirrored traffic to test resilience and detection under stress."
+      },
+      {
+        "name": "Real-time policy shadow mode",
+        "description": "Observation of policy effects without enforcement to assess potential impact."
+      },
+      {
+        "name": "Protocol spoofing (MCP / A2A)",
+        "description": "Testing of detection and response to spoofed or malicious inter-agent communications."
+      },
+      {
+        "name": "Cost-impact tracking",
+        "description": "Measurement of financial and operational costs associated with attacks and defenses."
+      }
+    ],
+    "Operate": [
+      {
+        "name": "Closed-loop purple coaching",
+        "description": "Automated feedback mechanisms that use attack results to continuously tune defenses."
+      },
+      {
+        "name": "Red/blue alert correlation",
+        "description": "Linking adversarial actions with defensive alerts to validate coverage and accuracy."
+      },
+      {
+        "name": "Rule tuning",
+        "description": "Refinement of defensive detection and enforcement rules based on observed failures."
+      },
+      {
+        "name": "Agent behavior baselining",
+        "description": "Establishment of normal behavior profiles to improve anomaly detection."
+      },
+      {
+        "name": "Auto guardrail patching",
+        "description": "Automated updates to guardrails in response to discovered weaknesses."
+      }
+    ],
+    "Monitor": [
+      {
+        "name": "Purple SIEM lens",
+        "description": "Unified analysis layer that combines adversarial and defensive telemetry."
+      },
+      {
+        "name": "Merged telemetry analysis",
+        "description": "Joint reporting that correlates red-team activity with blue-team performance."
+      },
+      {
+        "name": "Time-series scoring",
+        "description": "Tracking of risk and control effectiveness trends over time."
+      },
+      {
+        "name": "Adaptive hunt packs",
+        "description": "Dynamic threat-hunting strategies informed by recent adversarial findings."
+      },
+      {
+        "name": "Model-drift vs threat-drift analysis",
+        "description": "Differentiation between benign model evolution and adversarial manipulation."
+      }
+    ],
+    "Govern": [
+      {
+        "name": "Residual risk analysis cycles",
+        "description": "Ongoing assessment of remaining risks after mitigation efforts."
+      },
+      {
+        "name": "Risk simulators",
+        "description": "Forward-looking modeling of potential future AI risk scenarios."
+      },
+      {
+        "name": "Feedback to retraining & IR playbooks",
+        "description": "Systematic incorporation of adversarial findings into model improvement and incident response processes."
+      }
+    ]
+  },
+  "Shared": {
+    "Scope / Plan": [
+      {
+        "name": "Risk taxonomy import/export",
+        "description": "Standardized representation of AI risks to enable interoperability across tools and frameworks."
+      },
+      {
+        "name": "Visual data-flow mapping",
+        "description": "Shared visualization of AI system dependencies and trust boundaries."
+      },
+      {
+        "name": "Export of tests as stories",
+        "description": "Human-readable representations of tests for communication and governance."
+      }
+    ],
+    "Data Augmentation & Fine-Tuning": [
+      {
+        "name": "Bias / PII scorecards",
+        "description": "Standardized reporting of sensitive data and bias indicators."
+      },
+      {
+        "name": "Signed data packages",
+        "description": "Cryptographically verifiable datasets used across teams."
+      }
+    ],
+    "Development & Experimentation": [
+      {
+        "name": "IDE plugins",
+        "description": "Developer-integrated tools that surface AI risks early in the lifecycle."
+      }
+    ],
+    "Release & Operate": [
+      {
+        "name": "AI-BOM / SBOM diffing",
+        "description": "Traceability and change detection across models, data, and code."
+      }
+    ],
+    "Govern": [
+      {
+        "name": "Framework mapping",
+        "description": "Alignment of capabilities to standards such as NIST AI RMF, OWASP, MITRE, and ISO."
+      },
+      {
+        "name": "Signed artifact stores",
+        "description": "Tamper-evident storage of evidence and artifacts for audit and compliance."
+      }
+    ]
+  }
+}
