@@ -23,29 +23,9 @@
 </header>
 
 <main class="wrap directory-main">
-  <div class="db-grid" id="db-grid">
-    <a class="db-card" href="agentic/index.html">
-      <div class="db-card-head">
-        <h2>Agentic Security Solutions</h2>
-      </div>
-      <div class="db-card-body">
-        <p>Tools and platforms for securing agentic AI systems across the LLMOps and Agentic SDLC
-          lifecycle — red-teaming, runtime guardrails, monitoring, and governance mapped to the
-          Agentic Top 10 (2026).</p>
-        <p class="db-card-count" data-manifest="agentic/data/manifest.json">Loading…</p>
-      </div>
-    </a>
-
-    <a class="db-card" href="redteam/index.html">
-      <div class="db-card-head">
-        <h2>Red Team Solutions</h2>
-      </div>
-      <div class="db-card-body">
-        <p>Tools and platforms for red, blue, and purple teaming generative and agentic AI systems —
-          attack-surface mapping, adversarial testing, and coverage against OWASP risk frameworks.</p>
-        <p class="db-card-count" data-manifest="redteam/data/manifest.json">Loading…</p>
-      </div>
-    </a>
+  <div class="db-tabs" id="db-tabs" role="tablist" aria-label="Solution databases"></div>
+  <div class="db-iframe-wrap">
+    <iframe id="db-iframe" class="db-iframe" title="Database contents"></iframe>
   </div>
 </main>
 
@@ -56,16 +36,79 @@
 </footer>
 
 <script>
-  document.querySelectorAll(".db-card-count").forEach((el) => {
-    fetch(el.dataset.manifest)
-      .then((r) => r.json())
-      .then((list) => {
-        el.textContent = `${list.length} solution${list.length === 1 ? "" : "s"}`;
-      })
-      .catch(() => {
-        el.textContent = "";
-      });
+  // Add a new database to the directory by adding one entry here - no other
+  // changes needed for it to appear as a tab.
+  const DATABASES = [
+    { key: "agentic", label: "Agentic", path: "agentic/index.html" },
+    { key: "redteam", label: "Red Teaming", path: "redteam/index.html" },
+  ];
+
+  const tabsEl = document.getElementById("db-tabs");
+  const iframeEl = document.getElementById("db-iframe");
+  let resizeObserver = null;
+
+  function keyFromHash() {
+    const key = location.hash.replace(/^#/, "");
+    return DATABASES.some((d) => d.key === key) ? key : DATABASES[0].key;
+  }
+
+  function activate(key, { updateHash = true } = {}) {
+    const db = DATABASES.find((d) => d.key === key) || DATABASES[0];
+
+    tabsEl.querySelectorAll(".db-tab").forEach((btn) => {
+      const isActive = btn.dataset.key === db.key;
+      btn.classList.toggle("active", isActive);
+      btn.setAttribute("aria-selected", String(isActive));
+      btn.tabIndex = isActive ? 0 : -1;
+    });
+
+    if (updateHash) history.replaceState(null, "", `#${db.key}`);
+
+    iframeEl.style.height = "600px";
+    iframeEl.src = `${db.path}?embedded=1`;
+  }
+
+  function attachAutoResize() {
+    if (resizeObserver) resizeObserver.disconnect();
+    try {
+      const doc = iframeEl.contentDocument;
+      if (!doc) return;
+      const resize = () => {
+        const h = doc.documentElement.scrollHeight;
+        if (h) iframeEl.style.height = `${h}px`;
+      };
+      resizeObserver = new ResizeObserver(resize);
+      resizeObserver.observe(doc.documentElement);
+      resize();
+    } catch (err) {
+      console.error("Could not observe iframe content size", err);
+    }
+  }
+
+  DATABASES.forEach((db) => {
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "db-tab";
+    btn.textContent = db.label;
+    btn.dataset.key = db.key;
+    btn.setAttribute("role", "tab");
+    btn.addEventListener("click", () => activate(db.key));
+    btn.addEventListener("keydown", (e) => {
+      if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return;
+      const idx = DATABASES.findIndex((d) => d.key === db.key);
+      const next = e.key === "ArrowRight"
+        ? DATABASES[(idx + 1) % DATABASES.length]
+        : DATABASES[(idx - 1 + DATABASES.length) % DATABASES.length];
+      activate(next.key);
+      tabsEl.querySelector(`.db-tab[data-key="${next.key}"]`).focus();
+    });
+    tabsEl.appendChild(btn);
   });
+
+  iframeEl.addEventListener("load", attachAutoResize);
+  window.addEventListener("hashchange", () => activate(keyFromHash()));
+
+  activate(keyFromHash(), { updateHash: false });
 </script>
 </body>
 </html>

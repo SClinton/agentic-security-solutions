@@ -3,6 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+  if (new URLSearchParams(location.search).get("embedded") === "1") {
+    document.documentElement.classList.add("embedded");
+  }
+</script>
 <title>Red Team Solutions — OWASP GenAI Security Project Solution Directory</title>
 <meta name="description" content="A searchable database of AI red teaming solutions.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
