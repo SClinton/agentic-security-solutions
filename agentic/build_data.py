@@ -65,6 +65,7 @@ def main():
             "stars": int(r.get("stars") or 0),
             "forks": int(r.get("forks") or 0),
             "submitter_affiliation": clean_text(r.get("land_submitter_affiliation", "")),
+            "submitter_email": clean_text(r.get("land_sub_email", "")),
         }
 
         manifest.append(write_solution_folder(DATA_DIR, i, slug, solution))

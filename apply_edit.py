@@ -30,7 +30,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).parent
-EDITABLE_FIELDS = {"title", "company", "description", "link", "tags", "coverage", "submitter_affiliation"}
+EDITABLE_FIELDS = {"title", "company", "description", "link", "tags", "coverage", "submitter_affiliation", "submitter_email"}
 
 
 def data_dir_for(db: str) -> Path:

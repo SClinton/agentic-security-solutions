@@ -74,6 +74,7 @@ def main():
             "stars": int(r.get("GITHUB - Stars") or 0),
             "forks": int(r.get("GITHUB - Forks") or 0),
             "submitter_affiliation": clean_text(r.get("Affiliation", "")),
+            "submitter_email": clean_text(r.get("Submitter eMail", "")),
         }
 
         manifest.append(write_solution_folder(DATA_DIR, i, slug, solution))
