@@ -15,7 +15,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent / "shared"))
 from build_common import clean_text, split_grouped, split_sentence_items, split_simple, slugify, write_solution_folder
 
-SRC = Path(__file__).parent / "AgenticSolutions.csv"
+SRC = Path(__file__).parent / "upload" / "AgenticSolutions.csv"
 DATA_DIR = Path(__file__).parent / "data" / "solutions"
 MANIFEST = Path(__file__).parent / "data" / "manifest.json"
 

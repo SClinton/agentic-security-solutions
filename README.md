@@ -35,7 +35,10 @@ Each database is a self-contained folder:
   edit.html         - "Suggest an Edit" form (linked from each card's ✎ icon)
   db.config.js      - facets, labels, GitHub issue labels for this database
   build_data.py     - imports this database's CSV into data/
-  <Name>.csv        - source data
+  upload/<Name>.csv - source CSV; also the future drop location for batch-update files
+  taxonomy/         - reference material for this database's risk/stage taxonomy
+  logos/            - solution/company logo images
+  badges/           - certification/compliance/directory-listing badge images
   data/manifest.json
   data/solutions/<id-slug>/
     meta.json       - {slug, id, current_version, versions: [...]}
@@ -43,8 +46,8 @@ Each database is a self-contained folder:
 ```
 
 Currently:
-- **`agentic/`** — Agentic Security Solutions, sourced from `AgenticSolutions.csv`.
-- **`redteam/`** — Red Team Solutions, sourced from `RedTeamSolutions.csv`.
+- **`agentic/`** — Agentic Security Solutions, sourced from `agentic/upload/AgenticSolutions.csv`.
+- **`redteam/`** — Red Team Solutions, sourced from `redteam/upload/RedTeamSolutions.csv`.
 
 ### Adding a new database
 
@@ -105,7 +108,7 @@ python3 apply_edit.py <db> <slug> --rollback 2             # repoint "current" b
 
 ## Updating a database from its CSV
 
-1. Edit `<db>/<Name>.csv`.
+1. Edit `<db>/upload/<Name>.csv` (or drop in a replacement batch file there).
 2. Run `python3 <db>/build_data.py`.
 3. Commit the regenerated files in `<db>/data/`.
 
