@@ -1,0 +1,70 @@
+{
+  "id": 2,
+  "slug": "highflame-red-highflame-ai",
+  "title": "Highflame RED",
+  "company": "Highflame AI",
+  "description": "Highflame RED provides autonomous adversarial testing of AI Agents using research backed attack engines that generate novel & real-life adversarial testing scenarios. The RED teaming toolkit includes automatic reconnaissance of target Agent capabilities, Tool and Access privileges to autonomously generate test cases and test. RED also includes our sandboxed inference testing mode (for testing tool & model access in runtime) as well as an LLM Model & MCP Supply Chain Scan that incorporates for complete end-to-end testing.",
+  "link": "https://highflame.com/highflame-red",
+  "tags": {
+    "solution_types": [
+      "Commercial"
+    ],
+    "lifecycle_stages": [
+      "Data Augmentation and Fine-Tuning",
+      "Development and Experimentation",
+      "Test and Evaluation",
+      "Release",
+      "Deploy",
+      "Operate",
+      "Monitor",
+      "Govern"
+    ],
+    "team": [
+      "Red",
+      "Blue",
+      "Purple"
+    ],
+    "risk_maps": [
+      "OWASP Top 10 Risks and Mitigations for LLM Apps 2025",
+      "OWASP Top 10 Risks and Mitigations for Agentic Apps 2026"
+    ]
+  },
+  "coverage": [
+    {
+      "group": "Red, Blue, Purple",
+      "items": [
+        "Data Augmentation and Fine-Tuning",
+        "Development and Experimentation",
+        "Test and Evaluation",
+        "Release",
+        "Deploy",
+        "Operate",
+        "Monitor",
+        "Govern",
+        "Threat-model design aids",
+        "LLM attack-surface mapping",
+        "Agent attack-surface mapping",
+        "AI asset inventory",
+        "AI posture dashboards (AI-SPM / AI-TRiSM)",
+        "Import red scenarios",
+        "Map red scenarios to blue controls",
+        "Risk-scoring dashboards",
+        "Risk taxonomy import/export",
+        "Visual data-flow mapping",
+        "Export of tests as stories",
+        "Data-poison fuzzing;",
+        "Synthetic insert generation",
+        "Malicious model artifacts",
+        "Data lineage & provenance tracking",
+        "DLP scanning",
+        "Bias-toxicity co-auditing",
+        "Bias / PII scorecards",
+        "Signed data packages",
+        "Diff corpus versions"
+      ]
+    }
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "Company Representative"
+}

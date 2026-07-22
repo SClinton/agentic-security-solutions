@@ -1,0 +1,49 @@
+{
+  "id": 67,
+  "slug": "neuraltrust-ai-runtime-security-generative-application-firewall-gaf-neuraltrust",
+  "title": "NeuralTrust AI Runtime Security / Generative Application Firewall (GAF)",
+  "company": "NeuralTrust",
+  "description": "NeuralTrust Generative Application Firewall enforces zero-trust policies across agents, tools, and APIs, applying runtime guardrails, monitoring agent behavior for anomalies, and enabling secure, policy-driven interactions with real-time threat detection and human oversight.",
+  "link": "https://neuraltrust.ai/generative-application-firewall",
+  "tags": {
+    "solution_types": [
+      "Proprietary"
+    ],
+    "llmops_stages": [
+      "Deploy",
+      "Operate"
+    ],
+    "stage": [
+      "Deploy",
+      "Operate"
+    ],
+    "top10_2026": [
+      "ASI01:26",
+      "ASI02:26",
+      "ASI03:26",
+      "ASI05:26",
+      "ASI06:26",
+      "ASI07:26",
+      "ASI08:26",
+      "ASI09:26",
+      "ASI10:26"
+    ]
+  },
+  "coverage": [
+    {
+      "group": "Deploy",
+      "items": [
+        "Enforce zero-trust policies between agents, tools, & external APIs, Apply & manage runtime Guardrails"
+      ]
+    },
+    {
+      "group": "Operate",
+      "items": [
+        "Runtime guardrails & moderation; anomalous tool use"
+      ]
+    }
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "End User"
+}

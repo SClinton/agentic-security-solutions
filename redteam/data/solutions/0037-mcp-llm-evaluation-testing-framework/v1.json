@@ -1,0 +1,38 @@
+{
+  "id": 37,
+  "slug": "mcp-llm-evaluation-testing-framework",
+  "title": "MCP LLM Evaluation & Testing Framework",
+  "company": "",
+  "description": "Framework for evaluating LLM responses using automated testing, including accuracy, relevance, latency, and database validation. Supports prompt testing workflows and trace analysis to identify issues and improve response quality.",
+  "link": "https://github.com/nagarajnumberz/mcp-llm-evaluation-framework",
+  "tags": {
+    "solution_types": [
+      "Open Source"
+    ],
+    "lifecycle_stages": [
+      "Test and Evaluation",
+      "Monitor"
+    ],
+    "team": [
+      "Purple"
+    ],
+    "risk_maps": [
+      "OWASP Top 10 Risks and Mitigations for LLM Apps 2025"
+    ]
+  },
+  "coverage": [
+    {
+      "group": "Purple",
+      "items": [
+        "Test and Evaluation",
+        "Monitor",
+        "AI posture dashboards (AI-SPM / AI-TRiSM)",
+        "Import red scenarios",
+        "Map red scenarios to blue controls"
+      ]
+    }
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "Company Representative"
+}

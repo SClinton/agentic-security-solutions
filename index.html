@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Agentic Security Solutions</title>
-<meta name="description" content="A searchable database of agentic AI security solutions.">
+<title>OWASP GenAI Security Project Solution Directory</title>
+<meta name="description" content="Searchable databases of solutions for securing generative and agentic AI systems.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Inter:wght@600;700;800&display=swap" rel="stylesheet">
@@ -17,87 +17,55 @@
 
 <header class="site-header">
   <div class="wrap header-row">
-    <h1>Agentic Security Solutions</h1>
-    <nav>
-      <a class="btn btn-primary" href="add.html">+ Submit a Solution</a>
-    </nav>
+    <h1>OWASP GenAI Security Project Solution Directory</h1>
   </div>
-  <p class="subtitle">A searchable database of tools and platforms for securing agentic AI systems.</p>
+  <p class="subtitle">Searchable, community-maintained databases of solutions for securing generative and agentic AI systems.</p>
 </header>
 
-<main class="wrap">
-  <input id="search" type="search" placeholder="Search by name, company, or description…" aria-label="Search solutions">
-
-  <div class="layout">
-    <aside class="filters-sidebar">
-      <h2 class="filters-heading">Filters</h2>
-
-      <div class="facet-dropdown" data-facet="solution_types">
-        <button type="button" class="facet-toggle" aria-haspopup="true" aria-expanded="false">
-          <span class="facet-toggle-label">Solution Type</span>
-          <span class="facet-toggle-chevron" aria-hidden="true">⌄</span>
-        </button>
-        <div class="facet-panel" id="facet-solution_types"></div>
+<main class="wrap directory-main">
+  <div class="db-grid" id="db-grid">
+    <a class="db-card" href="agentic/index.html">
+      <div class="db-card-head">
+        <h2>Agentic Security Solutions</h2>
       </div>
-
-      <div class="facet-dropdown" data-facet="stage">
-        <button type="button" class="facet-toggle" aria-haspopup="true" aria-expanded="false">
-          <span class="facet-toggle-label">Stage (LLMOps / Agentic SDLC)</span>
-          <span class="facet-toggle-chevron" aria-hidden="true">⌄</span>
-        </button>
-        <div class="facet-panel" id="facet-stage"></div>
+      <div class="db-card-body">
+        <p>Tools and platforms for securing agentic AI systems across the LLMOps and Agentic SDLC
+          lifecycle — red-teaming, runtime guardrails, monitoring, and governance mapped to the
+          Agentic Top 10 (2026).</p>
+        <p class="db-card-count" data-manifest="agentic/data/manifest.json">Loading…</p>
       </div>
+    </a>
 
-      <div class="facet-dropdown" data-facet="top10_2026">
-        <button type="button" class="facet-toggle" aria-haspopup="true" aria-expanded="false">
-          <span class="facet-toggle-label">Agentic Top 10 (2026)</span>
-          <span class="facet-toggle-chevron" aria-hidden="true">⌄</span>
-        </button>
-        <div class="facet-panel" id="facet-top10_2026"></div>
+    <a class="db-card" href="redteam/index.html">
+      <div class="db-card-head">
+        <h2>Red Team Solutions</h2>
       </div>
-
-      <div class="active-filters" id="active-filters"></div>
-    </aside>
-
-    <div class="content">
-      <p class="result-count" id="result-count"></p>
-
-      <section id="cards" class="cards" aria-live="polite"></section>
-      <p id="empty-state" class="empty-state" hidden>No solutions match your filters.</p>
-    </div>
+      <div class="db-card-body">
+        <p>Tools and platforms for red, blue, and purple teaming generative and agentic AI systems —
+          attack-surface mapping, adversarial testing, and coverage against OWASP risk frameworks.</p>
+        <p class="db-card-count" data-manifest="redteam/data/manifest.json">Loading…</p>
+      </div>
+    </a>
   </div>
 </main>
 
 <footer class="site-footer">
   <div class="wrap">
-    <p>Data sourced from the OWASP Agentic Security Initiative landscape. <a href="add.html">Suggest a solution to add.</a></p>
+    <p>Community-maintained databases from the OWASP GenAI Security Project.</p>
   </div>
 </footer>
 
-<template id="card-template">
-  <article class="card">
-    <div class="card-head">
-      <a class="card-edit-btn" title="Suggest an edit" aria-label="Suggest an edit">
-        <span aria-hidden="true">✎</span>
-      </a>
-      <h2 class="card-title"></h2>
-      <span class="card-company"></span>
-    </div>
-    <p class="card-description"></p>
-    <div class="card-tags card-tags-types"></div>
-    <div class="card-tags card-tags-llmops"></div>
-    <details class="card-details">
-      <summary>Taxonomy Coverage</summary>
-      <div class="card-sldc"></div>
-    </details>
-    <div class="card-tags card-tags-risks"></div>
-    <div class="card-footer">
-      <a class="card-link" target="_blank" rel="noopener noreferrer">Visit site ↗</a>
-      <span class="card-version" title="Version history"></span>
-    </div>
-  </article>
-</template>
-
-<script src="app.js"></script>
+<script>
+  document.querySelectorAll(".db-card-count").forEach((el) => {
+    fetch(el.dataset.manifest)
+      .then((r) => r.json())
+      .then((list) => {
+        el.textContent = `${list.length} solution${list.length === 1 ? "" : "s"}`;
+      })
+      .catch(() => {
+        el.textContent = "";
+      });
+  });
+</script>
 </body>
 </html>

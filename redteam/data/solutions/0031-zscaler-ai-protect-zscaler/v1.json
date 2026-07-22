@@ -1,0 +1,64 @@
+{
+  "id": 31,
+  "slug": "zscaler-ai-protect-zscaler",
+  "title": "Zscaler AI Protect",
+  "company": "Zscaler",
+  "description": "Zscaler protects the full AI life cycle with AI asset management, automated red-teaming, dynamic risk assessment, advanced guardrails, real-time remediation, prompt hardening and policy generation for ensuring compliance.",
+  "link": "https://www.zscaler.com/products-and-solutions/ai-security",
+  "tags": {
+    "solution_types": [
+      "Commercial"
+    ],
+    "lifecycle_stages": [
+      "Scoping/Planning",
+      "Data Augmentation and Fine-Tuning",
+      "Development and Experimentation",
+      "Test and Evaluation",
+      "Release",
+      "Deploy",
+      "Operate",
+      "Monitor",
+      "Govern"
+    ],
+    "team": [
+      "Red",
+      "Blue",
+      "Purple"
+    ],
+    "risk_maps": [
+      "OWASP Top 10 Risks and Mitigations for LLM Apps 2025"
+    ]
+  },
+  "coverage": [
+    {
+      "group": "Red, Blue, Purple",
+      "items": [
+        "Scoping/Planning",
+        "Data Augmentation and Fine-Tuning",
+        "Development and Experimentation",
+        "Test and Evaluation",
+        "Release",
+        "Deploy",
+        "Operate",
+        "Monitor",
+        "Govern",
+        "LLM attack-surface mapping",
+        "Agent attack-surface mapping",
+        "AI asset inventory",
+        "AI posture dashboards (AI-SPM / AI-TRiSM)",
+        "Import red scenarios",
+        "Map red scenarios to blue controls",
+        "Risk-scoring dashboards",
+        "Visual data-flow mapping",
+        "Export of tests as stories",
+        "Data lineage & provenance tracking",
+        "DLP scanning",
+        "Bias-toxicity co-auditing",
+        "Bias / PII scorecards"
+      ]
+    }
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "Company Representative"
+}

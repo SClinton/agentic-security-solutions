@@ -1,0 +1,57 @@
+{
+  "id": 30,
+  "slug": "adversa-ai-red-teaming-platform-adversa-ai",
+  "title": "Adversa AI Red Teaming Platform",
+  "company": "Adversa AI",
+  "description": "An automated platform for continuous red teaming of AI Agents, Applications and Models models simulating tailored adversarial behavior to detect vulnerabilities, generate new unknown attack scenarios, and produce mitigations specific to each system.",
+  "link": "https://adversa.ai",
+  "tags": {
+    "solution_types": [
+      "Commercial"
+    ],
+    "lifecycle_stages": [
+      "Scoping/Planning",
+      "Development and Experimentation",
+      "Test and Evaluation",
+      "Release",
+      "Deploy",
+      "Operate",
+      "Monitor",
+      "Govern"
+    ],
+    "team": [
+      "Red"
+    ],
+    "risk_maps": [
+      "OWASP Top 10 Risks and Mitigations for LLM Apps 2025",
+      "OWASP Top 10 Risks and Mitigations for Agentic Apps 2026"
+    ]
+  },
+  "coverage": [
+    {
+      "group": "Red",
+      "items": [
+        "Scoping/Planning",
+        "Development and Experimentation",
+        "Test and Evaluation",
+        "Release",
+        "Deploy",
+        "Operate",
+        "Monitor",
+        "Govern",
+        "Threat-model design aids",
+        "LLM attack-surface mapping",
+        "Agent attack-surface mapping",
+        "AI asset inventory",
+        "Risk-scoring dashboards",
+        "Risk taxonomy import/export",
+        "Visual data-flow mapping",
+        "Export of tests as stories",
+        "Malicious model artifacts"
+      ]
+    }
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "End User"
+}

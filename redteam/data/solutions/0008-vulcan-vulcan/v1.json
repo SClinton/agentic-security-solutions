@@ -1,0 +1,38 @@
+{
+  "id": 8,
+  "slug": "vulcan-vulcan",
+  "title": "Vulcan",
+  "company": "Vulcan",
+  "description": "Identify your AI application vulnerabilities with Vulcan's red teaming services, and monitor and protect what matters most in real time with Vulcan's guardrails.",
+  "link": "https://vulcanlab.ai",
+  "tags": {
+    "solution_types": [
+      "Commercial"
+    ],
+    "lifecycle_stages": [
+      "Test and Evaluation",
+      "Operate",
+      "Govern"
+    ],
+    "team": [
+      "Red",
+      "Blue"
+    ],
+    "risk_maps": [
+      "OWASP Top 10 Risks and Mitigations for LLM Apps 2025"
+    ]
+  },
+  "coverage": [
+    {
+      "group": "Red, Blue",
+      "items": [
+        "Test and Evaluation",
+        "Operate",
+        "Govern"
+      ]
+    }
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "Company Representative"
+}

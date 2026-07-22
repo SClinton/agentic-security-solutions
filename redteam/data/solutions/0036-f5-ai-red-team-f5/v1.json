@@ -1,0 +1,54 @@
+{
+  "id": 36,
+  "slug": "f5-ai-red-team-f5",
+  "title": "F5 AI Red Team",
+  "company": "f5",
+  "description": "Executes adversarial attacks against AI models and agents to identify vulnerabilities, validate guardrails, and quantify risk across development and production environments through automated, continuous, and repeatable testing, with findings integrated into remediation workflows.",
+  "link": "https://www.f5.com/products/ai-red-team",
+  "tags": {
+    "solution_types": [
+      "Commercial"
+    ],
+    "lifecycle_stages": [
+      "Development and Experimentation",
+      "Test and Evaluation",
+      "Deploy",
+      "Operate",
+      "Monitor",
+      "Govern"
+    ],
+    "team": [
+      "Red",
+      "Purple"
+    ],
+    "risk_maps": [
+      "OWASP Top 10 Risks and Mitigations for LLM Apps 2025",
+      "OWASP Top 10 Risks and Mitigations for Agentic Apps 2026"
+    ]
+  },
+  "coverage": [
+    {
+      "group": "Red, Purple",
+      "items": [
+        "Development and Experimentation",
+        "Test and Evaluation",
+        "Deploy",
+        "Operate",
+        "Monitor",
+        "Govern",
+        "Threat-model design aids",
+        "LLM attack-surface mapping",
+        "Agent attack-surface mapping",
+        "Import red scenarios",
+        "Map red scenarios to blue controls",
+        "Risk-scoring dashboards",
+        "Risk taxonomy import/export",
+        "Export of tests as stories",
+        "DLP scanning"
+      ]
+    }
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "Company Representative"
+}

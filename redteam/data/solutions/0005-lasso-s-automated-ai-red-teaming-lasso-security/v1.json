@@ -1,0 +1,68 @@
+{
+  "id": 5,
+  "slug": "lasso-s-automated-ai-red-teaming-lasso-security",
+  "title": "Lasso's Automated AI Red Teaming",
+  "company": "Lasso Security",
+  "description": "Automated adversarial testing for agentic applications. Lasso profiles each application through recon, runs static and high-agency, multi-turn attacks to surface exploitable vulnerabilities, then maps findings directly to policy updates and runtime enforcement through purple and blue teaming.",
+  "link": "https://www.lasso.security/platform/lasso-red-teaming",
+  "tags": {
+    "solution_types": [
+      "Commercial"
+    ],
+    "lifecycle_stages": [
+      "Scoping/Planning",
+      "Development and Experimentation",
+      "Test and Evaluation",
+      "Release",
+      "Deploy",
+      "Operate",
+      "Monitor",
+      "Govern"
+    ],
+    "team": [
+      "Red",
+      "Blue",
+      "Purple"
+    ],
+    "risk_maps": [
+      "OWASP Top 10 Risks and Mitigations for LLM Apps 2025",
+      "OWASP Top 10 Risks and Mitigations for Agentic Apps 2026"
+    ]
+  },
+  "coverage": [
+    {
+      "group": "Red, Blue, Purple",
+      "items": [
+        "Scoping/Planning",
+        "Development and Experimentation",
+        "Test and Evaluation",
+        "Release",
+        "Deploy",
+        "Operate",
+        "Monitor",
+        "Govern",
+        "Threat-model design aids",
+        "LLM attack-surface mapping",
+        "Agent attack-surface mapping",
+        "AI asset inventory",
+        "AI posture dashboards (AI-SPM / AI-TRiSM)",
+        "Import red scenarios",
+        "Map red scenarios to blue controls",
+        "Risk-scoring dashboards",
+        "Visual data-flow mapping",
+        "Export of tests as stories",
+        "Data-poison fuzzing;",
+        "Synthetic insert generation",
+        "Malicious model artifacts",
+        "DLP scanning",
+        "Bias-toxicity co-auditing",
+        "Replay Red mutation through Bias filters",
+        "Bias / PII scorecards",
+        "Diff corpus versions"
+      ]
+    }
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "Company Representative"
+}

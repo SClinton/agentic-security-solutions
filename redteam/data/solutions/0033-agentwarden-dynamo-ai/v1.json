@@ -1,0 +1,43 @@
+{
+  "id": 33,
+  "slug": "agentwarden-dynamo-ai",
+  "title": "AgentWarden",
+  "company": "Dynamo AI",
+  "description": "AgentWarden evaluates AI agents and connected MCP tools, surfaces exfiltration and misuse risk, and enables security teams to enforce policies with runtime controls, telemetry, and dashboards before and after deployment.",
+  "link": "https://www.dynamo.ai/agentwarden",
+  "tags": {
+    "solution_types": [
+      "Commercial"
+    ],
+    "lifecycle_stages": [
+      "Deploy"
+    ],
+    "team": [
+      "Red",
+      "Blue",
+      "Purple"
+    ],
+    "risk_maps": [
+      "OWASP Top 10 Risks and Mitigations for LLM Apps 2025",
+      "OWASP Top 10 Risks and Mitigations for Agentic Apps 2026"
+    ]
+  },
+  "coverage": [
+    {
+      "group": "Red, Blue, Purple",
+      "items": [
+        "Deploy",
+        "Threat-model design aids",
+        "LLM attack-surface mapping",
+        "Agent attack-surface mapping",
+        "AI asset inventory",
+        "Risk-scoring dashboards",
+        "Risk taxonomy import/export",
+        "Export of tests as stories"
+      ]
+    }
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "Company Representative"
+}

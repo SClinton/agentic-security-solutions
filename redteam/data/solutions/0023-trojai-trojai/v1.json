@@ -1,0 +1,45 @@
+{
+  "id": 23,
+  "slug": "trojai-trojai",
+  "title": "TrojAI",
+  "company": "TrojAI",
+  "description": "TrojAI is an AI Security platform that helps enterprises secure their AI apps and agents through automated redteaming and runtime protection.",
+  "link": "https://troj.ai/",
+  "tags": {
+    "solution_types": [
+      "Commercial"
+    ],
+    "lifecycle_stages": [
+      "Scoping/Planning",
+      "Development and Experimentation",
+      "Test and Evaluation",
+      "Operate",
+      "Govern"
+    ],
+    "team": [
+      "Red",
+      "Blue"
+    ],
+    "risk_maps": [
+      "OWASP Top 10 Risks and Mitigations for LLM Apps 2025"
+    ]
+  },
+  "coverage": [
+    {
+      "group": "Red, Blue",
+      "items": [
+        "Scoping/Planning",
+        "Development and Experimentation",
+        "Test and Evaluation",
+        "Operate",
+        "Govern",
+        "Threat-model design aids",
+        "AI asset inventory",
+        "AI posture dashboards (AI-SPM / AI-TRiSM)"
+      ]
+    }
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "Company Representative"
+}

@@ -1,0 +1,44 @@
+{
+  "id": 79,
+  "slug": "red-specter-nightfall-red-specter-security-research-ltd",
+  "title": "Red Specter NIGHTFALL",
+  "company": "Red Specter Security Research Ltd",
+  "description": "Unified offensive AI framework with 40 tools covering prompt injection, jailbreaks, data poisoning, guardrail bypass, and autonomous campaign orchestration. Produces Ed25519_signed, timestamped evidence.",
+  "link": "https://red-specter.co.uk/nightfall/",
+  "tags": {
+    "solution_types": [
+      "Proprietary"
+    ],
+    "llmops_stages": [
+      "Test & Evaluation"
+    ],
+    "stage": [
+      "Test & Evaluation"
+    ],
+    "top10_2026": [
+      "ASI01:26",
+      "ASI02:26",
+      "ASI03:26",
+      "ASI05:26",
+      "ASI06:26",
+      "ASI07:26",
+      "ASI08:26",
+      "ASI09:26",
+      "ASI10:26"
+    ]
+  },
+  "coverage": [
+    {
+      "group": "Test & Evaluation",
+      "items": [
+        "Available Agent Scanning, Agent Penetration Testing, Adversarial red-teaming: goal drift, prompt injection, hallucination chaining, & over-permissioned tool usage.",
+        "Multi-agent scenario simulations for collusion, misalignment, or deception detection.",
+        "Validate agent decisions against expected goal plans.",
+        "Sandboxed testing of all tool calls, code execution, cloud API triggers"
+      ]
+    }
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "Company Representative"
+}

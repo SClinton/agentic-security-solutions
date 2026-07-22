@@ -1,0 +1,49 @@
+{
+  "id": 102,
+  "slug": "backslash-security-agentic-ai-endpoint-security-backslash-security",
+  "title": "Backslash Security Agentic AI Endpoint Security",
+  "company": "Backslash Security",
+  "description": "Backslash provides discovery, governance and real-time protection for the Agentic AI fabric on developer and user endpoints, including agents, skills, MCPs, plugins and hooks, enabling security teams to place guardrails for safe AI agent use and defend against prompt injections, drift and privilege escalation, and data exfiltration.",
+  "link": "https://backslash.security",
+  "tags": {
+    "solution_types": [
+      "Proprietary"
+    ],
+    "llmops_stages": [
+      "Scoping/Planning",
+      "Deploy"
+    ],
+    "stage": [
+      "Scoping/Planning",
+      "Deploy"
+    ],
+    "top10_2026": [
+      "ASI01:26",
+      "ASI02:26",
+      "ASI03:26",
+      "ASI05:26",
+      "ASI06:26",
+      "ASI07:26",
+      "ASI08:26",
+      "ASI09:26",
+      "ASI10:26"
+    ]
+  },
+  "coverage": [
+    {
+      "group": "Scoping/Planning",
+      "items": [
+        "Draft policy for Agent privilege boundaries, Draft policy Agent for tool scopes, Draft policy for delegation logic, Define controls for memory scoping, isolation & long-term persistance"
+      ]
+    },
+    {
+      "group": "Deploy",
+      "items": [
+        "Enforce zero-trust policies between agents, tools, & external APIs, Apply & manage runtime Guardrails"
+      ]
+    }
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "Company Representative"
+}

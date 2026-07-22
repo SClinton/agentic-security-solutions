@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Apply an approved edit-suggestion, or roll back to a prior version.
 
-A "Suggest an Edit" submission (opened via the site as a GitHub Issue
-labeled edit-suggestion) proposes new field values for an existing
+Works across all databases in this repo (agentic, redteam, ...). A
+"Suggest an Edit" submission (opened via the site as a GitHub Issue
+labeled <db>-edit-suggestion) proposes new field values for an existing
 solution. Once a maintainer decides to accept it, this script writes
 those changes as a NEW version file and repoints the solution's
 "current" pointer at it. The prior version file is never modified or
@@ -10,33 +11,38 @@ deleted, so it stays available for inspection or rollback.
 
 Usage:
     # Apply changes from a JSON file containing only the fields to override
-    # (any subset of: title, company, description, link, solution_types,
-    # llmops_stages, agentic_sldc, top10_2026, submitter_affiliation)
-    python3 apply_edit.py <slug> --changes changes.json
+    # (any subset of: title, company, description, link, tags, coverage,
+    # submitter_affiliation - "tags" may be a partial dict, e.g. just
+    # {"top10_2026": [...]}, and is merged key-by-key)
+    python3 apply_edit.py agentic <slug> --changes changes.json
+    python3 apply_edit.py redteam <slug> --changes changes.json
 
     # Roll back to a previously-recorded version (no files are deleted;
     # this only repoints which version is "current")
-    python3 apply_edit.py <slug> --rollback 2
+    python3 apply_edit.py agentic <slug> --rollback 2
 
     # List a solution's version history
-    python3 apply_edit.py <slug> --history
+    python3 apply_edit.py agentic <slug> --history
 """
 import argparse
 import json
 import sys
 from pathlib import Path
 
-DATA_DIR = Path(__file__).parent / "data" / "solutions"
-
-EDITABLE_FIELDS = {
-    "title", "company", "description", "link", "solution_types",
-    "llmops_stages", "agentic_sldc", "top10_2026", "submitter_affiliation",
-}
+ROOT = Path(__file__).parent
+EDITABLE_FIELDS = {"title", "company", "description", "link", "tags", "coverage", "submitter_affiliation"}
 
 
-def find_solution_folder(slug: str) -> Path:
+def data_dir_for(db: str) -> Path:
+    data_dir = ROOT / db / "data" / "solutions"
+    if not data_dir.is_dir():
+        sys.exit(f"No such database '{db}' (expected {data_dir} to exist)")
+    return data_dir
+
+
+def find_solution_folder(data_dir: Path, slug: str) -> Path:
     matches = []
-    for folder in DATA_DIR.iterdir():
+    for folder in data_dir.iterdir():
         meta_path = folder / "meta.json"
         if not meta_path.exists():
             continue
@@ -44,7 +50,7 @@ def find_solution_folder(slug: str) -> Path:
         if meta.get("slug") == slug or folder.name == slug or folder.name.endswith(f"-{slug}"):
             matches.append(folder)
     if not matches:
-        sys.exit(f"No solution folder found matching slug '{slug}'")
+        sys.exit(f"No solution folder found matching slug '{slug}' in {data_dir}")
     if len(matches) > 1:
         names = ", ".join(m.name for m in matches)
         sys.exit(f"Ambiguous slug '{slug}' matches multiple folders: {names}")
@@ -72,8 +78,11 @@ def apply_changes(folder: Path, changes_path: Path) -> None:
     if unknown:
         sys.exit(f"Refusing to apply unknown fields: {sorted(unknown)}")
 
-    new_version = max(meta["versions"]) + 1
     updated = {**base, **changes}
+    if "tags" in changes:
+        updated["tags"] = {**base.get("tags", {}), **changes["tags"]}
+
+    new_version = max(meta["versions"]) + 1
     (folder / f"v{new_version}.json").write_text(
         json.dumps(updated, indent=2, ensure_ascii=False), encoding="utf-8"
     )
@@ -108,6 +117,7 @@ def show_history(folder: Path) -> None:
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    parser.add_argument("db", help="Database folder to modify, e.g. agentic or redteam")
     parser.add_argument("slug", help="Solution slug (or folder name) to modify")
     group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument("--changes", type=Path, help="JSON file with fields to override")
@@ -115,7 +125,7 @@ def main():
     group.add_argument("--history", action="store_true", help="Show version history")
     args = parser.parse_args()
 
-    folder = find_solution_folder(args.slug)
+    folder = find_solution_folder(data_dir_for(args.db), args.slug)
 
     if args.changes:
         apply_changes(folder, args.changes)

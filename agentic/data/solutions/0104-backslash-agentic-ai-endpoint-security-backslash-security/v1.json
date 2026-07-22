@@ -1,0 +1,40 @@
+{
+  "id": 104,
+  "slug": "backslash-agentic-ai-endpoint-security-backslash-security",
+  "title": "Backslash Agentic AI Endpoint Security",
+  "company": "Backslash Security",
+  "description": "Backslash provides discovery, governance and real-time protection for the agentia AI fabric on endpoints, including agents, skills, MCPs, plugins, and hooks. We enable security teams to place guardrails for safe AI usage and prevent threats including prompt injections, drift and privilege escalations, the use of unapproved components, and data and credential theft.",
+  "link": "https://backslash.security",
+  "tags": {
+    "solution_types": [
+      "Proprietary"
+    ],
+    "llmops_stages": [
+      "Govern"
+    ],
+    "stage": [
+      "Govern"
+    ],
+    "top10_2026": [
+      "ASI01:26",
+      "ASI02:26",
+      "ASI03:26",
+      "ASI05:26",
+      "ASI07:26",
+      "ASI09:26",
+      "ASI10:26"
+    ]
+  },
+  "coverage": [
+    {
+      "group": "Govern",
+      "items": [
+        "Enforce role- & task-based access policies across agent populations & their tool access.",
+        "Align control evidence with frameworks like EU AI Act, NIST AI RMF, & ISO/IEC 42001."
+      ]
+    }
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "Company Representative"
+}

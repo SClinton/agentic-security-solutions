@@ -1,0 +1,50 @@
+{
+  "id": 21,
+  "slug": "not-eligible-sisa-information-security-pvt-ltd",
+  "title": "Not Eligible",
+  "company": "SISA Information Security PVT LTD",
+  "description": "SISA AI PRISM Suite enables adversarial testing of AI inference points through technique-based red teaming, and defends AI systems via LLM firewalls, guardrails, secure fine-tuning, and continuous token-level observability for drift and security monitoring.",
+  "link": "https://prism.sisa.ai/",
+  "tags": {
+    "solution_types": [
+      "Commercial"
+    ],
+    "lifecycle_stages": [
+      "Test and Evaluation"
+    ],
+    "team": [
+      "Red",
+      "Blue",
+      "Purple"
+    ],
+    "risk_maps": [
+      "OWASP Top 10 Risks and Mitigations for LLM Apps 2025",
+      "OWASP Top 10 Risks and Mitigations for Agentic Apps 2026"
+    ]
+  },
+  "coverage": [
+    {
+      "group": "Red, Blue, Purple",
+      "items": [
+        "Test and Evaluation",
+        "Threat-model design aids",
+        "LLM attack-surface mapping",
+        "AI asset inventory",
+        "AI posture dashboards (AI-SPM / AI-TRiSM)",
+        "Import red scenarios",
+        "Risk-scoring dashboards",
+        "Risk taxonomy import/export",
+        "Visual data-flow mapping",
+        "Synthetic insert generation",
+        "Malicious model artifacts",
+        "Data lineage & provenance tracking",
+        "Bias-toxicity co-auditing",
+        "Replay Red mutation through Bias filters",
+        "Bias / PII scorecards"
+      ]
+    }
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "Company Representative"
+}

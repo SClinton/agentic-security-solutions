@@ -1,0 +1,58 @@
+{
+  "id": 14,
+  "slug": "straiker-straiker",
+  "title": "Straiker",
+  "company": "Straiker",
+  "description": "Straiker detects and blocks security threats across AI applications and autonomous agents by analyzing behavioral signals at the model, prompt, tool, identity, and infrastructure layers, with continuous adversarial testing and real-time runtime guardrails.",
+  "link": "https://straiker.ai/",
+  "tags": {
+    "solution_types": [
+      "Commercial"
+    ],
+    "lifecycle_stages": [
+      "Scoping/Planning",
+      "Development and Experimentation",
+      "Test and Evaluation",
+      "Deploy",
+      "Operate",
+      "Monitor",
+      "Govern"
+    ],
+    "team": [
+      "Red",
+      "Blue",
+      "Purple"
+    ],
+    "risk_maps": [
+      "OWASP Top 10 Risks and Mitigations for LLM Apps 2025",
+      "OWASP Top 10 Risks and Mitigations for Agentic Apps 2026"
+    ]
+  },
+  "coverage": [
+    {
+      "group": "Red, Blue, Purple",
+      "items": [
+        "Scoping/Planning",
+        "Development and Experimentation",
+        "Test and Evaluation",
+        "Deploy",
+        "Operate",
+        "Monitor",
+        "Govern",
+        "Threat-model design aids",
+        "LLM attack-surface mapping",
+        "Agent attack-surface mapping",
+        "AI asset inventory",
+        "AI posture dashboards (AI-SPM / AI-TRiSM)",
+        "Map red scenarios to blue controls",
+        "Risk-scoring dashboards",
+        "Risk taxonomy import/export",
+        "Visual data-flow mapping",
+        "Export of tests as stories"
+      ]
+    }
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "Company Representative"
+}

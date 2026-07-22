@@ -1,0 +1,41 @@
+{
+  "id": 10,
+  "slug": "secureaiflow-secureaiflow",
+  "title": "secureaiflow",
+  "company": "SecureAIFlow",
+  "description": "SecureAIFlow is an AI security gateway that detects and pseudonymizes secrets and credentials in developer prompts before routing to LLMs, with IDE and browser integrations and a centralized policy management dashboard.",
+  "link": "https://secureaiflow.com",
+  "tags": {
+    "solution_types": [
+      "Commercial"
+    ],
+    "lifecycle_stages": [
+      "Development and Experimentation"
+    ],
+    "team": [
+      "Red",
+      "Blue",
+      "Purple"
+    ],
+    "risk_maps": [
+      "OWASP Top 10 Risks and Mitigations for LLM Apps 2025",
+      "OWASP Top 10 Risks and Mitigations for Agentic Apps 2026"
+    ]
+  },
+  "coverage": [
+    {
+      "group": "Red, Blue, Purple",
+      "items": [
+        "Development and Experimentation",
+        "AI asset inventory",
+        "Visual data-flow mapping",
+        "Data lineage & provenance tracking",
+        "DLP scanning",
+        "Bias / PII scorecards"
+      ]
+    }
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "Company Representative"
+}

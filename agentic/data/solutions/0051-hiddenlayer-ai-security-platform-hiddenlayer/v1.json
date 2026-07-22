@@ -1,0 +1,41 @@
+{
+  "id": 51,
+  "slug": "hiddenlayer-ai-security-platform-hiddenlayer",
+  "title": "HiddenLayer AI Security Platform",
+  "company": "HiddenLayer",
+  "description": "HiddenLayer—s AI Security Platform unifies supply chain security, runtime defense, posture management, and automated red teaming to protect agentic, generative, and predictive AI systems.",
+  "link": "www.hiddenlayer.com",
+  "tags": {
+    "solution_types": [
+      "Proprietary"
+    ],
+    "llmops_stages": [
+      "Monitor"
+    ],
+    "stage": [
+      "Monitor"
+    ],
+    "top10_2026": [
+      "ASI01:26",
+      "ASI02:26",
+      "ASI03:26",
+      "ASI05:26",
+      "ASI06:26",
+      "ASI07:26",
+      "ASI08:26",
+      "ASI09:26",
+      "ASI10:26"
+    ]
+  },
+  "coverage": [
+    {
+      "group": "Monitor",
+      "items": [
+        "Alert on anomalies;  e.g., goal reversal, unexpected plan depth, adversarial-input, excessive tool usage, or rapid inter-agent chatter."
+      ]
+    }
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "Company Representative"
+}

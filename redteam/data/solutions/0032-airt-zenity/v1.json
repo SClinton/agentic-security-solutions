@@ -1,0 +1,45 @@
+{
+  "id": 32,
+  "slug": "airt-zenity",
+  "title": "AIRT",
+  "company": "Zenity",
+  "description": "Zenity's AIRT provides automated red-teaming and risk scanning for enterprise and homegrown AI agents. Capabilities include multi-turn attack simulations, dynamic inventory testing, purple teaming, CI/CD integration, and scheduled assessments.",
+  "link": "https://zenity.io/platform",
+  "tags": {
+    "solution_types": [
+      "Commercial"
+    ],
+    "lifecycle_stages": [
+      "Test and Evaluation"
+    ],
+    "team": [
+      "Red",
+      "Blue",
+      "Purple"
+    ],
+    "risk_maps": [
+      "OWASP Top 10 Risks and Mitigations for LLM Apps 2025",
+      "OWASP Top 10 Risks and Mitigations for Agentic Apps 2026"
+    ]
+  },
+  "coverage": [
+    {
+      "group": "Red, Blue, Purple",
+      "items": [
+        "Test and Evaluation",
+        "LLM attack-surface mapping",
+        "Agent attack-surface mapping",
+        "AI asset inventory",
+        "AI posture dashboards (AI-SPM / AI-TRiSM)",
+        "Import red scenarios",
+        "Map red scenarios to blue controls",
+        "Risk-scoring dashboards",
+        "Risk taxonomy import/export",
+        "Visual data-flow mapping"
+      ]
+    }
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "Company Representative"
+}

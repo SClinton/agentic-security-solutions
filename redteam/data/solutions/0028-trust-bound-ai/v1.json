@@ -1,0 +1,35 @@
+{
+  "id": 28,
+  "slug": "trust-bound-ai",
+  "title": "trust-bound-ai",
+  "company": "",
+  "description": "Tests RAG pipelines against indirect prompt injection, context poisoning, retrieval cross-contamination, and permission boundary failures using deterministic adversarial document injection and a dual-provider safety evaluation via promptfoo.",
+  "link": "https://github.com/gowsiyabs/trust-bound-ai",
+  "tags": {
+    "solution_types": [
+      "Open Source"
+    ],
+    "lifecycle_stages": [
+      "Test and Evaluation"
+    ],
+    "team": [
+      "Red"
+    ],
+    "risk_maps": [
+      "OWASP Top 10 Risks and Mitigations for LLM Apps 2025"
+    ]
+  },
+  "coverage": [
+    {
+      "group": "Red",
+      "items": [
+        "Test and Evaluation",
+        "LLM attack-surface mapping",
+        "Synthetic insert generation"
+      ]
+    }
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "End User"
+}

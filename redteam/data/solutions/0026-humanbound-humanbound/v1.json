@@ -1,0 +1,47 @@
+{
+  "id": 26,
+  "slug": "humanbound-humanbound",
+  "title": "Humanbound",
+  "company": "Humanbound",
+  "description": "Continuously test AI agents for security vulnerabilities using adversarial penetration testing. Discover unsanctioned AI services across cloud environments. Track security posture, manage findings, and export guardrails.",
+  "link": "https://app.humanbound.ai/",
+  "tags": {
+    "solution_types": [
+      "Commercial"
+    ],
+    "lifecycle_stages": [
+      "Test and Evaluation",
+      "Deploy",
+      "Monitor",
+      "Govern"
+    ],
+    "team": [
+      "Red",
+      "Purple"
+    ],
+    "risk_maps": [
+      "OWASP Top 10 Risks and Mitigations for LLM Apps 2025",
+      "OWASP Top 10 Risks and Mitigations for Agentic Apps 2026"
+    ]
+  },
+  "coverage": [
+    {
+      "group": "Red, Purple",
+      "items": [
+        "Test and Evaluation",
+        "Deploy",
+        "Monitor",
+        "Govern",
+        "LLM attack-surface mapping",
+        "Agent attack-surface mapping",
+        "Map red scenarios to blue controls",
+        "Risk-scoring dashboards",
+        "Risk taxonomy import/export",
+        "Export of tests as stories"
+      ]
+    }
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "Company Representative"
+}

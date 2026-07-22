@@ -1,0 +1,61 @@
+{
+  "id": 19,
+  "slug": "deep-ai-red-blue-team-nri-secure",
+  "title": "Deep AI Red/Blue Team",
+  "company": "NRI Secure",
+  "description": "AI agent security solution that gains visibility into internal states via OpenTelemetry instrumentation — combining adversarial testing with real-time threat detection to cover all OWASP Top 10 for Agentic Applications.",
+  "link": "https://www.nri-secure.com/security-assessment/deep_ai-red-team-service",
+  "tags": {
+    "solution_types": [
+      "Commercial"
+    ],
+    "lifecycle_stages": [
+      "Scoping/Planning",
+      "Development and Experimentation",
+      "Test and Evaluation",
+      "Release",
+      "Deploy",
+      "Operate",
+      "Monitor",
+      "Govern"
+    ],
+    "team": [
+      "Red",
+      "Blue",
+      "Purple"
+    ],
+    "risk_maps": [
+      "OWASP Top 10 Risks and Mitigations for LLM Apps 2025",
+      "OWASP Top 10 Risks and Mitigations for Agentic Apps 2026"
+    ]
+  },
+  "coverage": [
+    {
+      "group": "Red, Blue, Purple",
+      "items": [
+        "Scoping/Planning",
+        "Development and Experimentation",
+        "Test and Evaluation",
+        "Release",
+        "Deploy",
+        "Operate",
+        "Monitor",
+        "Govern",
+        "Threat-model design aids",
+        "LLM attack-surface mapping",
+        "Agent attack-surface mapping",
+        "AI asset inventory",
+        "AI posture dashboards (AI-SPM / AI-TRiSM)",
+        "Import red scenarios",
+        "Map red scenarios to blue controls",
+        "Risk-scoring dashboards",
+        "Risk taxonomy import/export",
+        "Visual data-flow mapping",
+        "Export of tests as stories"
+      ]
+    }
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "Company Representative"
+}

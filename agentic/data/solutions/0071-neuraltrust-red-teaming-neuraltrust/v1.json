@@ -1,0 +1,41 @@
+{
+  "id": 71,
+  "slug": "neuraltrust-red-teaming-neuraltrust",
+  "title": "NeuralTrust Red Teaming",
+  "company": "NeuralTrust",
+  "description": "NeuralTrust Red Teaming applies dynamic security testing (DAST) to agents by simulating real-world attacks at runtime, evaluating behavior, tool interactions, and decision flows to identify vulnerabilities, unsafe actions, and policy violations before deployment.",
+  "link": "https://neuraltrust.ai/red-teaming",
+  "tags": {
+    "solution_types": [
+      "Proprietary"
+    ],
+    "llmops_stages": [
+      "Development & Experimentation"
+    ],
+    "stage": [
+      "Development & Experimentation"
+    ],
+    "top10_2026": [
+      "ASI01:26",
+      "ASI02:26",
+      "ASI03:26",
+      "ASI05:26",
+      "ASI06:26",
+      "ASI07:26",
+      "ASI08:26",
+      "ASI09:26",
+      "ASI10:26"
+    ]
+  },
+  "coverage": [
+    {
+      "group": "Development & Experimentation",
+      "items": [
+        "Perform SAST/DAST on agent planning code, tool wrappers, & plugin interfaces."
+      ]
+    }
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "Company Representative"
+}

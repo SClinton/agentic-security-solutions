@@ -1,0 +1,34 @@
+{
+  "id": 15,
+  "slug": "avenlis-sandstrike",
+  "title": "Avenlis Sandstrike",
+  "company": "",
+  "description": "Avenlis SandStrike is a Python library and CLI for LLM red teaming. It manages adversarial prompts, targets, and sessions, runs automated security tests (local and API-based), and generates detailed, structured vulnerability and grading reports.",
+  "link": "https://github.com/StateraSolutions/avenlis-sandstrike",
+  "tags": {
+    "solution_types": [
+      "Open Source"
+    ],
+    "lifecycle_stages": [
+      "Test and Evaluation"
+    ],
+    "team": [
+      "Red"
+    ],
+    "risk_maps": [
+      "OWASP Top 10 Risks and Mitigations for LLM Apps 2025"
+    ]
+  },
+  "coverage": [
+    {
+      "group": "Red",
+      "items": [
+        "Test and Evaluation",
+        "LLM attack-surface mapping"
+      ]
+    }
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "Company Representative"
+}

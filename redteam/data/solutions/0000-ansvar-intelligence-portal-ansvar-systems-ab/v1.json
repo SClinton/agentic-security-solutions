@@ -1,0 +1,42 @@
+{
+  "id": 0,
+  "slug": "ansvar-intelligence-portal-ansvar-systems-ab",
+  "title": "Ansvar Intelligence Portal",
+  "company": "Ansvar Systems AB",
+  "description": "MCP-native compliance intelligence and threat modeling platform. 91 MCP servers deliver deterministic access to security frameworks, global legislation, and vulnerability data with hard-linked citations to original sources, creating auditable evidentiary chains.",
+  "link": "https://ansvar.eu",
+  "tags": {
+    "solution_types": [
+      "Commercial"
+    ],
+    "lifecycle_stages": [
+      "Govern"
+    ],
+    "team": [
+      "Purple"
+    ],
+    "risk_maps": [
+      "OWASP Top 10 Risks and Mitigations for LLM Apps 2025",
+      "OWASP Top 10 Risks and Mitigations for Agentic Apps 2026"
+    ]
+  },
+  "coverage": [
+    {
+      "group": "Purple",
+      "items": [
+        "Govern",
+        "Threat-model design aids",
+        "LLM attack-surface mapping",
+        "Agent attack-surface mapping",
+        "AI asset inventory",
+        "AI posture dashboards (AI-SPM / AI-TRiSM)",
+        "Map red scenarios to blue controls",
+        "Risk taxonomy import/export",
+        "Visual data-flow mapping"
+      ]
+    }
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "Company Representative"
+}

@@ -1,0 +1,42 @@
+{
+  "id": 98,
+  "slug": "polaxis-polaxis",
+  "title": "polaxis",
+  "company": "polaxis",
+  "description": "Polaxis is an AI agent firewall and governance platform. \n7-layer detection pipeline intercepting every tool call \nbefore execution. 98% accuracy on adversarial test suite. \nSub-50ms policy enforcement. Human-in-the-loop approvals \nfor high-risk actions. Budget controls with hard spend caps. \nSHA-256 hash-chained immutable audit trail. One-click SOC2, \nGDPR, HIPAA, EU AI Act, and OWASP compliance reports.",
+  "link": "polaxis.io",
+  "tags": {
+    "solution_types": [
+      "Proprietary"
+    ],
+    "llmops_stages": [
+      "Operate"
+    ],
+    "stage": [
+      "Operate"
+    ],
+    "top10_2026": [
+      "ASI01:26",
+      "ASI02:26",
+      "ASI03:26",
+      "ASI05:26",
+      "ASI06:26",
+      "ASI07:26",
+      "ASI08:26",
+      "ASI09:26",
+      "ASI10:26"
+    ]
+  },
+  "coverage": [
+    {
+      "group": "Operate",
+      "items": [
+        "Monitor agent memory mutation patterns for drift, Detect task replay, infinite delegation, or hallucination loops.",
+        "Enable human-in-the-loop (HITL) override thresholds on high-risk or ambiguous actions, LLM Incident Detection & Response, Runtime guardrails & moderation; anomalous tool use"
+      ]
+    }
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "End User"
+}

@@ -1,0 +1,34 @@
+{
+  "id": 3,
+  "slug": "python-risk-identification-tool-for-generative-ai-pyrit",
+  "title": "Python Risk Identification Tool for generative AI (PyRIT)",
+  "company": "",
+  "description": "The Python Risk Identification Tool for generative AI (PyRIT) is an open source framework built to empower security professionals and engineers to proactively identify risks in generative AI systems.",
+  "link": "https://azure.github.io/PyRIT/",
+  "tags": {
+    "solution_types": [
+      "Open Source"
+    ],
+    "lifecycle_stages": [
+      "Test and Evaluation"
+    ],
+    "team": [
+      "Red"
+    ],
+    "risk_maps": [
+      "OWASP Top 10 Risks and Mitigations for LLM Apps 2025",
+      "OWASP Top 10 Risks and Mitigations for Agentic Apps 2026"
+    ]
+  },
+  "coverage": [
+    {
+      "group": "Red",
+      "items": [
+        "Test and Evaluation"
+      ]
+    }
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "Company Representative"
+}

@@ -1,0 +1,37 @@
+{
+  "id": 4,
+  "slug": "hivetrace-red",
+  "title": "HiveTrace Red",
+  "company": "",
+  "description": "HiveTrace Red is an open source AI red teaming framework for testing LLM and agentic systems. It supports automated adversarial test generation, multi-turn attack simulation, prompt injection testing, and structured evaluation reporting.",
+  "link": "https://github.com/HiveTrace/HiveTraceRed",
+  "tags": {
+    "solution_types": [
+      "Open Source"
+    ],
+    "lifecycle_stages": [
+      "Test and Evaluation"
+    ],
+    "team": [
+      "Red"
+    ],
+    "risk_maps": [
+      "OWASP Top 10 Risks and Mitigations for LLM Apps 2025"
+    ]
+  },
+  "coverage": [
+    {
+      "group": "Red",
+      "items": [
+        "Test and Evaluation",
+        "LLM attack-surface mapping",
+        "Agent attack-surface mapping",
+        "Synthetic insert generation",
+        "Bias-toxicity co-auditing"
+      ]
+    }
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "Company Representative"
+}

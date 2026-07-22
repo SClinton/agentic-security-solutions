@@ -1,0 +1,35 @@
+{
+  "id": 44,
+  "slug": "opsin-opsin",
+  "title": "Opsin",
+  "company": "Opsin",
+  "description": "Opsin equips enterprises to scale AI tools like Microsoft Copilot and Google Gemini safely and efficiently. Our platform continuously detects and mitigates oversharing, sensitive data exposure, and policy drift across cloud file systems and collaborative tools.",
+  "link": "https://opsinsecurity.com/",
+  "tags": {
+    "solution_types": [
+      "Proprietary"
+    ],
+    "llmops_stages": [
+      "Govern"
+    ],
+    "stage": [
+      "Govern"
+    ],
+    "top10_2026": [
+      "ASI08:26",
+      "ASI09:26"
+    ]
+  },
+  "coverage": [
+    {
+      "group": "Govern",
+      "items": [
+        "Enforce role- & task-based access policies across agent populations & their tool access.",
+        "Align control evidence with frameworks like EU AI Act, NIST AI RMF, & ISO/IEC 42001."
+      ]
+    }
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "Company Representative"
+}

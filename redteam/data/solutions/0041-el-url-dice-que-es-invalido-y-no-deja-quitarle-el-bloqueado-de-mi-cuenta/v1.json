@@ -1,0 +1,42 @@
+{
+  "id": 41,
+  "slug": "el-url-dice-que-es-invalido-y-no-deja-quitarle-el-bloqueado-de-mi-cuenta",
+  "title": "El URL dice que es invalido y no deja quitarle el bloqueado de mi cuenta",
+  "company": "",
+  "description": "Y Me Comunico Con Soporte De Meta De la manera mas sociable para ver si le quitan el bloqueo a mi cuenta",
+  "link": "https://www.facebook.com/login/unlock.php?ap_submission_id=1288796546550604&u=100062608117948&n=fjK9SJN6nb",
+  "tags": {
+    "solution_types": [
+      "Open Source"
+    ],
+    "lifecycle_stages": [
+      "Release"
+    ],
+    "team": [
+      "Blue"
+    ],
+    "risk_maps": [
+      "OWASP Top 10 Risks and Mitigations for Agentic Apps 2026",
+      "Does not Support OWASP GenAI Security Posture Reporting"
+    ]
+  },
+  "coverage": [
+    {
+      "group": "Blue",
+      "items": [
+        "Release",
+        "Threat-model design aids",
+        "AI asset inventory",
+        "Import red scenarios",
+        "Visual data-flow mapping",
+        "Synthetic insert generation",
+        "Data lineage & provenance tracking",
+        "Bias-toxicity co-auditing",
+        "Signed data packages"
+      ]
+    }
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "Update to Existing"
+}

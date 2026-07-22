@@ -1,0 +1,48 @@
+{
+  "id": 17,
+  "slug": "trendai-vision-one-ai-application-security-trendai",
+  "title": "TrendAI Vision One AI Application Security",
+  "company": "TrendAI",
+  "description": "Identifies security vulnerabilities in AI Applications through automated prompt attacks. Provides guardrails to protect AI Applications from AI specific threats.",
+  "link": "https://www.trendmicro.com/en/business/ai/security-ai-stacks/ai-applications.html",
+  "tags": {
+    "solution_types": [
+      "Commercial"
+    ],
+    "lifecycle_stages": [
+      "Scoping/Planning",
+      "Test and Evaluation",
+      "Deploy",
+      "Operate",
+      "Monitor",
+      "Govern"
+    ],
+    "team": [
+      "Red",
+      "Blue",
+      "Purple"
+    ],
+    "risk_maps": [
+      "OWASP Top 10 Risks and Mitigations for LLM Apps 2025",
+      "OWASP Top 10 Risks and Mitigations for Agentic Apps 2026"
+    ]
+  },
+  "coverage": [
+    {
+      "group": "Red, Blue, Purple",
+      "items": [
+        "Scoping/Planning",
+        "Test and Evaluation",
+        "Deploy",
+        "Operate",
+        "Monitor",
+        "Govern",
+        "AI asset inventory",
+        "AI posture dashboards (AI-SPM / AI-TRiSM)"
+      ]
+    }
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "Company Representative"
+}

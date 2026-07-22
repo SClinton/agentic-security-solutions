@@ -1,0 +1,64 @@
+{
+  "id": 22,
+  "slug": "surelio-ai-surelio-ai",
+  "title": "Surelio.ai",
+  "company": "Surelio.ai",
+  "description": "Swiss based Third-Party Red Teaming for AI Applications (all Taxonomy Lifecycle Stages excluding Release, Deploy, Operate)",
+  "link": "https://Surelio.ai",
+  "tags": {
+    "solution_types": [
+      "Commercial"
+    ],
+    "lifecycle_stages": [
+      "Scoping/Planning",
+      "Data Augmentation and Fine-Tuning",
+      "Development and Experimentation",
+      "Test and Evaluation",
+      "Monitor",
+      "Govern"
+    ],
+    "team": [
+      "Red"
+    ],
+    "risk_maps": [
+      "OWASP Top 10 Risks and Mitigations for LLM Apps 2025",
+      "OWASP Top 10 Risks and Mitigations for Agentic Apps 2026"
+    ]
+  },
+  "coverage": [
+    {
+      "group": "Red",
+      "items": [
+        "Scoping/Planning",
+        "Data Augmentation and Fine-Tuning",
+        "Development and Experimentation",
+        "Test and Evaluation",
+        "Monitor",
+        "Govern",
+        "Threat-model design aids",
+        "LLM attack-surface mapping",
+        "Agent attack-surface mapping",
+        "AI asset inventory",
+        "AI posture dashboards (AI-SPM / AI-TRiSM)",
+        "Import red scenarios",
+        "Map red scenarios to blue controls",
+        "Risk-scoring dashboards",
+        "Risk taxonomy import/export",
+        "Visual data-flow mapping",
+        "Export of tests as stories",
+        "Data-poison fuzzing;",
+        "Synthetic insert generation",
+        "Malicious model artifacts",
+        "Data lineage & provenance tracking",
+        "DLP scanning",
+        "Bias-toxicity co-auditing",
+        "Replay Red mutation through Bias filters",
+        "Bias / PII scorecards",
+        "Signed data packages"
+      ]
+    }
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "Company Representative"
+}

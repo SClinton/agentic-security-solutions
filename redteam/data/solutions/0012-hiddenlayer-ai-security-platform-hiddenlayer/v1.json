@@ -1,0 +1,56 @@
+{
+  "id": 12,
+  "slug": "hiddenlayer-ai-security-platform-hiddenlayer",
+  "title": "HiddenLayer AI Security Platform",
+  "company": "HiddenLayer",
+  "description": "Our platform proactively defends against the full spectrum of AI threats, safeguarding your IP, compliance posture, and enterprise operations.HiddenLayer AI Security Platform",
+  "link": "https://www.hiddenlayer.com/platform",
+  "tags": {
+    "solution_types": [
+      "Commercial"
+    ],
+    "lifecycle_stages": [
+      "Development and Experimentation",
+      "Test and Evaluation",
+      "Release",
+      "Deploy",
+      "Operate",
+      "Monitor",
+      "Govern"
+    ],
+    "team": [
+      "Red",
+      "Blue",
+      "Purple"
+    ],
+    "risk_maps": [
+      "OWASP Top 10 Risks and Mitigations for LLM Apps 2025",
+      "OWASP Top 10 Risks and Mitigations for Agentic Apps 2026"
+    ]
+  },
+  "coverage": [
+    {
+      "group": "Red, Blue, Purple",
+      "items": [
+        "Development and Experimentation",
+        "Test and Evaluation",
+        "Release",
+        "Deploy",
+        "Operate",
+        "Monitor",
+        "Govern",
+        "LLM attack-surface mapping",
+        "Agent attack-surface mapping",
+        "AI asset inventory",
+        "AI posture dashboards (AI-SPM / AI-TRiSM)",
+        "Import red scenarios",
+        "Risk-scoring dashboards",
+        "Malicious model artifacts",
+        "Data lineage & provenance tracking"
+      ]
+    }
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "Company Representative"
+}

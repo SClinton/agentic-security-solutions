@@ -1,0 +1,36 @@
+{
+  "id": 13,
+  "slug": "edictum",
+  "title": "Edictum",
+  "company": "",
+  "description": "Runtime governance library for AI agent tool calls. Deterministic YAML contracts enforce allow/deny/redact verdicts outside the LLM. Structured audit trail, human-in-the-loop approvals, PII redaction. 8 framework adapters. 55µs overhead. MIT licensed.",
+  "link": "https://github.com/edictum-ai/edictum",
+  "tags": {
+    "solution_types": [
+      "Open Source"
+    ],
+    "lifecycle_stages": [
+      "Operate"
+    ],
+    "team": [
+      "Red",
+      "Purple"
+    ],
+    "risk_maps": [
+      "OWASP Top 10 Risks and Mitigations for LLM Apps 2025"
+    ]
+  },
+  "coverage": [
+    {
+      "group": "Red, Purple",
+      "items": [
+        "Operate",
+        "AI asset inventory",
+        "AI posture dashboards (AI-SPM / AI-TRiSM)"
+      ]
+    }
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "Company Representative"
+}

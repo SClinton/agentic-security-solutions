@@ -1,0 +1,41 @@
+{
+  "id": 30,
+  "slug": "straiker-ai-straiker",
+  "title": "Straiker AI",
+  "company": "Straiker",
+  "description": "Straiker secures agentic AI with autonomous red teaming and real-time guardrails. Ascend AI reveals how live agents behave under pressure; Defend AI blocks unsafe model decisions and tool calls without disrupting workflows",
+  "link": "https://www.straiker.ai/products",
+  "tags": {
+    "solution_types": [
+      "Proprietary"
+    ],
+    "llmops_stages": [
+      "Scoping/Planning"
+    ],
+    "stage": [
+      "Scoping/Planning"
+    ],
+    "top10_2026": [
+      "ASI01:26",
+      "ASI02:26",
+      "ASI03:26",
+      "ASI05:26",
+      "ASI06:26",
+      "ASI07:26",
+      "ASI08:26",
+      "ASI09:26",
+      "ASI10:26"
+    ]
+  },
+  "coverage": [
+    {
+      "group": "Scoping/Planning",
+      "items": [
+        "Conducting Agentic Threat Modeling, Draft policy for Agent privilege boundaries, Draft policy Agent for tool scopes, Draft policy for delegation logic"
+      ]
+    }
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "Company Representative"
+}

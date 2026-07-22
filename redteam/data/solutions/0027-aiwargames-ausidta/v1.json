@@ -1,0 +1,41 @@
+{
+  "id": 27,
+  "slug": "aiwargames-ausidta",
+  "title": "aiwargames",
+  "company": "Ausidta",
+  "description": "AI War Games is a hands-on AI red teaming and agentic security training platform that helps teams discover vulnerabilities in LLM and agent-based systems through guided adversarial missions, interactive sandbox testing, attack replay, and defense-oriented learning.",
+  "link": "https://aiwargames.audista.com",
+  "tags": {
+    "solution_types": [
+      "Commercial"
+    ],
+    "lifecycle_stages": [
+      "Test and Evaluation"
+    ],
+    "team": [
+      "Red",
+      "Blue",
+      "Purple"
+    ],
+    "risk_maps": [
+      "OWASP Top 10 Risks and Mitigations for LLM Apps 2025",
+      "OWASP Top 10 Risks and Mitigations for Agentic Apps 2026"
+    ]
+  },
+  "coverage": [
+    {
+      "group": "Red, Blue, Purple",
+      "items": [
+        "Test and Evaluation",
+        "Threat-model design aids",
+        "Import red scenarios",
+        "Map red scenarios to blue controls",
+        "Visual data-flow mapping",
+        "Export of tests as stories"
+      ]
+    }
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "Company Representative"
+}

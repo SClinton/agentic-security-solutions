@@ -1,0 +1,48 @@
+{
+  "id": 39,
+  "slug": "exabeam-new-scale-analytics-exabeam",
+  "title": "Exabeam New-Scale Analytics",
+  "company": "Exabeam",
+  "description": "New-Scale Analytics uses machine-learned behavioral analytics and automation to help security operations teams detect credential-based attacks, insider threats, and unusual activity.",
+  "link": "https://www.exabeam.com/platform/new-scale-analytics/",
+  "tags": {
+    "solution_types": [
+      "Commercial"
+    ],
+    "lifecycle_stages": [
+      "Operate",
+      "Monitor",
+      "Govern"
+    ],
+    "team": [
+      "Red",
+      "Blue",
+      "Purple"
+    ],
+    "risk_maps": [
+      "OWASP Top 10 Risks and Mitigations for LLM Apps 2025",
+      "OWASP Top 10 Risks and Mitigations for Agentic Apps 2026"
+    ]
+  },
+  "coverage": [
+    {
+      "group": "Red, Blue, Purple",
+      "items": [
+        "Operate",
+        "Monitor",
+        "Govern",
+        "Threat-model design aids",
+        "Agent attack-surface mapping",
+        "AI asset inventory",
+        "AI posture dashboards (AI-SPM / AI-TRiSM)",
+        "Map red scenarios to blue controls",
+        "Risk-scoring dashboards",
+        "Risk taxonomy import/export",
+        "DLP scanning"
+      ]
+    }
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "New"
+}

@@ -1,0 +1,39 @@
+{
+  "id": 25,
+  "slug": "reinforce-labs-ai-readiness-red-teaming-platform-reinforce-labs",
+  "title": "Reinforce Labs AI Readiness & Red Teaming Platform",
+  "company": "Reinforce Labs",
+  "description": "Automates adversarial probing and red teaming to validate AI safety, abuse resistance, and policy alignment. Provides readiness scores, audit-ready reports, and continuous monitoring to detect regressions and harden guardrails against model vulnerabilities.",
+  "link": "https://reinforcelabs.ai/",
+  "tags": {
+    "solution_types": [
+      "Commercial"
+    ],
+    "lifecycle_stages": [
+      "Test and Evaluation"
+    ],
+    "team": [
+      "Red",
+      "Blue"
+    ],
+    "risk_maps": [
+      "OWASP Top 10 Risks and Mitigations for LLM Apps 2025"
+    ]
+  },
+  "coverage": [
+    {
+      "group": "Red, Blue",
+      "items": [
+        "Test and Evaluation",
+        "LLM attack-surface mapping",
+        "AI posture dashboards (AI-SPM / AI-TRiSM)",
+        "Export of tests as stories",
+        "Synthetic insert generation",
+        "Bias / PII scorecards"
+      ]
+    }
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "Company Representative"
+}

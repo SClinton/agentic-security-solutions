@@ -1,0 +1,52 @@
+{
+  "id": 47,
+  "slug": "activefence-guardrails-activefence",
+  "title": "ActiveFence | Guardrails",
+  "company": "ActiveFence",
+  "description": "ActiveFence Guardrails monitors generative AI inputs and outputs in real-time. It enforces customizable policies across text, image, audio, and video, providing live visibility and intervening to prevent unsafe or misaligned behaviors with contextualized localization in 20+ languages.",
+  "link": "https://www.activefence.com/products/real-time-guardrails/",
+  "tags": {
+    "solution_types": [
+      "Proprietary"
+    ],
+    "llmops_stages": [
+      "Monitor",
+      "Deploy"
+    ],
+    "stage": [
+      "Monitor",
+      "Deploy"
+    ],
+    "top10_2026": [
+      "ASI01:26",
+      "ASI02:26",
+      "ASI03:26",
+      "ASI05:26",
+      "ASI06:26",
+      "ASI07:26",
+      "ASI08:26",
+      "ASI09:26",
+      "ASI10:26"
+    ]
+  },
+  "coverage": [
+    {
+      "group": "Monitor",
+      "items": [
+        "Alert on anomalies;  e.g., goal reversal, unexpected plan depth, adversarial-input, excessive tool usage, or rapid inter-agent chatter.",
+        "Audit reflection accuracy by comparing stated & observed planning outcomes.",
+        "Use immutable logs (e.g.",
+        "Sigstore, Immudb) for forensic readiness."
+      ]
+    },
+    {
+      "group": "Deploy",
+      "items": [
+        "Enforce zero-trust policies between agents, tools, & external APIs, Apply & manage runtime Guardrails, Configure Inter-agent authorization policies, capabilities, & roles"
+      ]
+    }
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "Company Representative"
+}

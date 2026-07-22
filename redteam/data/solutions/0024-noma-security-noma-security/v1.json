@@ -1,0 +1,67 @@
+{
+  "id": 24,
+  "slug": "noma-security-noma-security",
+  "title": "Noma Security",
+  "company": "Noma Security",
+  "description": "Enterprise-grade automated red teaming that continuously tests your AI models, agents, and applications against dynamic, evolving attack techniques. Unlike static attack libraries, Noma AI Red Team is itself an intelligent agent, building and adapting attacks based on the specific behavior of each application under test. Test any AI endpoint in production, backed by Noma Labs’ cutting-edge security research.",
+  "link": "https://noma.security",
+  "tags": {
+    "solution_types": [
+      "Commercial"
+    ],
+    "lifecycle_stages": [
+      "Govern"
+    ],
+    "team": [
+      "Red",
+      "Red",
+      "Blue",
+      "Purple"
+    ],
+    "risk_maps": [
+      "OWASP Top 10 Risks and Mitigations for LLM Apps 2025"
+    ]
+  },
+  "coverage": [
+    {
+      "group": "Red",
+      "items": [
+        "Govern",
+        "Threat-model design aids",
+        "AI asset inventory",
+        "Import red scenarios",
+        "Risk taxonomy import/export",
+        "Signed data packages",
+        "Red",
+        "Blue",
+        "Purple>Scoping/Planning",
+        "Data Augmentation and Fine-Tuning",
+        "Development and Experimentation",
+        "Test and Evaluation",
+        "Release",
+        "Deploy",
+        "Operate",
+        "Monitor",
+        "Govern",
+        "Threat-model design aids",
+        "LLM attack-surface mapping",
+        "Agent attack-surface mapping",
+        "AI asset inventory",
+        "AI posture dashboards (AI-SPM / AI-TRiSM)",
+        "Import red scenarios",
+        "Map red scenarios to blue controls",
+        "Risk-scoring dashboards",
+        "Risk taxonomy import/export",
+        "Visual data-flow mapping",
+        "Export of tests as stories",
+        "Malicious model artifacts",
+        "Data lineage & provenance tracking",
+        "DLP scanning",
+        "Bias / PII scorecards"
+      ]
+    }
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "Company Representative"
+}

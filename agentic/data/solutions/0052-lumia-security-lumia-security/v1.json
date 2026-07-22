@@ -1,0 +1,39 @@
+{
+  "id": 52,
+  "slug": "lumia-security-lumia-security",
+  "title": "Lumia Security",
+  "company": "Lumia Security",
+  "description": "Lumia Security—s AI Security and Governance platform helps organizations adopt AI safely, offering visibility, control, and risk mitigation across thousands of applications without disrupting productivity or creating a negative user experience.",
+  "link": "https://lumia.security",
+  "tags": {
+    "solution_types": [
+      "Proprietary"
+    ],
+    "llmops_stages": [
+      "Govern"
+    ],
+    "stage": [
+      "Govern"
+    ],
+    "top10_2026": [
+      "ASI01:26",
+      "ASI02:26",
+      "ASI03:26",
+      "ASI05:26",
+      "ASI08:26",
+      "ASI09:26"
+    ]
+  },
+  "coverage": [
+    {
+      "group": "Govern",
+      "items": [
+        "Enforce role- & task-based access policies across agent populations & their tool access.",
+        "Align control evidence with frameworks like EU AI Act, NIST AI RMF, & ISO/IEC 42001."
+      ]
+    }
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "Company Representative"
+}

@@ -1,0 +1,51 @@
+{
+  "id": 8,
+  "slug": "fiddler-ai-fiddler-ai",
+  "title": "Fiddler AI",
+  "company": "Fiddler AI",
+  "description": "Build secure, observable agentic systems using Fiddler Agentic Observability. Get aggregated and granular visibility up and down the agentic hierarchy, understand agent behavior, and implement safety guardrails to prevent unsafe behaviors ensuring reliable, protected agents.",
+  "link": "https://www.fiddler.ai/agentic-observability",
+  "tags": {
+    "solution_types": [
+      "Proprietary"
+    ],
+    "llmops_stages": [
+      "Monitor",
+      "Govern"
+    ],
+    "stage": [
+      "Monitor",
+      "Govern"
+    ],
+    "top10_2026": [
+      "ASI01:26",
+      "ASI02:26",
+      "ASI03:26",
+      "ASI05:26",
+      "ASI06:26",
+      "ASI07:26",
+      "ASI08:26",
+      "ASI09:26",
+      "ASI10:26"
+    ]
+  },
+  "coverage": [
+    {
+      "group": "Monitor",
+      "items": [
+        "Correlate telemetry from agent step tracing, tool execution, & message logs.",
+        "Alert on anomalies;  e.g., goal reversal, unexpected plan depth, adversarial-input, excessive tool usage, or rapid inter-agent chatter.",
+        "Audit reflection accuracy by comparing stated & observed planning outcomes."
+      ]
+    },
+    {
+      "group": "Govern",
+      "items": [
+        "Align control evidence with frameworks like EU AI Act, NIST AI RMF, & ISO/IEC 42001."
+      ]
+    }
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "Company Representative"
+}

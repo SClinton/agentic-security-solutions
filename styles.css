@@ -26,6 +26,9 @@
   --risk-bg: #fdeeee;
   --risk-text: #9a3030;
 
+  --team-tag-bg: #fde8cf;
+  --team-tag-text: #92400e;
+
   --card-head-bg: #1b4332;
   --card-head-text: #ffffff;
   --card-head-text-muted: #bfe3d2;
@@ -59,6 +62,9 @@
     --risk-bg: #2e1f22;
     --risk-text: #e08a8a;
 
+    --team-tag-bg: #3a2a12;
+    --team-tag-text: #f0b968;
+
     --card-head-bg: #12291e;
     --card-head-text: #f4f5f7;
     --card-head-text-muted: #9cc4b1;
@@ -83,6 +89,8 @@
   --llmops-tag-text: #007367;
   --risk-bg: #fdeeee;
   --risk-text: #9a3030;
+  --team-tag-bg: #fde8cf;
+  --team-tag-text: #92400e;
   --card-head-bg: #1b4332;
   --card-head-text: #ffffff;
   --card-head-text-muted: #bfe3d2;
@@ -104,6 +112,8 @@
   --llmops-tag-text: #6cd9c8;
   --risk-bg: #2e1f22;
   --risk-text: #e08a8a;
+  --team-tag-bg: #3a2a12;
+  --team-tag-text: #f0b968;
   --card-head-bg: #12291e;
   --card-head-text: #f4f5f7;
   --card-head-text-muted: #9cc4b1;
@@ -129,6 +139,23 @@ body {
   padding: 28px 0 22px;
   background: var(--header-dark);
   color: #ffffff;
+}
+
+.breadcrumb {
+  max-width: 1200px;
+  margin: 0 auto 10px;
+  padding: 0 20px;
+  font-size: 0.8rem;
+  color: #9aa1ac;
+}
+
+.breadcrumb a {
+  color: #d7dae0;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
 }
 
 .header-row {
@@ -176,6 +203,68 @@ body {
 main.wrap {
   padding-top: 24px;
   padding-bottom: 48px;
+}
+
+.directory-main {
+  padding-top: 40px;
+}
+
+.db-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 22px;
+}
+
+.db-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  text-decoration: none;
+  color: var(--text);
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.db-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(20, 24, 33, 0.12);
+}
+
+.db-card-head {
+  background: var(--card-head-bg);
+  color: var(--card-head-text);
+  padding: 20px 22px;
+}
+
+.db-card-head h2 {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--card-head-text);
+}
+
+.db-card-body {
+  padding: 18px 22px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.db-card-body p {
+  margin: 0;
+  font-size: 0.92rem;
+}
+
+.db-card-count {
+  margin-top: auto;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 600;
 }
 
 .layout {
@@ -483,6 +572,12 @@ main.wrap {
 .tag-risk {
   background: var(--risk-bg);
   color: var(--risk-text);
+}
+
+.tag-team {
+  background: var(--team-tag-bg);
+  color: var(--team-tag-text);
+  font-weight: 600;
 }
 
 .card-details {

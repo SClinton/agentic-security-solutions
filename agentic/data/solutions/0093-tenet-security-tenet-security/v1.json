@@ -1,0 +1,96 @@
+{
+  "id": 93,
+  "slug": "tenet-security-tenet-security",
+  "title": "Tenet Security",
+  "company": "Tenet Security",
+  "description": "Correlates AI agent LLM calls, tool invocations, syscalls, and filesystem operations in real time to detect behavioral anomalies, adversarial logic exploits, and prompt injection attacks across autonomous agent sessions.",
+  "link": "https://www.tenetsecurity.ai/",
+  "tags": {
+    "solution_types": [
+      "Proprietary"
+    ],
+    "llmops_stages": [
+      "Monitor",
+      "Govern",
+      "Operate",
+      "Test & Evaluation",
+      "Deploy",
+      "Development & Experimentation"
+    ],
+    "stage": [
+      "Monitor",
+      "Govern",
+      "Operate",
+      "Test & Evaluation",
+      "Deploy",
+      "Development & Experimentation"
+    ],
+    "top10_2026": [
+      "ASI01:26",
+      "ASI02:26",
+      "ASI03:26",
+      "ASI05:26",
+      "ASI06:26",
+      "ASI07:26",
+      "ASI08:26",
+      "ASI09:26",
+      "ASI10:26"
+    ]
+  },
+  "coverage": [
+    {
+      "group": "Monitor",
+      "items": [
+        "Correlate telemetry from agent step tracing, tool execution, & message logs.",
+        "Alert on anomalies;  e.g., goal reversal, unexpected plan depth, adversarial-input, excessive tool usage, or rapid inter-agent chatter.",
+        "Use immutable logs (e.g.",
+        "Sigstore, Immudb) for forensic readiness."
+      ]
+    },
+    {
+      "group": "Govern",
+      "items": [
+        "Enforce role- & task-based access policies across agent populations & their tool access.",
+        "Align control evidence with frameworks like EU AI Act, NIST AI RMF, & ISO/IEC 42001.",
+        "Automate goal alignment audits, including adversarial review of long-term agent memory."
+      ]
+    },
+    {
+      "group": "Operate",
+      "items": [
+        "Detect task replay, infinite delegation, or hallucination loops.",
+        "Enable human-in-the-loop (HITL) override thresholds on high-risk or ambiguous actions, Continuously scan loaded plugins for CVEs & privilege escalation vectors.",
+        "LLM Incident Detection & Response, Runtime guardrails & moderation; anomalous tool use"
+      ]
+    },
+    {
+      "group": "Test & Evaluation",
+      "items": [
+        "Available Agent Scanning, Agent Penetration Testing, Adversarial red-teaming: goal drift, prompt injection, hallucination chaining, & over-permissioned tool usage.",
+        "Multi-agent scenario simulations for collusion, misalignment, or deception detection.",
+        "Validate agent decisions against expected goal plans.",
+        "Sandboxed testing of all tool calls, code execution, cloud API triggers"
+      ]
+    },
+    {
+      "group": "Deploy",
+      "items": [
+        "Enforce zero-trust policies between agents, tools, & external APIs, Apply & manage runtime Guardrails"
+      ]
+    },
+    {
+      "group": "Development & Experimentation",
+      "items": [
+        "Perform SAST/DAST on agent planning code, tool wrappers, & plugin interfaces.",
+        "Harden agent loop logic against infinite loops, unsafe function routing, & unauthorized self-modification.",
+        "Validate connector (e.g.",
+        "MCP)  contracts (input/output schemas & permissions).",
+        "Implement policy enforcement hooks in Frameworks (e.g.",
+        "LangGraph, CrewAI, Others)"
+      ]
+    }
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "Company Representative"
+}

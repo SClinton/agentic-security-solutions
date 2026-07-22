@@ -1,0 +1,37 @@
+{
+  "id": 29,
+  "slug": "fujitsu-agentic-ai-scanner-fujitsu",
+  "title": "Fujitsu Agentic AI Scanner",
+  "company": "Fujitsu",
+  "description": "Fujitsu Agentic AI Scanning closes the gaps in agentic AI security by introducing a unified scanning pipeline that reconstructs, simulates, and stress-tests agentic systems in a safe, controlled environment.",
+  "link": "https://www.fujitsu.com/global/about/resources/news/press-releases/2024/1212-01.html",
+  "tags": {
+    "solution_types": [
+      "Commercial"
+    ],
+    "lifecycle_stages": [
+      "Test and Evaluation",
+      "Govern"
+    ],
+    "team": [
+      "Red"
+    ],
+    "risk_maps": [
+      "OWASP Top 10 Risks and Mitigations for Agentic Apps 2026"
+    ]
+  },
+  "coverage": [
+    {
+      "group": "Red",
+      "items": [
+        "Test and Evaluation",
+        "Govern",
+        "Threat-model design aids",
+        "Agent attack-surface mapping"
+      ]
+    }
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "Company Representative"
+}

@@ -1,0 +1,33 @@
+{
+  "id": 9,
+  "slug": "llm-rtk-large-language-model-red-teaming-kit",
+  "title": "LLM-RTK (Large Language Model Red Teaming Kit)",
+  "company": "",
+  "description": "Adversarial testing framework for GenAI systems that executes objective-driven attack prompts and analyzes responses to identify potential security weaknesses aligned with OWASP GenAI risks, including prompt injection, data leakage, role escalation, and policy bypass behaviors.",
+  "link": "https://github.com/koraydns/llm-rtk",
+  "tags": {
+    "solution_types": [
+      "Open Source"
+    ],
+    "lifecycle_stages": [
+      "Test and Evaluation"
+    ],
+    "team": [
+      "Red"
+    ],
+    "risk_maps": [
+      "OWASP Top 10 Risks and Mitigations for LLM Apps 2025"
+    ]
+  },
+  "coverage": [
+    {
+      "group": "Red",
+      "items": [
+        "Test and Evaluation"
+      ]
+    }
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "End User"
+}

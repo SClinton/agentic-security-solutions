@@ -1,0 +1,30 @@
+{
+  "id": 4,
+  "slug": "microsoft-defedner-for-cloud-apps-microsoft",
+  "title": "Microsoft Defedner for Cloud Apps",
+  "company": "Microsoft",
+  "description": "Microsoft Defender for Cloud Apps provide customers with the ability to discover, assess and govern the usage of AI SaaS applications, and AI applications connections to Microsoft 365 environment, together with threat detections for malicious usage of managed Gen AI applications, starting with Microsoft Copilot.",
+  "link": "https://www.microsoft.com/en-us/security/business/siem-and-xdr/microsoft-defender-cloud-apps",
+  "tags": {
+    "solution_types": [
+      "Proprietary"
+    ],
+    "llmops_stages": [
+      "Monitor"
+    ],
+    "stage": [
+      "Monitor"
+    ],
+    "top10_2026": [
+      "ASI01:26",
+      "ASI02:26",
+      "ASI05:26",
+      "ASI08:26",
+      "ASI09:26"
+    ]
+  },
+  "coverage": [],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "Company Representative"
+}

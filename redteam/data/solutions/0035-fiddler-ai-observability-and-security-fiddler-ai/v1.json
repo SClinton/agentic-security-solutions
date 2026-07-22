@@ -1,0 +1,54 @@
+{
+  "id": 35,
+  "slug": "fiddler-ai-observability-and-security-fiddler-ai",
+  "title": "Fiddler AI Observability and Security",
+  "company": "Fiddler AI",
+  "description": "Fiddler AI Observability and Security serves as the Control Plane for compound AI and agentic systems. The platform provides standardized telemetry, continuous evaluation, real-time guardrails, enforceable policy, and auditable governance across the full AI lifecycle. Fiddler's built-in Trust Models enable organizations to evaluate every AI interaction for safety, accuracy, and compliance without relying on external LLM API calls.",
+  "link": "https://www.fiddler.ai",
+  "tags": {
+    "solution_types": [
+      "Commercial"
+    ],
+    "lifecycle_stages": [
+      "Scoping/Planning",
+      "Development and Experimentation",
+      "Test and Evaluation",
+      "Deploy",
+      "Operate",
+      "Monitor",
+      "Govern"
+    ],
+    "team": [
+      "Blue",
+      "Purple"
+    ],
+    "risk_maps": [
+      "OWASP Top 10 Risks and Mitigations for LLM Apps 2025",
+      "OWASP Top 10 Risks and Mitigations for Agentic Apps 2026"
+    ]
+  },
+  "coverage": [
+    {
+      "group": "Blue, Purple",
+      "items": [
+        "Scoping/Planning",
+        "Development and Experimentation",
+        "Test and Evaluation",
+        "Deploy",
+        "Operate",
+        "Monitor",
+        "Govern",
+        "AI asset inventory",
+        "AI posture dashboards (AI-SPM / AI-TRiSM)",
+        "Risk-scoring dashboards",
+        "Visual data-flow mapping",
+        "DLP scanning",
+        "Bias-toxicity co-auditing",
+        "Bias / PII scorecards"
+      ]
+    }
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "Company Representative"
+}

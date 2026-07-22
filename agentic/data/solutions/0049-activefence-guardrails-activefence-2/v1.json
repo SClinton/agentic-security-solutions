@@ -1,0 +1,42 @@
+{
+  "id": 49,
+  "slug": "activefence-guardrails-activefence-2",
+  "title": "ActiveFence | Guardrails",
+  "company": "ActiveFence",
+  "description": "ActiveFence Guardrails monitors generative AI inputs and outputs in real-time. It enforces customizable policies across text, image, audio, and video, providing live visibility and intervening to prevent unsafe or misaligned behaviors with contextualized localization in 20+ languages.",
+  "link": "https://www.activefence.com/products/real-time-guardrails/",
+  "tags": {
+    "solution_types": [
+      "Proprietary"
+    ],
+    "llmops_stages": [
+      "Operate"
+    ],
+    "stage": [
+      "Operate"
+    ],
+    "top10_2026": [
+      "ASI01:26",
+      "ASI02:26",
+      "ASI03:26",
+      "ASI05:26",
+      "ASI06:26",
+      "ASI07:26",
+      "ASI08:26",
+      "ASI09:26",
+      "ASI10:26"
+    ]
+  },
+  "coverage": [
+    {
+      "group": "Operate",
+      "items": [
+        "Detect task replay, infinite delegation, or hallucination loops.",
+        "LLM Incident Detection & Response, Runtime guardrails & moderation; anomalous tool use"
+      ]
+    }
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "Company Representative"
+}

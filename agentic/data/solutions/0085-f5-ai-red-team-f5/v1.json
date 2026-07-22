@@ -1,0 +1,37 @@
+{
+  "id": 85,
+  "slug": "f5-ai-red-team-f5",
+  "title": "F5 AI Red Team",
+  "company": "F5",
+  "description": "Evaluates agentic AI systems through adversarial testing of prompts, context, and multi-step workflows, simulating attack scenarios to identify unsafe behaviors, assess resilience, and provide structured findings to support risk assessment and mitigation.",
+  "link": "https://www.f5.com/products/ai-red-team",
+  "tags": {
+    "solution_types": [
+      "Proprietary"
+    ],
+    "llmops_stages": [
+      "Test & Evaluation"
+    ],
+    "stage": [
+      "Test & Evaluation"
+    ],
+    "top10_2026": [
+      "ASI01:26",
+      "ASI02:26",
+      "ASI05:26",
+      "ASI06:26",
+      "ASI09:26"
+    ]
+  },
+  "coverage": [
+    {
+      "group": "Test & Evaluation",
+      "items": [
+        "Agent Penetration Testing, Adversarial red-teaming: goal drift, prompt injection, hallucination chaining, & over-permissioned tool usage."
+      ]
+    }
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "Company Representative"
+}

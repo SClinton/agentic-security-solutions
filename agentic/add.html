@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Submit a Solution — Agentic Security Solutions</title>
+<meta name="description" content="Submit a new agentic AI security solution to the database.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Inter:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body data-form-mode="add">
+<div class="concept-banner">
+  ⚠️ Design concept only — this is a prototype, not an active or production application. Submissions are not processed automatically.
+</div>
+
+<header class="site-header">
+  <p class="breadcrumb"><a href="../index.html">OWASP GenAI Security Project Solution Directory</a> / <a href="index.html">Agentic Security Solutions</a> / Submit a Solution</p>
+  <div class="wrap header-row">
+    <h1>Agentic Security Solutions</h1>
+    <nav>
+      <a class="btn" href="index.html">← Back to database</a>
+    </nav>
+  </div>
+</header>
+
+<main class="form-wrap">
+  <h1>Submit a Solution</h1>
+  <p class="lede">
+    This opens a pre-filled GitHub Issue in this repository so a maintainer can review and add
+    your entry to the database. No account changes are made and nothing is submitted automatically.
+  </p>
+
+  <form id="submit-form">
+    <div class="field">
+      <label for="title">Solution / Product Name <span aria-hidden="true">*</span></label>
+      <input type="text" id="title" name="title" required>
+    </div>
+
+    <div class="field">
+      <label for="company">Company / Project Name <span aria-hidden="true">*</span></label>
+      <input type="text" id="company" name="company" required>
+    </div>
+
+    <div class="field">
+      <label for="description">Description <span aria-hidden="true">*</span></label>
+      <textarea id="description" name="description" required
+        placeholder="A short description of what the solution does and the problem it solves."></textarea>
+    </div>
+
+    <div class="field">
+      <label for="link">Solution Link (URL) <span aria-hidden="true">*</span></label>
+      <input type="url" id="link" name="link" placeholder="https://example.com" required>
+    </div>
+
+    <div class="field">
+      <label>Solution Type</label>
+      <div class="checkbox-grid" id="solution_types"></div>
+      <span class="hint">Existing types are listed as chips; use "Other" below for a new one.</span>
+      <input type="text" id="solution_types_other" placeholder="Other solution type (optional)" style="margin-top:8px;">
+    </div>
+
+    <div class="field">
+      <label>LLMOps Stage(s)</label>
+      <div class="checkbox-grid" id="llmops_stages"></div>
+    </div>
+
+    <div class="field">
+      <label>Agentic SDLC Phase(s)</label>
+      <div class="checkbox-grid" id="sldc_stages"></div>
+    </div>
+
+    <div class="field">
+      <label for="characteristics">Taxonomy Coverage</label>
+      <textarea id="characteristics" name="characteristics"
+        placeholder="Describe specific capabilities per phase, e.g. &quot;Test & Evaluation: adversarial red-teaming, goal-drift detection.&quot;"></textarea>
+      <span class="hint">Freeform — reference the phases above where relevant.</span>
+    </div>
+
+    <div class="field">
+      <label>Agentic Top 10 (2026) Risks Addressed</label>
+      <div class="checkbox-grid" id="top10_2026"></div>
+    </div>
+
+    <div class="field">
+      <label for="submitter_name">Your Name</label>
+      <input type="text" id="submitter_name" name="submitter_name">
+    </div>
+
+    <div class="field">
+      <label for="submitter_affiliation">Affiliation</label>
+      <input type="text" id="submitter_affiliation" name="submitter_affiliation"
+        placeholder="e.g. Company Representative, Independent Researcher">
+    </div>
+
+    <div class="field">
+      <label for="submitter_email">Email</label>
+      <input type="email" id="submitter_email" name="submitter_email">
+    </div>
+
+    <div class="form-actions">
+      <button type="submit" class="btn btn-primary">Open GitHub Issue to Submit</button>
+    </div>
+    <p class="form-note" id="form-note"></p>
+  </form>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p><a href="index.html">← Back to database</a></p>
+  </div>
+</footer>
+
+<script src="../app.config.js"></script>
+<script src="db.config.js"></script>
+<script src="../shared/form.js"></script>
+</body>
+</html>

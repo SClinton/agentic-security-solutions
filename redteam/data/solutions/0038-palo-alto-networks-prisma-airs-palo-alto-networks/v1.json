@@ -1,0 +1,69 @@
+{
+  "id": 38,
+  "slug": "palo-alto-networks-prisma-airs-palo-alto-networks",
+  "title": "Palo Alto Networks - Prisma AIRS",
+  "company": "Palo Alto Networks",
+  "description": "Prisma AIRS includes modules for AI Red Teaming, which runs automated attack simulations on AI agents, and Agent Artifact Scanning, which scans model artifacts and agent source code to find sources of risk. \n\nThis includes the ability to run automated profiling, where AI Red Teaming gathers details about a target's tools, use case, and system prompts in order to tailor attack simulations to each target agent. Reports from AI Red Teaming automatically feed into runtime guardrails that the security architect can leverage.",
+  "link": "https://www.paloaltonetworks.com/prisma/ai-red-teaming",
+  "tags": {
+    "solution_types": [
+      "Commercial"
+    ],
+    "lifecycle_stages": [
+      "Scoping/Planning",
+      "Data Augmentation and Fine-Tuning",
+      "Development and Experimentation",
+      "Test and Evaluation",
+      "Release",
+      "Deploy",
+      "Operate",
+      "Monitor",
+      "Govern"
+    ],
+    "team": [
+      "Red",
+      "Blue",
+      "Purple"
+    ],
+    "risk_maps": [
+      "OWASP Top 10 Risks and Mitigations for LLM Apps 2025"
+    ]
+  },
+  "coverage": [
+    {
+      "group": "Red, Blue, Purple",
+      "items": [
+        "Scoping/Planning",
+        "Data Augmentation and Fine-Tuning",
+        "Development and Experimentation",
+        "Test and Evaluation",
+        "Release",
+        "Deploy",
+        "Operate",
+        "Monitor",
+        "Govern",
+        "Threat-model design aids",
+        "LLM attack-surface mapping",
+        "Agent attack-surface mapping",
+        "AI asset inventory",
+        "AI posture dashboards (AI-SPM / AI-TRiSM)",
+        "Import red scenarios",
+        "Map red scenarios to blue controls",
+        "Risk-scoring dashboards",
+        "Risk taxonomy import/export",
+        "Visual data-flow mapping",
+        "Export of tests as stories",
+        "Synthetic insert generation",
+        "Malicious model artifacts",
+        "Data lineage & provenance tracking",
+        "DLP scanning",
+        "Bias-toxicity co-auditing",
+        "Replay Red mutation through Bias filters",
+        "Bias / PII scorecards"
+      ]
+    }
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "Company Representative"
+}

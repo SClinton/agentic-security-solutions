@@ -1,0 +1,35 @@
+{
+  "id": 1,
+  "slug": "eu-compliance-mcp",
+  "title": "EU Compliance MCP",
+  "company": "",
+  "description": "Open-source MCP server providing deterministic, structured access to 50 EU regulations and 2,700+ articles including GDPR, AI Act, NIS2, DORA, and CRA. Every provision hard-linked to official EUR-Lex sources, creating auditable compliance chains for AI systems.",
+  "link": "https://ansvar.eu",
+  "tags": {
+    "solution_types": [
+      "Open Source"
+    ],
+    "lifecycle_stages": [
+      "Scoping/Planning"
+    ],
+    "team": [
+      "Blue"
+    ],
+    "risk_maps": [
+      "Does not Support OWASP GenAI Security Posture Reporting"
+    ]
+  },
+  "coverage": [
+    {
+      "group": "Blue",
+      "items": [
+        "Scoping/Planning",
+        "AI asset inventory",
+        "Risk taxonomy import/export"
+      ]
+    }
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "Company Representative"
+}

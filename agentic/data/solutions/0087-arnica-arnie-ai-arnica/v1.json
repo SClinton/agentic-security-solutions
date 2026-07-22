@@ -1,0 +1,35 @@
+{
+  "id": 87,
+  "slug": "arnica-arnie-ai-arnica",
+  "title": "Arnica - Arnie AI",
+  "company": "Arnica",
+  "description": "Arnie AI is Agentic Rules Enforcement at code generation and AI SAST to prevent vulnerabilities from ever reaching production.",
+  "link": "https://www.arnica.io/solutions/arnie-ai",
+  "tags": {
+    "solution_types": [
+      "Proprietary"
+    ],
+    "llmops_stages": [
+      "Development & Experimentation"
+    ],
+    "stage": [
+      "Development & Experimentation"
+    ],
+    "top10_2026": [
+      "ASI09:26"
+    ]
+  },
+  "coverage": [
+    {
+      "group": "Development & Experimentation",
+      "items": [
+        "Perform SAST/DAST on agent planning code, tool wrappers, & plugin interfaces.",
+        "Implement policy enforcement hooks in Frameworks (e.g.",
+        "LangGraph, CrewAI, Others)"
+      ]
+    }
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "Company Representative"
+}

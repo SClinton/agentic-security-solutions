@@ -1,0 +1,42 @@
+{
+  "id": 40,
+  "slug": "datumo-datumo",
+  "title": "Datumo",
+  "company": "Datumo",
+  "description": "Provides automated red teaming to assess AI application vulnerabilities by generating attack prompts from seed data and attack strategies, executing iterative attacks against target models, and automatically scoring responses for safe or unsafe behavior.",
+  "link": "https://datumo.com/ai_redteam/",
+  "tags": {
+    "solution_types": [
+      "Commercial"
+    ],
+    "lifecycle_stages": [
+      "Test and Evaluation"
+    ],
+    "team": [
+      "Red"
+    ],
+    "risk_maps": [
+      "OWASP Top 10 Risks and Mitigations for LLM Apps 2025"
+    ]
+  },
+  "coverage": [
+    {
+      "group": "Red",
+      "items": [
+        "Test and Evaluation",
+        "LLM attack-surface mapping",
+        "Agent attack-surface mapping",
+        "Risk taxonomy import/export",
+        "Visual data-flow mapping",
+        "Synthetic insert generation",
+        "Malicious model artifacts",
+        "Bias / PII scorecards",
+        "Signed data packages",
+        "Diff corpus versions"
+      ]
+    }
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "New"
+}

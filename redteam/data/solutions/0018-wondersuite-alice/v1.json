@@ -1,0 +1,61 @@
+{
+  "id": 18,
+  "slug": "wondersuite-alice",
+  "title": "WonderSuite",
+  "company": "Alice",
+  "description": "WonderSuite is an AI safety and security platform providing pre-launch stress testing, real-time adaptive guardrails for live applications, and ongoing automated red teaming to detect drift and emerging risks in production systems.",
+  "link": "https://alice.io/products/platform",
+  "tags": {
+    "solution_types": [
+      "Commercial"
+    ],
+    "lifecycle_stages": [
+      "Scoping/Planning",
+      "Data Augmentation and Fine-Tuning",
+      "Development and Experimentation",
+      "Test and Evaluation",
+      "Release",
+      "Deploy",
+      "Operate",
+      "Govern"
+    ],
+    "team": [
+      "Red",
+      "Purple"
+    ],
+    "risk_maps": [
+      "OWASP Top 10 Risks and Mitigations for LLM Apps 2025",
+      "OWASP Top 10 Risks and Mitigations for Agentic Apps 2026"
+    ]
+  },
+  "coverage": [
+    {
+      "group": "Red, Purple",
+      "items": [
+        "Scoping/Planning",
+        "Data Augmentation and Fine-Tuning",
+        "Development and Experimentation",
+        "Test and Evaluation",
+        "Release",
+        "Deploy",
+        "Operate",
+        "Govern",
+        "Threat-model design aids",
+        "LLM attack-surface mapping",
+        "Agent attack-surface mapping",
+        "Import red scenarios",
+        "Risk-scoring dashboards",
+        "Risk taxonomy import/export",
+        "Data-poison fuzzing;",
+        "Synthetic insert generation",
+        "Bias-toxicity co-auditing",
+        "Replay Red mutation through Bias filters",
+        "Bias / PII scorecards",
+        "Diff corpus versions"
+      ]
+    }
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "Company Representative"
+}

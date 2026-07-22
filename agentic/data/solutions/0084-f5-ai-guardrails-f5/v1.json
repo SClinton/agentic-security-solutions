@@ -1,0 +1,36 @@
+{
+  "id": 84,
+  "slug": "f5-ai-guardrails-f5",
+  "title": "F5 AI Guardrails",
+  "company": "F5",
+  "description": "Applies policy enforcement at inference time, inspecting prompts and context to constrain unsafe behavior and control execution across multi-step agentic workflows.",
+  "link": "https://www.f5.com/products/ai-guardrails",
+  "tags": {
+    "solution_types": [
+      "Proprietary"
+    ],
+    "llmops_stages": [
+      "Operate"
+    ],
+    "stage": [
+      "Operate"
+    ],
+    "top10_2026": [
+      "ASI01:26",
+      "ASI02:26",
+      "ASI05:26",
+      "ASI09:26"
+    ]
+  },
+  "coverage": [
+    {
+      "group": "Operate",
+      "items": [
+        "Runtime guardrails & moderation; anomalous tool use"
+      ]
+    }
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "Company Representative"
+}

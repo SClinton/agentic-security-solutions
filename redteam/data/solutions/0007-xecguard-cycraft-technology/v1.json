@@ -1,0 +1,47 @@
+{
+  "id": 7,
+  "slug": "xecguard-cycraft-technology",
+  "title": "XecGuard",
+  "company": "CyCraft Technology",
+  "description": "the next-generation AI Guardrail safety module, instantly equips existing AI applications with robust malicious context defense. By blocking threats such as Prompt Injection, Prompt Extraction and Jailbreak attacks, XecGuard precisely enhances instruction adherence and provides active defense for enterprise AI.",
+  "link": "https://www.cycraft.com/en/xecguard",
+  "tags": {
+    "solution_types": [
+      "Commercial"
+    ],
+    "lifecycle_stages": [
+      "Data Augmentation and Fine-Tuning",
+      "Test and Evaluation",
+      "Deploy",
+      "Operate"
+    ],
+    "team": [
+      "Blue",
+      "Blue",
+      "Purple"
+    ],
+    "risk_maps": [
+      "OWASP Top 10 Risks and Mitigations for LLM Apps 2025"
+    ]
+  },
+  "coverage": [
+    {
+      "group": "Blue",
+      "items": [
+        "Data Augmentation and Fine-Tuning",
+        "Test and Evaluation",
+        "Deploy",
+        "Operate",
+        "Data lineage & provenance tracking",
+        "DLP scanning",
+        "Blue",
+        "Purple>Operate",
+        "Monitor",
+        "Bias / PII scorecards"
+      ]
+    }
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "Company Representative"
+}

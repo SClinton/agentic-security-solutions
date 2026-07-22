@@ -1,0 +1,45 @@
+{
+  "id": 11,
+  "slug": "tenuo",
+  "title": "Tenuo",
+  "company": "",
+  "description": "Tenuo issues cryptographically signed, task-scoped authorization tokens for AI agent tool calls. Enforces least-privilege through subtractive delegation chains. Provides a control plane for policy management, audit logging, and authorization reporting across agent deployments.",
+  "link": "https://tenuo.ai",
+  "tags": {
+    "solution_types": [
+      "Open Source"
+    ],
+    "lifecycle_stages": [
+      "Scoping/Planning",
+      "Test and Evaluation",
+      "Deploy",
+      "Operate",
+      "Monitor",
+      "Govern"
+    ],
+    "team": [
+      "Blue"
+    ],
+    "risk_maps": [
+      "OWASP Top 10 Risks and Mitigations for Agentic Apps 2026"
+    ]
+  },
+  "coverage": [
+    {
+      "group": "Blue",
+      "items": [
+        "Scoping/Planning",
+        "Test and Evaluation",
+        "Deploy",
+        "Operate",
+        "Monitor",
+        "Govern",
+        "AI asset inventory",
+        "AI posture dashboards (AI-SPM / AI-TRiSM)"
+      ]
+    }
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "Company Representative"
+}

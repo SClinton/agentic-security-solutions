@@ -1,0 +1,49 @@
+{
+  "id": 34,
+  "slug": "opsin-opsin",
+  "title": "Opsin",
+  "company": "Opsin",
+  "description": "Opsin evaluates enterprise AI deployments by analyzing real-world AI interactions to uncover data exposure, permission drift, prompt manipulation, and misuse scenarios, supporting ongoing AI risk detection, visibility, and governance across copilots and agents.",
+  "link": "https://www.opsinsecurity.com/product",
+  "tags": {
+    "solution_types": [
+      "Commercial"
+    ],
+    "lifecycle_stages": [
+      "Deploy",
+      "Operate",
+      "Monitor",
+      "Govern"
+    ],
+    "team": [
+      "Blue"
+    ],
+    "risk_maps": [
+      "OWASP Top 10 Risks and Mitigations for LLM Apps 2025",
+      "OWASP Top 10 Risks and Mitigations for Agentic Apps 2026"
+    ]
+  },
+  "coverage": [
+    {
+      "group": "Blue",
+      "items": [
+        "Deploy",
+        "Operate",
+        "Monitor",
+        "Govern",
+        "AI asset inventory",
+        "AI posture dashboards (AI-SPM / AI-TRiSM)",
+        "Map red scenarios to blue controls",
+        "Risk-scoring dashboards",
+        "Risk taxonomy import/export",
+        "Visual data-flow mapping",
+        "Export of tests as stories",
+        "Data lineage & provenance tracking",
+        "Bias / PII scorecards"
+      ]
+    }
+  ],
+  "stars": 0,
+  "forks": 0,
+  "submitter_affiliation": "Company Representative"
+}
