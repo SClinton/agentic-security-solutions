@@ -77,6 +77,9 @@
 <template id="card-template">
   <article class="card">
     <div class="card-head">
+      <a class="card-edit-btn" title="Suggest an edit" aria-label="Suggest an edit">
+        <span aria-hidden="true">✎</span>
+      </a>
       <h2 class="card-title"></h2>
       <span class="card-company"></span>
     </div>
@@ -90,6 +93,7 @@
     <div class="card-tags card-tags-risks"></div>
     <div class="card-footer">
       <a class="card-link" target="_blank" rel="noopener noreferrer">Visit site ↗</a>
+      <span class="card-version" title="Version history"></span>
     </div>
   </article>
 </template>

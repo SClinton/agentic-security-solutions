@@ -15,12 +15,20 @@
     container.appendChild(label);
   }
 
-  async function loadFacetValues() {
+  async function loadAllCurrentSolutions() {
     const manifestRes = await fetch("data/manifest.json");
-    const files = await manifestRes.json();
-    const solutions = await Promise.all(
-      files.map((f) => fetch(`data/${f}`).then((r) => r.json()))
+    const metaPaths = await manifestRes.json();
+    return Promise.all(
+      metaPaths.map(async (metaPath) => {
+        const meta = await fetch(`data/${metaPath}`).then((r) => r.json());
+        const folder = metaPath.replace(/\/meta\.json$/, "");
+        return fetch(`data/${folder}/v${meta.current_version}.json`).then((r) => r.json());
+      })
     );
+  }
+
+  async function loadFacetValues() {
+    const solutions = await loadAllCurrentSolutions();
 
     const values = {
       solution_types: new Set(),

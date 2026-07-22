@@ -1,14 +1,23 @@
 #!/usr/bin/env python3
-"""Convert AgenticSolutions.csv into one JSON file per solution, plus a manifest.
+"""Convert AgenticSolutions.csv into one versioned folder per solution, plus a manifest.
+
+Each solution lives at data/solutions/<folder>/ as:
+    v1.json    - the initial version (immutable once written)
+    meta.json  - {"slug", "id", "current_version", "versions": [1, ...]}
 
 Run whenever the source CSV changes:
     python3 build_data.py
+
+This only (re)builds v1 for solutions sourced from the CSV. It never
+touches a folder that already has a meta.json, so it will not clobber
+version history created by apply_edit.py for entries edited since the
+last CSV import. To force a full rebuild from scratch (discarding all
+edit history), delete data/solutions/ first.
 """
 import csv
 import html
 import json
 import re
-import shutil
 from pathlib import Path
 
 SRC = Path(__file__).parent / "AgenticSolutions.csv"
@@ -85,8 +94,6 @@ def main():
         reader = csv.DictReader(f)
         rows = list(reader)
 
-    if DATA_DIR.exists():
-        shutil.rmtree(DATA_DIR)
     DATA_DIR.mkdir(parents=True, exist_ok=True)
 
     manifest = []
@@ -107,7 +114,15 @@ def main():
         seen_slugs[slug] = n + 1
         if n:
             slug = f"{slug}-{n + 1}"
-        filename = f"{i:04d}-{slug}.json"
+        folder_name = f"{i:04d}-{slug}"
+        folder = DATA_DIR / folder_name
+        meta_path = folder / "meta.json"
+
+        manifest.append(f"solutions/{folder_name}/meta.json")
+
+        if meta_path.exists():
+            # Already imported (and possibly edited since) - leave it alone.
+            continue
 
         solution = {
             "id": i,
@@ -125,13 +140,15 @@ def main():
             "submitter_affiliation": clean_text(r.get("land_submitter_affiliation", "")),
         }
 
-        (DATA_DIR / filename).write_text(
+        folder.mkdir(parents=True, exist_ok=True)
+        (folder / "v1.json").write_text(
             json.dumps(solution, indent=2, ensure_ascii=False), encoding="utf-8"
         )
-        manifest.append(f"solutions/{filename}")
+        meta = {"slug": slug, "id": i, "current_version": 1, "versions": [1]}
+        meta_path.write_text(json.dumps(meta, indent=2, ensure_ascii=False), encoding="utf-8")
 
     MANIFEST.write_text(json.dumps(manifest, indent=2), encoding="utf-8")
-    print(f"Wrote {len(manifest)} solution files to {DATA_DIR}")
+    print(f"Wrote {len(manifest)} solution folders under {DATA_DIR}")
     print(f"Wrote manifest with {len(manifest)} entries to {MANIFEST}")
 
 

@@ -26,10 +26,23 @@
 
   async function loadData() {
     const manifestRes = await fetch("data/manifest.json");
-    const files = await manifestRes.json();
+    const metaPaths = await manifestRes.json();
+
     const solutions = await Promise.all(
-      files.map((f) => fetch(`data/${f}`).then((r) => r.json()))
+      metaPaths.map(async (metaPath) => {
+        const meta = await fetch(`data/${metaPath}`).then((r) => r.json());
+        const folder = metaPath.replace(/\/meta\.json$/, "");
+        const current = await fetch(
+          `data/${folder}/v${meta.current_version}.json`
+        ).then((r) => r.json());
+        return {
+          ...current,
+          version: meta.current_version,
+          versionCount: meta.versions.length,
+        };
+      })
     );
+
     state.all = solutions.map((s) => {
       const sldc_stages = (s.agentic_sldc || []).map((st) => st.stage);
       const stage = Array.from(new Set([...(s.llmops_stages || []), ...sldc_stages]));
@@ -198,6 +211,16 @@
       node.querySelector(".card-title").textContent = s.title;
       node.querySelector(".card-company").textContent = s.company;
       node.querySelector(".card-description").textContent = s.description;
+
+      const editBtn = node.querySelector(".card-edit-btn");
+      editBtn.href = `edit.html?slug=${encodeURIComponent(s.slug)}`;
+      editBtn.setAttribute("aria-label", `Suggest an edit to ${s.title}`);
+
+      const versionEl = node.querySelector(".card-version");
+      versionEl.textContent = `v${s.version}`;
+      versionEl.title = s.versionCount > 1
+        ? `Version ${s.version} of ${s.versionCount}`
+        : `Version ${s.version}`;
 
       const typesEl = node.querySelector(".card-tags-types");
       s.solution_types.forEach((t) => {
