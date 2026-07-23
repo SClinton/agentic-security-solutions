@@ -8,7 +8,21 @@ window.DB_CONFIG = {
   // Sidebar filters on index.html
   facets: [
     { key: "solution_types", label: "Solution Type", tagClass: "tag-type" },
-    { key: "lifecycle_stages", label: "Lifecycle Stage", tagClass: "tag-llmops" },
+    {
+      key: "lifecycle_stages",
+      label: "Lifecycle Stage",
+      tagClass: "tag-llmops",
+      order: [
+        "Scoping/Planning",
+        "Development and Experimentation",
+        "Test and Evaluation",
+        "Release",
+        "Deploy",
+        "Operate",
+        "Monitor",
+        "Govern",
+      ],
+    },
     { key: "team", label: "Red / Blue / Purple Team", tagClass: "tag-team" },
     { key: "risk_maps", label: "Risk Maps Supported", tagClass: "tag-risk" },
   ],

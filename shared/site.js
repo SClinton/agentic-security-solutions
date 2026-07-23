@@ -82,6 +82,18 @@
     });
   }
 
+  function sortFacetValues(values, order) {
+    if (!order) return values.sort();
+    return values.sort((a, b) => {
+      const ia = order.indexOf(a);
+      const ib = order.indexOf(b);
+      if (ia === -1 && ib === -1) return a.localeCompare(b);
+      if (ia === -1) return 1;
+      if (ib === -1) return -1;
+      return ia - ib;
+    });
+  }
+
   function buildFacets() {
     const values = {};
     cfg.facets.forEach((f) => (values[f.key] = new Set()));
@@ -90,11 +102,12 @@
         (s[f.key] || []).forEach((v) => values[f.key].add(v));
       });
     }
-    for (const facet of Object.keys(values)) {
+    for (const f of cfg.facets) {
+      const facet = f.key;
       const container = document.getElementById(`facet-${facet}`);
       if (!container) continue;
       container.innerHTML = "";
-      const sorted = Array.from(values[facet]).sort();
+      const sorted = sortFacetValues(Array.from(values[facet]), f.order);
       for (const val of sorted) {
         const label = document.createElement("label");
         label.className = "facet-check";
