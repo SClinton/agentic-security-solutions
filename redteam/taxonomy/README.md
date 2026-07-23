@@ -1,4 +1,5 @@
 # taxonomy
 
-Reference material for this database's risk/stage taxonomy (e.g. Risk Maps Supported
-definitions, Lifecycle Stage and Red/Blue/Purple Team definitions).
+`rt_taxonomy.json` is generated output, fetched at runtime by the "Red Team Coverage"
+checklist on `add.html`/`edit.html`. Its markdown source and the script that generates it are
+maintained in the private companion source repo.

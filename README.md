@@ -1,87 +1,46 @@
 # OWASP GenAI Security Project Solution Directory
 
-An umbrella site hosting multiple searchable, community-maintained databases of solutions for
-securing generative and agentic AI systems, published via GitHub Pages.
+The published static site for the OWASP GenAI Security Project Solution Directory, served via
+GitHub Pages: https://sclinton.github.io/agentic-security-solutions/
+
+**This repo holds only the published output** — HTML/CSS/JS and the generated per-solution JSON
+data each database's pages fetch at runtime. Source CSVs, build scripts, `apply_edit.py`, and
+the red-team capability taxonomy's markdown source are maintained in a private companion repo
+and are not part of this repo's history. This split exists so that repo/source access can be
+restricted to invited collaborators while the directory itself stays publicly viewable, which
+GitHub Pages requires for any content it serves.
+
+## Layout
 
 - `index.html` — the umbrella page: a tab bar (one tab per database) above an iframe that loads
   the selected database's own `index.html` with `?embedded=1`.
 - `embed.html` — the same tab bar + iframe, with no page header/title, meant to be dropped into
   an `<iframe>` on another site (e.g. a WordPress page) as a self-contained widget.
 - `shared/directory-tabs.js` — drives both of the above: the `DATABASES` list, tab rendering,
-  and the iframe's src/height management. Add a new database here (one entry) to add its tab.
+  and the iframe's src/height management.
 - `styles.css` — shared styles used by every page in the site.
 - `app.config.js` — shared config (`githubOwner`/`githubRepo`) used when building GitHub Issue
   links from any database.
-- `shared/site.js` — the card-gallery engine (search, sidebar filters, sort, card rendering).
-  Driven entirely by each database's `db.config.js`; not specific to any one database. Reads
-  `?embedded=1` (set via `<html class="embedded">`, applied by an inline script in each
-  database's `index.html`) to hide its own title/breadcrumb/banner when shown inside the
-  umbrella page's iframe.
+- `shared/site.js` — the card-gallery engine (search, sidebar filters, sort, card rendering),
+  driven entirely by each database's `db.config.js`.
 - `shared/form.js` — the add/edit form engine (checkbox groups, pre-fill on edit, GitHub Issue
-  body). Also driven by `db.config.js`. If a database's config sets `taxonomy: {path,
-  containerId}`, the freeform coverage textarea is replaced with a checklist built from that
-  taxonomy JSON (grouped Team > Stage > capability); selections become the entry's `coverage`
-  field. Every form also offers an optional logo upload: it's renamed client-side to
-  `<company-slug>.<ext>` (a "Download renamed file" button) for the submitter to drag into the
-  GitHub Issue, since a URL-triggered issue can't carry a file attachment automatically - the
-  maintainer saves it to `<db>/logos/` on acceptance. Setting `captcha: true` in a database's
-  config adds a simple math challenge (regenerated on a wrong answer) before the form will open
-  its GitHub Issue, to deter naive bot submissions - currently enabled for `redteam/`.
-- `shared/build_common.py` — shared Python helpers for turning a landscape CSV into versioned
-  per-solution JSON.
-- `apply_edit.py` — maintainer tool (works across all databases) to accept an edit suggestion as
-  a new version, roll back to an earlier version, or show version history.
-
-## Databases
-
-Each database is a self-contained folder:
-
-```
-<db>/
-  index.html        - card gallery (search + sidebar filters)
-  add.html          - "Submit a Solution" form
-  edit.html         - "Suggest an Edit" form (linked from each card's ✎ icon)
-  db.config.js      - facets, labels, GitHub issue labels for this database
-  build_data.py     - imports this database's CSV into data/
-  upload/<Name>.csv - source CSV; also the future drop location for batch-update files
-  taxonomy/         - reference material for this database's risk/stage taxonomy
-  logos/            - solution/company logo images
-  badges/           - certification/compliance/directory-listing badge images
-  data/manifest.json
-  data/solutions/<id-slug>/
-    meta.json       - {slug, id, current_version, versions: [...]}
-    v1.json, v2.json, ... - one immutable file per version
-```
-
-Currently:
-- **`agentic/`** — Agentic Security Solutions, sourced from `agentic/upload/AgenticSolutions.csv`.
-- **`redteam/`** — Red Team Solutions, sourced from `redteam/upload/RedTeamSolutions.csv`. Its
-  `taxonomy/rt_taxonomy.md` is the authoritative capability taxonomy (Red/Blue/Purple/Shared ×
-  lifecycle stage); `taxonomy/build_taxonomy.py` regenerates `rt_taxonomy.json` from it whenever
-  the markdown changes, which drives the "Red Team Coverage" checklist on `add.html`/`edit.html`.
-
-### Adding a new database
-
-1. Create `<db>/` with its own CSV and a `build_data.py` that maps CSV columns into the common
-   solution shape (see either existing `build_data.py` for the pattern; both import
-   `shared/build_common.py`):
-   ```json
-   {
-     "id": 0, "slug": "...", "title": "...", "company": "...",
-     "description": "...", "link": "...",
-     "tags": { "<facet_key>": ["..."], ... },
-     "coverage": [ { "group": "...", "items": ["..."] } ],
-     "stars": 0, "forks": 0, "submitter_affiliation": "..."
-   }
-   ```
-2. Copy `agentic/index.html`, `add.html`, `edit.html` into `<db>/`, adjusting only the
-   `<title>`/breadcrumb text and the card `<template>`'s detail `<summary>` label — the JS is
-   shared and needs no changes.
-3. Write `<db>/db.config.js` defining `facets` (sidebar filters + card tag colors), `formFacets`
-   (add/edit checkbox groups), `searchKeys`, `coverageLabel`, and the two GitHub issue labels.
-4. Run `python3 <db>/build_data.py`.
-5. Add one entry to the `DATABASES` array in `shared/directory-tabs.js` — it appears as a new
-   tab on both `index.html` and `embed.html` automatically.
+  body, optional taxonomy checklist, optional logo upload, optional math captcha), also driven
+  by `db.config.js`.
+- `<db>/` (currently `agentic/` and `redteam/`) — each a self-contained database:
+  ```
+  <db>/
+    index.html        - card gallery (search + sidebar filters)
+    add.html          - "Submit a Solution" form
+    edit.html         - "Suggest an Edit" form (linked from each card's ✎ icon)
+    db.config.js      - facets, labels, GitHub issue labels for this database
+    logos/, badges/   - solution/company logo and badge images
+    data/manifest.json
+    data/solutions/<id-slug>/
+      meta.json       - {slug, id, current_version, versions: [...]}
+      v1.json, v2.json, ... - one immutable file per version
+  ```
+- `redteam/taxonomy/rt_taxonomy.json` — generated output fetched at runtime by the "Red Team
+  Coverage" checklist; its markdown source and generator script live in the private repo.
 
 ## Embedding elsewhere
 
@@ -101,38 +60,12 @@ the same `shared/directory-tabs.js`, so they always stay in sync.
 
 Every solution's data lives under `<db>/data/solutions/<id>-<slug>/`. `meta.json` tracks which
 version is currently shown on the site (`current_version`) and the full list of versions that
-exist. Editing an entry never overwrites a version file — it always writes the next `vN.json`
-and repoints `current_version`. Older version files are never deleted, so any version can be
-restored.
-
-```
-python3 apply_edit.py <db> <slug> --history
-python3 apply_edit.py <db> <slug> --changes changes.json   # apply an approved edit as a new version
-python3 apply_edit.py <db> <slug> --rollback 2             # repoint "current" back to v2
-```
-
-`changes.json` only needs to contain the fields being changed, e.g.:
-
-```json
-{ "description": "Updated description text.", "tags": { "risk_maps": ["..."] } }
-```
-
-## Updating a database from its CSV
-
-1. Edit `<db>/upload/<Name>.csv` (or drop in a replacement batch file there).
-2. Run `python3 <db>/build_data.py`.
-3. Commit the regenerated files in `<db>/data/`.
-
-`build_data.py` skips any solution folder that already has a `meta.json`, so it never clobbers
-edit history — it only adds new rows.
+exist. Accepted edits are published here as a new `vN.json` with `current_version` repointed;
+older version files are never deleted. The tooling that produces these commits
+(`apply_edit.py`, `build_data.py`) lives in the private source repo, not here.
 
 ## Reviewing submissions and edits
 
-- New-solution submissions (via "Submit a Solution") arrive as GitHub Issues labeled
-  `<db>-new-submission` (e.g. `agentic-new-submission`). Add an approved entry as a new row in
-  that database's CSV and rebuild, or create its `data/solutions/<folder>/` (`meta.json` +
-  `v1.json`) by hand and add the `meta.json` path to `data/manifest.json`.
-- Edit suggestions (via each card's ✎ icon) arrive as GitHub Issues labeled
-  `<db>-edit-suggestion`, naming the entry's slug and current version. To accept one, save the
-  proposed field changes as a JSON file and run
-  `apply_edit.py <db> <slug> --changes changes.json`, then commit.
+New-solution submissions and edit suggestions arrive as GitHub Issues on this repo, labeled
+`<db>-new-submission` / `<db>-edit-suggestion` respectively. They're reviewed and applied from
+the private source repo, then published here as a new commit.
