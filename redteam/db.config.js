@@ -14,6 +14,7 @@ window.DB_CONFIG = {
       tagClass: "tag-llmops",
       order: [
         "Scoping/Planning",
+        "Data Augmentation and Fine-Tuning",
         "Development and Experimentation",
         "Test and Evaluation",
         "Release",
