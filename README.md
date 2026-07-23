@@ -24,7 +24,9 @@ securing generative and agentic AI systems, published via GitHub Pages.
   field. Every form also offers an optional logo upload: it's renamed client-side to
   `<company-slug>.<ext>` (a "Download renamed file" button) for the submitter to drag into the
   GitHub Issue, since a URL-triggered issue can't carry a file attachment automatically - the
-  maintainer saves it to `<db>/logos/` on acceptance.
+  maintainer saves it to `<db>/logos/` on acceptance. Setting `captcha: true` in a database's
+  config adds a simple math challenge (regenerated on a wrong answer) before the form will open
+  its GitHub Issue, to deter naive bot submissions - currently enabled for `redteam/`.
 - `shared/build_common.py` — shared Python helpers for turning a landscape CSV into versioned
   per-solution JSON.
 - `apply_edit.py` — maintainer tool (works across all databases) to accept an edit suggestion as

@@ -6,6 +6,47 @@
 
   const mode = document.body.dataset.formMode === "edit" ? "edit" : "add";
 
+  // --- Math captcha (optional, config-driven) --------------------------------
+
+  let captchaAnswer = null;
+
+  function initCaptcha() {
+    if (!cfg.captcha) return;
+    const questionEl = document.getElementById("captcha-question");
+    const answerEl = document.getElementById("captcha_answer");
+    const hintEl = document.getElementById("captcha-hint");
+    if (!questionEl || !answerEl) return;
+
+    const a = Math.floor(Math.random() * 10) + 1;
+    const b = Math.floor(Math.random() * 10) + 1;
+    const isAddition = Math.random() < 0.5;
+    if (isAddition) {
+      captchaAnswer = a + b;
+      questionEl.textContent = `${a} + ${b}`;
+    } else {
+      const hi = Math.max(a, b);
+      const lo = Math.min(a, b);
+      captchaAnswer = hi - lo;
+      questionEl.textContent = `${hi} − ${lo}`;
+    }
+    answerEl.value = "";
+    if (hintEl) hintEl.textContent = "";
+  }
+
+  function captchaPasses() {
+    if (!cfg.captcha) return true;
+    const answerEl = document.getElementById("captcha_answer");
+    const hintEl = document.getElementById("captcha-hint");
+    if (!answerEl) return true;
+    const ok = Number(answerEl.value.trim()) === captchaAnswer;
+    if (!ok) {
+      initCaptcha();
+      if (hintEl) hintEl.textContent = "That's not quite right — try the new question below.";
+      answerEl.focus();
+    }
+    return ok;
+  }
+
   function makeCheckbox(container, name, value, isChecked) {
     const label = document.createElement("label");
     label.className = "checkbox-chip";
@@ -349,6 +390,7 @@
     const form = document.getElementById("submit-form");
     const note = document.getElementById("form-note");
     initLogoUpload();
+    initCaptcha();
     try {
       const entries = await loadAllCurrentSolutions();
       renderFacetCheckboxes(buildFacetValueSets(entries), null);
@@ -358,6 +400,7 @@
     }
     form.addEventListener("submit", (e) => {
       e.preventDefault();
+      if (!captchaPasses()) return;
       openIssue(collectFormData(), null, note);
     });
   }
@@ -411,11 +454,13 @@
 
     renderFacetCheckboxes(buildFacetValueSets(entries), s);
     initLogoUpload();
+    initCaptcha();
 
     form.hidden = false;
 
     form.addEventListener("submit", (e) => {
       e.preventDefault();
+      if (!captchaPasses()) return;
       openIssue(collectFormData(), target, note);
     });
   }

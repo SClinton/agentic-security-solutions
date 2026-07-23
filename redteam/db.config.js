@@ -41,4 +41,7 @@ window.DB_CONFIG = {
 
   issueLabelNew: "redteam-new-submission",
   issueLabelEdit: "redteam-edit-suggestion",
+
+  // Simple math challenge on add.html / edit.html to deter bot submissions.
+  captcha: true,
 };
