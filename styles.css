@@ -842,6 +842,16 @@ html.embedded .site-header {
   color: var(--text-muted);
 }
 
+.checkbox-chip.has-description {
+  cursor: help;
+}
+
+.checkbox-chip.has-description span {
+  text-decoration: underline dotted;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--text-muted);
+}
+
 .logo-preview {
   display: flex;
   align-items: center;

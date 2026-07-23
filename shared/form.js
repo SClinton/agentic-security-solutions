@@ -123,7 +123,11 @@
         taxonomy[team][stage].forEach((cap) => {
           const label = document.createElement("label");
           label.className = "checkbox-chip";
-          label.title = cap.description || "";
+          const hasDescription = Boolean(cap.description && cap.description.trim());
+          if (hasDescription) {
+            label.title = cap.description;
+            label.classList.add("has-description");
+          }
           const input = document.createElement("input");
           input.type = "checkbox";
           input.name = "taxonomy";
@@ -132,7 +136,9 @@
           input.value = cap.name;
           if (isCapabilityChecked(existingCoverage, team, stage, cap.name)) input.checked = true;
           label.appendChild(input);
-          label.appendChild(document.createTextNode(cap.name));
+          const nameSpan = document.createElement("span");
+          nameSpan.textContent = cap.name;
+          label.appendChild(nameSpan);
           grid.appendChild(label);
         });
         stageBlock.appendChild(grid);
